@@ -24,6 +24,20 @@ html {
     font-size: 0.6875rem;
   }
 }
+@media (min-width: 1200px) {
+  html {
+    font-size: 0.75rem;
+  }
+}
+
+body {
+  font-size: 1.4rem;
+  background-color: #1e2127;
+}
+
+a {
+  color: #edeef0;
+}
 
 html {
   scroll-behavior: smooth;
@@ -40,9 +54,56 @@ main > section {
   margin: 0 auto;
 }
 
+header.header {
+  background-color: #080808;
+  box-shadow: 0 0 10px #181818;
+  position: sticky;
+  top: 0;
+}
+header.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4rem;
+  max-width: 1230px;
+  margin: 0 auto;
+}
+header.header .header__menu ul {
+  display: flex;
+  gap: 2rem;
+}
+header.header .header__menu ul li a {
+  display: inline-block;
+  padding: 2rem 0;
+  font-family: sans-serif;
+  transition: color 0.3s;
+}
+header.header .header__menu ul li a:hover {
+  color: #40ecde;
+}
+header.header .header__menu ul li.active-item a {
+  color: #ec406a;
+}
+header.header .header__brand {
+  font-size: 1.4rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  word-spacing: -0.3rem;
+}
+header.header .header__brand a {
+  padding: 2rem 0;
+  color: #fcd8a1;
+}
+header.header .header__brand a:hover {
+  color: #40ecde;
+}
+header.header .header__brand span {
+  font-size: 1.5rem;
+  color: #ec406a;
+}
+
 main.home {
-  background-color: #0d1117;
-  min-height: 100vh;
+  background-color: #080808;
 }
 
 /*# sourceMappingURL=styles.css.map */
