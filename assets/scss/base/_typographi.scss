@@ -1,0 +1,11 @@
+html {
+  // 1rem = 10px
+  // 16 * 0.625 = 10px
+  font-size: 0.625rem;
+
+  // 1rem = 11px
+  // 16 * 0.6875 = 11px
+  @include breakpoint(md) {
+    font-size: 0.6875rem;
+  }
+}

@@ -1,0 +1,26 @@
+// @include breakpoint(sm){ font-size: 1rem; }
+@mixin breakpoint($class) {
+  @if ($class == sm) {
+    @media (min-width: 576px) {
+      @content;
+    }
+  } @else if ($class == md) {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if ($class == lg) {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if ($class == xl) {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if ($class == xxl) {
+    @media (min-width: 1400px) {
+      @content;
+    }
+  } @else {
+    @warn "breakpoint mixin supports: xs, sm, md, lg, xl, xxl";
+  }
+}

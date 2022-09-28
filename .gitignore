@@ -1,0 +1,7 @@
+### Sass ###
+.sass-cache/
+*.css.map
+
+### vsCode ###
+.settings/
+.vscode/
