@@ -2,26 +2,46 @@
 $color-black-0: #000000;
 $color-black-1: #080808;
 $color-black-2: #181818;
+$color-black-3: #1a1d1e;
 
 $color-gray-0: #1e2127;
 $color-gray-1: #22262e;
-$color-gray-8: #5d626b;
+$color-gray-2: #272c35;
+$color-gray-3: #454a53;
+$color-gray-4: #4f5659;
 
+$color-gray-8: #5d626b;
+$color-gray-9: #60676c;
 
 $color-white-0: #edeef0;
+$color-white-1: #d1d5db;
 
 $color-pink-0: #ec406a;
 
-$color-red-0: #D96060;
+$color-purple-0: #9084f5;
+
+$color-red-0: #d96060;
+$color-red-1: #df8282;
 
 $color-cyan-0: #40ecde;
 
-$color-gold-0: #fcd8a1;
-$color-gold-1: #fde782;
+$color-green-0: #4eec40;
 
+$color-gold-0: #fde782;
+
+$color-orange-0: #cf9965;
+$color-orange-1: #fcd8a1;
 
 //? sizes
+// section
 $section-max-width: 1230px;
+
+// sidebar
+$sidebar-width: 20rem;
+
+// progress bar
+$progress-bar-height: 1.5rem;
+$progress-bar-height-xs: 1.5rem;
 
 //? other values
 $transition-0: 0.3s;
