@@ -348,6 +348,7 @@ main.home .home__lang ul li .text {
     padding: 0.3rem 2rem;
     border-radius: 1rem;
     font-size: 1.4rem;
+    transition: all 0.3s;
   }
   main.home .home__skills ul li:hover .text,
 main.home .home__lang ul li:hover .text {

@@ -129,6 +129,7 @@ main.home {
         padding: 0.3rem 2rem;
         border-radius: 1rem;
         font-size: 1.4rem;
+        transition: background-color $transition-0;
       }
 
       &:hover .text {
