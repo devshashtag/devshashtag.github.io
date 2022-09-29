@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 *,
 ::after,
 ::before {
@@ -16,6 +17,33 @@ a {
   text-decoration: none;
 }
 
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+::-webkit-scrollbar {
+  background-color: #22262e;
+  color: #bcb4a8;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #454a53;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #60676c;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #4f5659;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #1a1d1e;
+}
+
 html {
   font-size: 0.625rem;
 }
@@ -32,7 +60,9 @@ html {
 
 body {
   font-size: 1.4rem;
+  font-family: "Poppins", sans-serif;
   background-color: #1e2127;
+  color: #edeef0;
 }
 
 a {
@@ -43,15 +73,102 @@ html {
   scroll-behavior: smooth;
 }
 
-img {
-  width: 100%;
-  height: 100%;
+@-webkit-keyframes progressBar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: var(--prog);
+  }
+}
+@-moz-keyframes progressBar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: var(--prog);
+  }
+}
+@keyframes progressBar {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: var(--prog);
+  }
+}
+aside.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 1rem;
+}
+@media (min-width: 992px) {
+  aside.sidebar {
+    min-width: 20rem;
+  }
+}
+aside.sidebar > section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+aside.sidebar > section h2 {
+  color: #cf9965;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+aside.sidebar > section nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+aside.sidebar > section nav ul h3 {
+  color: #fcd8a1;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+aside.sidebar > section nav ul > h3:first-child {
+  margin-top: 0;
+}
+aside.sidebar > section nav ul li a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #d1d5db;
+  transition: color 0.3s;
+}
+aside.sidebar > section nav ul li a:hover {
+  color: #d96060;
 }
 
-main > section {
+.progress-bar {
   width: 100%;
-  max-width: 1230px;
-  margin: 0 auto;
+  background-color: #454a53;
+  border-radius: 1rem;
+  height: 1.5rem;
+}
+@media (min-width: 576px) {
+  .progress-bar {
+    height: 1.5rem;
+  }
+}
+.progress-bar::before {
+  content: "";
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background-color: #9084f5;
+  transition: background-color 0.3s;
+  -webkit-animation: progressBar 2s ease;
+  -webkit-animation-fill-mode: both;
+  -moz-animation: progressBar 2s ease;
+  -moz-animation-fill-mode: both;
+  animation: progressBar 2s ease;
+  animation-fill-mode: both;
 }
 
 header.header {
@@ -74,8 +191,9 @@ header.header .header__menu ul {
 }
 header.header .header__menu ul li a {
   display: inline-block;
+  font-size: 1.2rem;
+  text-transform: uppercase;
   padding: 2rem 0;
-  font-family: sans-serif;
   transition: color 0.3s;
 }
 header.header .header__menu ul li a:hover {
@@ -85,7 +203,7 @@ header.header .header__menu ul li.active-item a {
   color: #ec406a;
 }
 header.header .header__brand {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-family: Arial, Helvetica, sans-serif;
   text-transform: capitalize;
   word-spacing: -0.3rem;
@@ -102,8 +220,139 @@ header.header .header__brand span {
   color: #ec406a;
 }
 
+.main__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+@media (min-width: 768px) {
+  .main__container {
+    padding: 2rem 4rem;
+  }
+}
+@media (min-width: 992px) {
+  .main__container {
+    flex-direction: row;
+  }
+}
+
 main.home {
-  background-color: #080808;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 1rem 0;
+}
+@media (min-width: 576px) {
+  main.home {
+    padding: 1rem;
+  }
+}
+main.home .home__profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 1rem;
+  background-color: #272c35;
+  padding: 2rem;
+}
+main.home .home__profile img {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  border: 0.5rem solid transparent;
+  outline: 0.2rem dashed #d96060;
+}
+main.home .home__profile p {
+  line-height: 2;
+  font-size: 1.3rem;
+  text-align: center;
+}
+@media (min-width: 576px) {
+  main.home .home__profile {
+    flex-direction: row;
+  }
+  main.home .home__profile p {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+}
+main.home section:not(.home__profile) {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main.home section:not(.home__profile) h2 {
+  color: #cf9965;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+main.home section:not(.home__profile) ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main.home section:not(.home__profile) ul h3 {
+  color: #fcd8a1;
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 2rem;
+}
+main.home section:not(.home__profile) ul > h3:first-child {
+  margin-top: 0;
+}
+@media (min-width: 576px) {
+  main.home section:not(.home__profile) h2,
+main.home section:not(.home__profile) ul h3 {
+    text-align: left;
+  }
+}
+main.home .home__skills ul li,
+main.home .home__lang ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #d96060;
+}
+main.home .home__skills ul li .text,
+main.home .home__lang ul li .text {
+  font-size: 1.5rem;
+  display: block;
+  text-align: center;
+  margin-top: 1.5rem;
+  min-width: 13rem;
+}
+@media (min-width: 576px) {
+  main.home .home__skills ul li,
+main.home .home__lang ul li {
+    cursor: pointer;
+    flex-direction: row;
+  }
+  main.home .home__skills ul li .text,
+main.home .home__lang ul li .text {
+    margin-top: 0;
+    text-align: left;
+    padding: 0.3rem 2rem;
+    border-radius: 1rem;
+    font-size: 1.4rem;
+  }
+  main.home .home__skills ul li:hover .text,
+main.home .home__lang ul li:hover .text {
+    background-color: #272c35;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

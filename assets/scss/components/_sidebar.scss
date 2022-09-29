@@ -1,0 +1,62 @@
+aside.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 1rem;
+
+  @include breakpoint(lg) {
+    min-width: $sidebar-width;
+  }
+
+  // sidebar sections
+  > section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    // header
+    h2 {
+      color: $color-orange-0;
+
+      font-size: 1.5rem;
+      text-transform: uppercase;
+    }
+
+    // list items
+    nav ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      // sub titles
+      h3 {
+        color: $color-orange-1;
+
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        margin-top: 1rem;
+      }
+
+      & > h3:first-child {
+        margin-top: 0;
+      }
+
+      // list item
+      li a {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        font-weight: 500;
+        text-transform: capitalize;
+        color: $color-white-1;
+
+        transition: color $transition-0;
+
+        &:hover {
+          color: $color-red-0;
+        }
+      }
+    }
+  }
+}

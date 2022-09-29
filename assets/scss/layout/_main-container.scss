@@ -1,0 +1,18 @@
+.main__container {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2rem;
+  max-width: $section-max-width;
+  margin: 0 auto;
+
+  padding: 2rem;
+
+  @include breakpoint(md) {
+    padding: 2rem 4rem;
+  }
+
+  @include breakpoint(lg) {
+    flex-direction: row;
+  }
+}

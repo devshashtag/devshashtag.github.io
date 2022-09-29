@@ -1,3 +1,139 @@
 main.home {
-  background-color: $color-black-1;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  padding: 1rem 0;
+
+  @include breakpoint(sm) {
+    padding: 1rem;
+  }
+
+  // profile
+  .home__profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 2rem;
+    border-radius: 1rem;
+
+    background-color: $color-gray-2;
+    padding: 2rem;
+
+    img {
+      width: 12rem;
+      height: 12rem;
+
+      border-radius: 50%;
+
+      border: 0.5rem solid transparent;
+      outline: 0.2rem dashed $color-red-0;
+    }
+
+    p {
+      line-height: 2;
+
+      font-size: 1.3rem;
+      text-align: center;
+    }
+
+    @include breakpoint(sm) {
+      flex-direction: row;
+
+      p {
+        font-size: 1.5rem;
+        text-align: left;
+      }
+    }
+  }
+
+  // other sections
+  section:not(.home__profile) {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    // section header
+    h2 {
+      color: $color-orange-0;
+
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    // list
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      // sub headers
+      h3 {
+        color: $color-orange-1;
+
+        font-size: 1.3rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+
+        margin-top: 2rem;
+      }
+
+      & > h3:first-child {
+        margin-top: 0;
+      }
+    }
+
+    @include breakpoint(sm) {
+      h2,
+      ul h3 {
+        text-align: left;
+      }
+    }
+  }
+
+  // languages , skills
+  .home__skills ul li,
+  .home__lang ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $color-red-0;
+
+    .text {
+      font-size: 1.5rem;
+      display: block;
+      text-align: center;
+      margin-top: 1.5rem;
+      min-width: 13rem;
+    }
+
+    @include breakpoint(sm) {
+      cursor: pointer;
+      flex-direction: row;
+
+      .text {
+        margin-top: 0;
+        text-align: left;
+        padding: 0.3rem 2rem;
+        border-radius: 1rem;
+        font-size: 1.4rem;
+      }
+
+      &:hover .text {
+        background-color: $color-gray-2;
+      }
+    }
+  }
 }

@@ -1,0 +1,28 @@
+.progress-bar {
+  width: 100%;
+  background-color: $color-gray-3;
+  border-radius: 1rem;
+
+  height: $progress-bar-height-xs;
+
+  @include breakpoint(sm) {
+    height: $progress-bar-height;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    height: 100%;
+
+    border-radius: inherit;
+    background-color: $color-purple-0;
+    transition: background-color $transition-0;
+
+    -webkit-animation: progressBar 2s ease;
+    -webkit-animation-fill-mode: both;
+    -moz-animation: progressBar 2s ease;
+    -moz-animation-fill-mode: both;
+    animation: progressBar 2s ease;
+    animation-fill-mode: both;
+  }
+}

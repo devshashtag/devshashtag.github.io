@@ -23,8 +23,10 @@ header.header {
         // menu items
         li a {
             display: inline-block;
+            font-size: 1.2rem;
+            text-transform: uppercase;
             padding: 2rem 0;
-            font-family: sans-serif;
+
             transition: color $transition-0;
 
             &:hover {
@@ -39,7 +41,7 @@ header.header {
 
     // brand
     .header__brand {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         font-family: Arial, Helvetica, sans-serif;
         text-transform: capitalize;
         word-spacing: -.3rem;
@@ -47,7 +49,7 @@ header.header {
         // brand text
         a {
             padding: 2rem 0;
-            color: $color-gold-0;
+            color: $color-orange-1;
 
             &:hover {
                 color: $color-cyan-0;
