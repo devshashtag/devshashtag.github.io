@@ -315,43 +315,42 @@ main.home section:not(.home__profile) ul h3 {
     text-align: left;
   }
 }
-main.home .home__skills ul li,
-main.home .home__lang ul li {
+main.home .home__info h2 {
+  margin-top: 2rem;
+}
+main.home .home__info > h2:first-child {
+  margin-top: 0;
+}
+main.home .home__info ul li {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 1rem;
-  font-size: 1.3rem;
+}
+main.home .home__info ul li .info__text {
+  font-size: 1.5rem;
   font-weight: 500;
   text-transform: uppercase;
   color: #d96060;
-}
-main.home .home__skills ul li .text,
-main.home .home__lang ul li .text {
-  font-size: 1.5rem;
   display: block;
   text-align: center;
   margin-top: 1.5rem;
   min-width: 13rem;
 }
 @media (min-width: 576px) {
-  main.home .home__skills ul li,
-main.home .home__lang ul li {
+  main.home .home__info ul li {
     cursor: pointer;
     flex-direction: row;
   }
-  main.home .home__skills ul li .text,
-main.home .home__lang ul li .text {
+  main.home .home__info ul li .info__text {
     margin-top: 0;
     text-align: left;
     padding: 0.3rem 2rem;
     border-radius: 1rem;
     font-size: 1.4rem;
-    transition: all 0.3s;
+    transition: background-color 0.3s;
   }
-  main.home .home__skills ul li:hover .text,
-main.home .home__lang ul li:hover .text {
+  main.home .home__info ul li:hover .info__text {
     background-color: #272c35;
   }
 }
