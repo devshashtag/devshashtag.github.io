@@ -172,7 +172,7 @@ aside.sidebar > section nav ul li a:hover {
 }
 
 header.header {
-  background-color: #080808;
+  background-color: rgba(18, 18, 18, 0.9333333333);
   box-shadow: 0 0 10px #181818;
   position: sticky;
   top: 0;
@@ -337,6 +337,14 @@ main.home .home__info ul li .info__text {
   margin-top: 1.5rem;
   min-width: 13rem;
 }
+main.home .home__info ul li .info__item {
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 0.5rem 2rem;
+  line-height: 2;
+  color: #d1d5db;
+  text-align: center;
+}
 @media (min-width: 576px) {
   main.home .home__info ul li {
     cursor: pointer;
@@ -352,6 +360,9 @@ main.home .home__info ul li .info__text {
   }
   main.home .home__info ul li:hover .info__text {
     background-color: #272c35;
+  }
+  main.home .home__info ul li .info__item {
+    text-align: left;
   }
 }
 

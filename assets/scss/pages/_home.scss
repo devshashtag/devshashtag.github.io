@@ -128,6 +128,16 @@ main.home {
         min-width: 13rem;
       }
 
+      // info item
+      .info__item {
+        font-size: 1.3rem;
+        font-weight: 500;
+        padding: 0.5rem 2rem;
+        line-height: 2;
+        color: $color-white-1;
+        text-align: center;
+      }
+
       @include breakpoint(sm) {
         cursor: pointer;
         flex-direction: row;
@@ -144,6 +154,11 @@ main.home {
 
         &:hover .info__text {
           background-color: $color-gray-2;
+        }
+
+        // info item
+        .info__item {
+          text-align: left;
         }
       }
     }
