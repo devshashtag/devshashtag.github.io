@@ -1,65 +1,65 @@
 header.header {
-    background-color: $color-black-1;
-    box-shadow: 0 0 10px $color-black-2;
+  background-color: $color-black-alpha-3;
+  box-shadow: 0 0 10px $color-black-2;
 
-    position: sticky;
-    top: 0;
+  position: sticky;
+  top: 0;
 
-    // container
-    .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 4rem;
-        max-width: $section-max-width;
-        margin: 0 auto;
+  // container
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+    max-width: $section-max-width;
+    margin: 0 auto;
+  }
+
+  // menu
+  .header__menu ul {
+    display: flex;
+    gap: 2rem;
+
+    // menu items
+    li a {
+      display: inline-block;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      padding: 2rem 0;
+
+      transition: color $transition-0;
+
+      &:hover {
+        color: $color-cyan-0;
+      }
     }
 
-    // menu
-    .header__menu ul {
-        display: flex;
-        gap: 2rem;
+    li.active-item a {
+      color: $color-pink-0;
+    }
+  }
 
-        // menu items
-        li a {
-            display: inline-block;
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            padding: 2rem 0;
+  // brand
+  .header__brand {
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    word-spacing: -0.3rem;
 
-            transition: color $transition-0;
+    // brand text
+    a {
+      padding: 2rem 0;
+      color: $color-orange-1;
 
-            &:hover {
-                color: $color-cyan-0;
-            }
-        }
-
-        li.active-item a {
-            color: $color-pink-0;
-        }
+      &:hover {
+        color: $color-cyan-0;
+      }
     }
 
-    // brand
-    .header__brand {
-        font-size: 1.5rem;
-        font-family: Arial, Helvetica, sans-serif;
-        text-transform: capitalize;
-        word-spacing: -.3rem;
-
-        // brand text
-        a {
-            padding: 2rem 0;
-            color: $color-orange-1;
-
-            &:hover {
-                color: $color-cyan-0;
-            }
-        }
-
-        // angles
-        span {
-            font-size: 1.5rem;
-            color: $color-pink-0;
-        }
+    // angles
+    span {
+      font-size: 1.5rem;
+      color: $color-pink-0;
     }
+  }
 }
