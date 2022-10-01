@@ -10,22 +10,62 @@ header.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 4rem;
+
+    padding: 0 2rem;
     max-width: $section-max-width;
+    min-height: $header-height;
+
     margin: 0 auto;
+
+    @include breakpoint(sm) {
+      padding: 0 4rem;
+    }
   }
 
   // menu
-  .header__menu ul {
+  .header__menu {
     display: flex;
+    align-items: center;
+    min-height: inherit;
+  }
+
+  // links
+  .menu__links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    display: flex;
+    flex-direction: column;
     gap: 2rem;
+
+    width: 100%;
+    background-color: $color-red-0;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: all $transition-0;
+
+    // mobile styles
+    &.active {
+      visibility: visible;
+      opacity: 1;
+
+      gap: 1px;
+    }
 
     // menu items
     li a {
+      background-color: $color-black-3;
       display: inline-block;
+
       font-size: 1.2rem;
       text-transform: uppercase;
-      padding: 2rem 0;
+      text-align: center;
+
+      padding: 2rem 1rem;
+      width: 100%;
 
       transition: color $transition-0;
 
@@ -37,14 +77,36 @@ header.header {
     li.active-item a {
       color: $color-pink-0;
     }
+
+    // desktop styles
+    @include breakpoint(sm) {
+      position: static;
+
+      flex-direction: row;
+
+      visibility: visible;
+      opacity: 1;
+      width: auto;
+
+      gap: 2rem;
+
+      &,
+      li a {
+        background-color: transparent;
+      }
+    }
   }
 
   // brand
   .header__brand {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-family: Arial, Helvetica, sans-serif;
     text-transform: capitalize;
     word-spacing: -0.3rem;
+
+    @include breakpoint(md) {
+      font-size: 1.5rem;
+    }
 
     // brand text
     a {
@@ -58,7 +120,6 @@ header.header {
 
     // angles
     span {
-      font-size: 1.5rem;
       color: $color-pink-0;
     }
   }
