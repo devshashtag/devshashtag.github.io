@@ -218,7 +218,7 @@ aside.sidebar > section nav ul li a:hover {
 }
 
 header.header {
-  background-color: rgba(18, 18, 18, 0.9333333333);
+  background-color: #181818;
   box-shadow: 0 0 10px #181818;
   position: sticky;
   top: 0;
