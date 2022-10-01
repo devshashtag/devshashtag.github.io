@@ -1,0 +1,57 @@
+.navbar-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 10px 5px;
+  cursor: pointer;
+
+  @include breakpoint(sm) {
+    display: none;
+  }
+
+  .toggle-icon {
+    background-color: $color-pink-0;
+    position: relative;
+    display: inline-block;
+
+    width: $toggle-icon-width;
+    height: $toggle-icon-height;
+
+    transition: all $transition-1;
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+
+      width: inherit;
+      height: inherit;
+      transition: inherit;
+
+      background-color: $color-pink-0;
+    }
+
+    &::before {
+      top: $toggle-icon-gap-neg;
+    }
+
+    &::after {
+      top: $toggle-icon-gap-pos;
+    }
+  }
+
+  &.active .toggle-icon {
+    background-color: transparent;
+
+    &::before {
+      -webkit-transform: translateY($toggle-icon-gap-pos) rotateZ(-45deg);
+      transform: translateY($toggle-icon-gap-pos) rotateZ(-45deg);
+    }
+
+    &::after {
+      -webkit-transform: translateY($toggle-icon-gap-neg) rotateZ(45deg);
+      transform: translateY($toggle-icon-gap-neg) rotateZ(45deg);
+    }
+  }
+}
