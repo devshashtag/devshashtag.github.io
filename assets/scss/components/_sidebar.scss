@@ -28,7 +28,7 @@ aside.sidebar {
       flex-direction: column;
       gap: 1rem;
 
-      // sub titles
+      // sub header
       h3 {
         color: $color-orange-1;
 
@@ -36,6 +36,16 @@ aside.sidebar {
         font-weight: 200;
         text-transform: uppercase;
         margin-top: 1rem;
+
+        // sub-header separator
+        .sep {
+          color: $color-red-0;
+        }
+
+        // usb-header tag
+        .tag {
+          color: $color-orange-0;
+        }
       }
 
       & > h3:first-child {
