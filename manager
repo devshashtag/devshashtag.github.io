@@ -1,34 +1,133 @@
 # github pages todos
 
-[ ] - fix menu in mobile devices
-[ ] - add training section in main.home
-[ ] - create project page
-[ ] - add projects descriptions
-[ ] - add blog section in main.home
-[ ] - replace contact with resume section
-[ ] - move skills, languages, education to resume tab
+- [ ] fix menu in mobile devices
+- [ ] add training section in main.home
+- [ ] add tags to project names
+- [ ] create project page
+- [ ] add projects descriptions
+- [ ] add blog section in main.home
+- [ ] replace contact with resume section
+- [ ] move skills, languages, education to resume tab
 
 # projects todos
 
+# frontend - team work
+
+- [ ] reactapp
+
+  - [ ] About
+  - [ ] readme.md
+  - [ ] github-pages
+
+- [ ] luxury hotels
+
+  - [ ] About
+  - [ ] readme.md
+  - [ ] github-pages
+
 # frontend
 
-[x] - image filters
-[ ] - video cover
-[ ] - selling project
+- [ ] botostart
+
+  - [ ] About
+  - [ ] readme.md
+  - [ ] github-pages
+
+- [ ] sheypoor post collector
+
+  - [ ] About
+  - [ ] readme.md
+
+- [ ] job finder
+
+  - [ ] About
+  - [ ] readme.md
+  - [ ] github-pages
+
+- [ ] image filters
+
+  - [ ] About
+  - [ ] readme.md
+  - [ ] github-pages
+
+- [ ] video cover
+
+  - [ ] About
+  - [ ] readme.md
+  - [ ] github-pages
+
+- [ ] selling template
+
+  - [ ] About
+  - [ ] readme.md
+  - [ ] github-pages
 
 ## python
 
-[ ] - divar phone collector
-[ ] - sheypoor phone collector
-[ ] - profile timer
-[ ] - captcha solver
-[ ] - click repeater
-[ ] - contact creator
-[ ] - translator py
-[ ] - vim golf challenges collector
+- [ ] divar phone collector
+
+  - [ ] About
+  - [ ] readme.md
+  - [ ] github-pages
+
+- [ ] sheypoor phone collector
+
+  - [ ] About
+  - [ ] readme.md
+  - [ ] github-pages
+
+- [ ] profile timer
+
+  - [ ] About
+  - [ ] readme.md
+  - [ ] github-pages
+
+- [ ] captcha solver
+
+  - [ ] About
+  - [ ] readme.md
+  - [ ] github-pages
+
+- [ ] click repeater
+
+  - [ ] About
+  - [ ] readme.md
+  - [ ] github-pages
+
+- [ ] contact creator
+
+  - [ ] About
+  - [ ] readme.md
+  - [ ] github-pages
+
+- [ ] translator py
+
+  - [ ] About
+  - [ ] readme.md
+  - [ ] github-pages
+
+- [ ] vim golf challenges collector
+
+  - [ ] About
+  - [ ] readme.md
+  - [ ] github-pages
 
 ## bash
 
-[ ] - tor bridge cli
-[ ] - aparat playlist downloader
-[ ] - translator sh
+- [ ] tor bridge cli
+
+  - [ ] About
+  - [ ] readme.md
+  - [ ] github-pages
+
+- [ ] aparat playlist downloader
+
+  - [ ] About
+  - [ ] readme.md
+  - [ ] github-pages
+
+- [ ] translator sh
+
+  - [ ] About
+  - [ ] readme.md
+  - [ ] github-pages
