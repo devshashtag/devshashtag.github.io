@@ -1,7 +1,7 @@
 .progress-bar {
   width: 100%;
-  background-color: $color-gray-3;
-  border-radius: 1rem;
+  background-color: $color-gray-1;
+  border-radius: 5rem;
 
   height: $progress-bar-height-xs;
 
@@ -15,7 +15,7 @@
     height: 100%;
 
     border-radius: inherit;
-    background-color: $color-purple-0;
+    background-color: $color-black-2;
     transition: background-color $transition-0;
 
     -webkit-animation: progressBar 2s ease;
