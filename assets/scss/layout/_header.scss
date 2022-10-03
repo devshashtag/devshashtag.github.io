@@ -5,6 +5,8 @@ header.header {
   position: sticky;
   top: 0;
 
+  z-index: 10;
+
   // container
   .container {
     display: flex;
@@ -32,6 +34,7 @@ header.header {
   // links
   .menu__links {
     position: absolute;
+    width: 100%;
     top: 100%;
     left: 0;
 
@@ -39,9 +42,7 @@ header.header {
     flex-direction: column;
     gap: 2rem;
 
-    width: 100%;
     background-color: $color-red-0;
-
     visibility: hidden;
     opacity: 0;
 
