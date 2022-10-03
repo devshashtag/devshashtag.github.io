@@ -13,6 +13,7 @@ aside.sidebar {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    text-align: center;
 
     // header
     h2 {
@@ -53,24 +54,83 @@ aside.sidebar {
       }
 
       // list item
-      li a {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
+      li {
+        padding: 0;
 
-        font-weight: 500;
-        text-transform: capitalize;
-        color: $color-white-1;
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
 
-        transition: color $transition-0;
+          font-weight: 500;
+          text-transform: capitalize;
+          color: $color-white-1;
 
-        i {
-          color: $color-orange-1;
+          transition: color $transition-0;
+
+          i {
+            color: $color-orange-1;
+          }
+
+          &:hover {
+            color: $color-red-1;
+          }
         }
+      }
+    }
+
+    @include breakpoint(sm) {
+      text-align: left;
+
+      nav ul li {
+        padding: 0 2rem;
+
+        a {
+          justify-content: stretch;
+        }
+      }
+    }
+
+    @include breakpoint(lg) {
+      nav ul li {
+        padding: 0;
+      }
+    }
+  }
+
+  // // social
+  .sidebar__social nav ul {
+    justify-content: center;
+    flex-direction: row;
+    gap: 2rem;
+
+    li a i {
+      font-size: 1.8rem;
+
+      &:hover {
+        color: $color-red-0;
+      }
+    }
+
+    li a span {
+      display: none;
+    }
+
+    @include breakpoint(sm) {
+      flex-direction: column;
+      gap: 1.5rem;
+
+      li a i {
+        font-size: 1.5rem;
 
         &:hover {
-          color: $color-red-1;
+          color: $color-orange-1;
         }
+      }
+
+      li a span {
+        display: block;
       }
     }
   }
