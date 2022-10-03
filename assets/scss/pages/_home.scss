@@ -55,7 +55,7 @@ main.home {
   section:not(.home__profile) {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
 
     // section header
     h2 {
@@ -80,7 +80,7 @@ main.home {
       h3 {
         color: $color-orange-1;
 
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight: 300;
         text-transform: uppercase;
         text-align: center;
@@ -132,8 +132,7 @@ main.home {
 
         color: $color-red-0;
 
-        font-size: 1.2rem;
-        font-weight: 400;
+        font-size: 1.3rem;
         text-transform: uppercase;
 
         position: absolute;
@@ -145,7 +144,7 @@ main.home {
         text-align: center;
 
         font-size: 1.3rem;
-        font-weight: 500;
+        font-weight: 300;
         line-height: 2;
       }
 
@@ -158,7 +157,8 @@ main.home {
           position: static;
           min-width: 15rem;
 
-          font-size: 1.4rem;
+          font-size: 1.5rem;
+          font-weight: 300;
           border-radius: 1rem;
 
           padding: 0.1rem 1rem;
@@ -167,7 +167,7 @@ main.home {
         }
 
         &:hover .info__text {
-          background-color: $color-gray-2;
+          background-color: $color-black-2;
         }
 
         // info item

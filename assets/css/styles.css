@@ -112,6 +112,7 @@ aside.sidebar > section {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  text-align: center;
 }
 aside.sidebar > section h2 {
   color: #cf9965;
@@ -139,9 +140,13 @@ aside.sidebar > section nav ul h3 .tag {
 aside.sidebar > section nav ul > h3:first-child {
   margin-top: 0;
 }
+aside.sidebar > section nav ul li {
+  padding: 0;
+}
 aside.sidebar > section nav ul li a {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   font-weight: 500;
   text-transform: capitalize;
@@ -154,12 +159,58 @@ aside.sidebar > section nav ul li a i {
 aside.sidebar > section nav ul li a:hover {
   color: #df8282;
 }
+@media (min-width: 576px) {
+  aside.sidebar > section {
+    text-align: left;
+  }
+  aside.sidebar > section nav ul li {
+    padding: 0 2rem;
+  }
+  aside.sidebar > section nav ul li a {
+    justify-content: stretch;
+  }
+}
+@media (min-width: 992px) {
+  aside.sidebar > section nav ul li {
+    padding: 0;
+  }
+}
+aside.sidebar .sidebar__social nav ul {
+  justify-content: center;
+  flex-direction: row;
+  gap: 2rem;
+}
+aside.sidebar .sidebar__social nav ul li a i {
+  font-size: 1.8rem;
+}
+aside.sidebar .sidebar__social nav ul li a i:hover {
+  color: #d96060;
+}
+aside.sidebar .sidebar__social nav ul li a span {
+  display: none;
+}
+@media (min-width: 576px) {
+  aside.sidebar .sidebar__social nav ul {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  aside.sidebar .sidebar__social nav ul li a i {
+    font-size: 1.5rem;
+  }
+  aside.sidebar .sidebar__social nav ul li a i:hover {
+    color: #fcd8a1;
+  }
+  aside.sidebar .sidebar__social nav ul li a span {
+    display: block;
+  }
+}
 
 .progress-bar {
+  background-color: #454a53;
   width: 100%;
-  background-color: #22262e;
-  border-radius: 5rem;
   height: 2.1rem;
+  border-radius: 5rem;
+  overflow-x: hidden;
 }
 @media (min-width: 576px) {
   .progress-bar {
@@ -171,7 +222,7 @@ aside.sidebar > section nav ul li a:hover {
   display: block;
   height: 100%;
   border-radius: inherit;
-  background-color: #0e0e0e;
+  background-color: #272c35;
   transition: background-color 0.3s;
   -webkit-animation: progressBar 2s ease;
   -webkit-animation-fill-mode: both;
@@ -389,7 +440,7 @@ main.home .home__profile p {
 main.home section:not(.home__profile) {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 main.home section:not(.home__profile) h2 {
   color: #cf9965;
@@ -409,7 +460,7 @@ main.home section:not(.home__profile) ul {
 }
 main.home section:not(.home__profile) ul h3 {
   color: #fcd8a1;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 300;
   text-transform: uppercase;
   text-align: center;
@@ -446,8 +497,7 @@ main.home .home__info .info__list li {
 main.home .home__info .info__list li .info__text {
   display: block;
   color: #d96060;
-  font-size: 1.2rem;
-  font-weight: 400;
+  font-size: 1.3rem;
   text-transform: uppercase;
   position: absolute;
 }
@@ -455,7 +505,7 @@ main.home .home__info .info__list li .info__item {
   color: #d1d5db;
   text-align: center;
   font-size: 1.3rem;
-  font-weight: 500;
+  font-weight: 300;
   line-height: 2;
 }
 @media (min-width: 576px) {
@@ -466,13 +516,14 @@ main.home .home__info .info__list li .info__item {
   main.home .home__info .info__list li .info__text {
     position: static;
     min-width: 15rem;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    font-weight: 300;
     border-radius: 1rem;
     padding: 0.1rem 1rem;
     transition: background-color 0.3s;
   }
   main.home .home__info .info__list li:hover .info__text {
-    background-color: #272c35;
+    background-color: #0e0e0e;
   }
   main.home .home__info .info__list li .info__item {
     text-align: left;
