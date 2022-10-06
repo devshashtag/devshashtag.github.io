@@ -7,15 +7,18 @@ main.projects {
     // header
     h2 {
       color: $color-orange-0;
-      text-transform: uppercase;
-      text-align: center;
 
       font-size: 1.3rem;
       font-weight: 500;
+
+      white-space: nowrap;
+      text-transform: uppercase;
       text-align: center;
+
       display: flex;
       align-items: center;
       gap: 2rem;
+
       margin: 2rem 0;
 
       &::before,
@@ -61,6 +64,7 @@ main.projects {
 
     // image
     .card__image {
+      cursor: pointer;
       line-height: 0;
     }
 
@@ -89,9 +93,12 @@ main.projects {
       transition: all $transition-0;
     }
 
-    &:not(.modal--active):hover .card__caption {
-      visibility: visible;
-      opacity: 1;
+    // caption
+    @include breakpoint(md) {
+      &:not(.modal--active):hover .card__caption {
+        visibility: visible;
+        opacity: 1;
+      }
     }
 
     // modal
