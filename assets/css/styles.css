@@ -23,6 +23,25 @@ video {
   height: auto;
 }
 
+button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+}
+
 ::-webkit-scrollbar {
   background-color: #22262e;
   color: #bcb4a8;
@@ -71,6 +90,10 @@ a {
 
 html {
   scroll-behavior: smooth;
+}
+
+body.no-scroll {
+  overflow: hidden;
 }
 
 @-webkit-keyframes progressBar {
@@ -374,7 +397,7 @@ header.header .header__brand span {
   color: #ec406a;
 }
 
-.main__container {
+.main__container, main.projects {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -383,12 +406,12 @@ header.header .header__brand span {
   padding: 2rem;
 }
 @media (min-width: 768px) {
-  .main__container {
+  .main__container, main.projects {
     padding: 2rem 3rem;
   }
 }
 @media (min-width: 992px) {
-  .main__container {
+  .main__container, main.projects {
     flex-direction: row;
     padding: 2rem 4rem;
   }
@@ -528,6 +551,203 @@ main.home .home__info .info__list li .info__item {
   main.home .home__info .info__list li .info__item {
     text-align: left;
   }
+}
+
+main.projects .projects__categories {
+  margin: 0 auto;
+}
+main.projects .projects__categories h2 {
+  color: #cf9965;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+main.projects .projects__categories h2::before, main.projects .projects__categories h2::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 0.2rem;
+  border-radius: 1rem;
+  background-color: #272c35;
+}
+main.projects .projects__categories .category__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: flex-start;
+  justify-content: flex-start;
+  justify-items: flex-start;
+  gap: 2rem;
+  padding: 1rem;
+}
+@media (min-width: 576px) {
+  main.projects .projects__categories .category__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  main.projects .projects__categories .category__cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+main.projects .category__card {
+  position: relative;
+}
+main.projects .category__card .card__image {
+  line-height: 0;
+}
+main.projects .category__card .card__caption {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(18, 18, 18, 0.6666666667);
+  color: #fde782;
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  transition: all 0.3s;
+}
+main.projects .category__card:not(.modal--active):hover .card__caption {
+  visibility: visible;
+  opacity: 1;
+}
+main.projects .category__card.modal--active .card__modal {
+  transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
+}
+main.projects .card__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(18, 18, 18, 0.9333333333);
+  z-index: 10;
+  transform: translateY(-100px);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  padding: 2rem 1rem;
+}
+main.projects .card__modal .modal__box {
+  max-width: 820px;
+  background-color: #272c35;
+  padding: 1rem 1.2rem;
+  border-radius: 2px;
+  margin: 0 auto;
+  overflow: auto;
+  max-height: 94vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main.projects .card__modal .modal__close {
+  padding: 0.5rem;
+  text-align: right;
+}
+main.projects .card__modal .modal__close i {
+  cursor: pointer;
+  font-size: 1.7rem;
+  color: #df8282;
+  vertical-align: bottom;
+}
+main.projects .card__modal .modal__close i:hover {
+  color: #d96060;
+}
+@media (min-width: 768px) {
+  main.projects .card__modal .modal__close {
+    padding: 1rem;
+  }
+  main.projects .card__modal .modal__close i {
+    font-size: 2rem;
+  }
+}
+main.projects .card__modal .modal__image {
+  line-height: 0;
+}
+main.projects .card__modal .modal__image img {
+  cursor: pointer;
+  border-radius: 2px;
+  opacity: 0.8;
+}
+main.projects .card__modal .modal__content {
+  background-color: rgba(18, 18, 18, 0.6666666667);
+  padding: 2rem 1rem;
+  border-radius: 2px;
+}
+main.projects .card__modal .modal__content h3 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: #d1d5db;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  main.projects .card__modal .modal__content h3 {
+    font-size: 1.6rem;
+  }
+}
+main.projects .card__modal .modal__content h3::before {
+  content: "#";
+  display: inline-block;
+  color: #cf9965;
+  padding-right: 0.5rem;
+}
+main.projects .card__modal .modal__content p,
+main.projects .card__modal .modal__content ul {
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: #d1d5db;
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+}
+@media (min-width: 768px) {
+  main.projects .card__modal .modal__content p,
+main.projects .card__modal .modal__content ul {
+    font-size: 1.3rem;
+  }
+}
+main.projects .card__modal .modal__content p a,
+main.projects .card__modal .modal__content ul a {
+  color: #fde782;
+}
+main.projects .card__modal .modal__content p a:hover,
+main.projects .card__modal .modal__content ul a:hover {
+  color: #cf9965;
+}
+main.projects .card__modal .modal__content > :last-child {
+  margin-bottom: 0;
+}
+main.projects .card__modal .modal__content ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+main.projects .card__modal .modal__content ul li a {
+  color: #fcd8a1;
+}
+main.projects .card__modal .modal__content ul li::before {
+  content: "";
+  display: inline-block;
+  border: 2px solid #d96060;
+  border-radius: 50%;
 }
 
 /*# sourceMappingURL=styles.css.map */
