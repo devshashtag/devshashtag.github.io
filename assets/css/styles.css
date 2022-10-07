@@ -645,7 +645,7 @@ main.projects .card__modal {
   padding: 2rem 1rem;
 }
 main.projects .card__modal .modal__box {
-  max-width: 820px;
+  max-width: 1025px;
   background-color: #22262e;
   padding: 1rem 1.2rem;
   border-radius: 2px;
