@@ -40,9 +40,6 @@ main.projects {
     .category__cards {
       display: grid;
       grid-template-columns: 1fr;
-      align-items: flex-start;
-      justify-content: flex-start;
-      justify-items: flex-start;
       gap: 2rem;
 
       padding: 1rem;
@@ -69,7 +66,7 @@ main.projects {
     // image
     .card__image {
       cursor: pointer;
-      line-height: 0;
+      height: 100%;
     }
 
     // caption
