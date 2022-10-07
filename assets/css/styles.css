@@ -19,8 +19,8 @@ a {
 
 img,
 video {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 100%;
 }
 
 button {
@@ -60,7 +60,7 @@ button {
 }
 
 ::-webkit-scrollbar-corner {
-  background-color: #1a1d1e;
+  background-color: #16191b;
 }
 
 html {
@@ -346,7 +346,7 @@ header.header .menu__links.active {
   gap: 1px;
 }
 header.header .menu__links li a {
-  background-color: #1a1d1e;
+  background-color: #16191b;
   display: inline-block;
   font-size: 1.2rem;
   text-transform: uppercase;
@@ -558,15 +558,18 @@ main.projects .projects__categories {
 }
 main.projects .projects__categories h2 {
   color: #cf9965;
-  text-transform: uppercase;
-  text-align: center;
   font-size: 1.3rem;
   font-weight: 500;
+  white-space: nowrap;
+  text-transform: uppercase;
   text-align: center;
   display: flex;
   align-items: center;
   gap: 2rem;
   margin: 2rem 0;
+}
+main.projects .projects__categories h2 .sep {
+  color: #d96060;
 }
 main.projects .projects__categories h2::before, main.projects .projects__categories h2::after {
   content: "";
@@ -579,9 +582,6 @@ main.projects .projects__categories h2::before, main.projects .projects__categor
 main.projects .projects__categories .category__cards {
   display: grid;
   grid-template-columns: 1fr;
-  align-items: flex-start;
-  justify-content: flex-start;
-  justify-items: flex-start;
   gap: 2rem;
   padding: 1rem;
 }
@@ -600,7 +600,8 @@ main.projects .category__card {
   position: relative;
 }
 main.projects .category__card .card__image {
-  line-height: 0;
+  cursor: pointer;
+  height: 100%;
 }
 main.projects .category__card .card__caption {
   cursor: pointer;
@@ -621,14 +622,18 @@ main.projects .category__card .card__caption {
   text-transform: capitalize;
   transition: all 0.3s;
 }
-main.projects .category__card:not(.modal--active):hover .card__caption {
+@media (min-width: 768px) {
+  main.projects .category__card:not(.modal--active):hover .card__caption {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+main.projects .category__card.modal--active .card__modal {
   visibility: visible;
   opacity: 1;
 }
-main.projects .category__card.modal--active .card__modal {
+main.projects .category__card.modal--active .card__modal .modal__box {
   transform: translateY(0);
-  visibility: visible;
-  opacity: 1;
 }
 main.projects .card__modal {
   position: fixed;
@@ -638,7 +643,6 @@ main.projects .card__modal {
   height: 100%;
   background-color: rgba(18, 18, 18, 0.9333333333);
   z-index: 10;
-  transform: translateY(-100px);
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s;
@@ -646,7 +650,7 @@ main.projects .card__modal {
 }
 main.projects .card__modal .modal__box {
   max-width: 820px;
-  background-color: #272c35;
+  background-color: #16191b;
   padding: 1rem 1.2rem;
   border-radius: 2px;
   margin: 0 auto;
@@ -655,6 +659,8 @@ main.projects .card__modal .modal__box {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  transform: translateY(-100px);
+  transition: all 0.3s linear;
 }
 main.projects .card__modal .modal__close {
   padding: 0.5rem;
