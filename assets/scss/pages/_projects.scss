@@ -21,6 +21,10 @@ main.projects {
 
       margin: 2rem 0;
 
+      .sep {
+        color: $color-red-0;
+      }
+
       &::before,
       &::after {
         content: '';
@@ -76,6 +80,7 @@ main.projects {
       left: 0;
       height: 100%;
       width: 100%;
+
       visibility: hidden;
       opacity: 0;
 
