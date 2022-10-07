@@ -108,9 +108,13 @@ main.projects {
 
     // modal
     &.modal--active .card__modal {
-      transform: translateY(0);
       visibility: visible;
       opacity: 1;
+
+      // box
+      .modal__box {
+        transform: translateY(0);
+      }
     }
   }
 
@@ -123,8 +127,6 @@ main.projects {
     height: 100%;
     background-color: $color-black-alpha-3;
     z-index: 10;
-
-    transform: translateY(-100px);
 
     opacity: 0;
     visibility: hidden;
@@ -147,6 +149,9 @@ main.projects {
       display: flex;
       flex-direction: column;
       gap: 1rem;
+
+      transform: translateY(-100px);
+      transition: all $transition-0 linear;
     }
 
     // close
