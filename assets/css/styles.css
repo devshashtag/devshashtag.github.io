@@ -658,24 +658,34 @@ main.projects .card__modal .modal__box {
   transform: translateY(-100px);
   transition: all 0.3s linear;
 }
-main.projects .card__modal .modal__close {
+main.projects .card__modal .modal__header {
+  display: flex;
+  justify-content: space-between;
   padding: 0.5rem;
-  text-align: right;
 }
-main.projects .card__modal .modal__close i {
+main.projects .card__modal .modal__header .modal__name {
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: #d1d5db;
+}
+main.projects .card__modal .modal__header i {
   cursor: pointer;
   font-size: 1.7rem;
   color: #df8282;
   vertical-align: bottom;
 }
-main.projects .card__modal .modal__close i:hover {
+main.projects .card__modal .modal__header i:hover {
   color: #d96060;
 }
 @media (min-width: 768px) {
-  main.projects .card__modal .modal__close {
+  main.projects .card__modal .modal__header {
     padding: 1rem;
   }
-  main.projects .card__modal .modal__close i {
+  main.projects .card__modal .modal__header .modal__name {
+    font-size: 1.6rem;
+  }
+  main.projects .card__modal .modal__header i {
     font-size: 2rem;
   }
 }

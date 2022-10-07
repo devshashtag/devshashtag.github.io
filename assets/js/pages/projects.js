@@ -7,7 +7,7 @@ projectsCategories.addEventListener('click', (e) => {
     const elm = e.target;
     const categoryCard = elm.closest('.category__card');
     const cardModal = categoryCard.querySelector('.card__modal');
-    const modalClose = cardModal.querySelector('.modal__close button i');
+    const modalClose = cardModal.querySelector('.modal__header button i');
 
     const modalToggles = [
       elm.classList.contains('card__caption'),
@@ -21,6 +21,7 @@ projectsCategories.addEventListener('click', (e) => {
       categoryCard.classList.toggle('modal--active');
       documentBody.classList.toggle('no-scroll');
     }
-
-  } catch (err) { return; }
+  } catch (err) {
+    return;
+  }
 });
