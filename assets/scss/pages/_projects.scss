@@ -106,10 +106,10 @@ main.projects {
     // modal
     &.modal--active .card__modal {
       visibility: visible;
-      opacity: 1;
 
       // box
       .modal__box {
+        opacity: 1;
         transform: translateY(0);
       }
     }
@@ -125,9 +125,7 @@ main.projects {
     background-color: $color-black-alpha-3;
     z-index: 10;
 
-    opacity: 0;
     visibility: hidden;
-    transition: all $transition-0;
 
     padding: 2rem 1rem;
 
@@ -147,8 +145,9 @@ main.projects {
       flex-direction: column;
       gap: 1rem;
 
+      opacity: 0;
       transform: translateY(-100px);
-      transition: all $transition-0 linear;
+      transition: all $transition-0;
     }
 
     // header

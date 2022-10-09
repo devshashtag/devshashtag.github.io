@@ -626,9 +626,9 @@ main.projects .category__card .card__caption {
 }
 main.projects .category__card.modal--active .card__modal {
   visibility: visible;
-  opacity: 1;
 }
 main.projects .category__card.modal--active .card__modal .modal__box {
+  opacity: 1;
   transform: translateY(0);
 }
 main.projects .card__modal {
@@ -639,9 +639,7 @@ main.projects .card__modal {
   height: 100%;
   background-color: rgba(18, 18, 18, 0.9333333333);
   z-index: 10;
-  opacity: 0;
   visibility: hidden;
-  transition: all 0.3s;
   padding: 2rem 1rem;
 }
 main.projects .card__modal .modal__box {
@@ -655,8 +653,9 @@ main.projects .card__modal .modal__box {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  opacity: 0;
   transform: translateY(-100px);
-  transition: all 0.3s linear;
+  transition: all 0.3s;
 }
 main.projects .card__modal .modal__header {
   display: flex;
