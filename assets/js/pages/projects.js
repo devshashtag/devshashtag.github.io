@@ -9,10 +9,10 @@ projectsCategories.addEventListener('click', (e) => {
     const modalClose = categoryCard.querySelector('.modal__header button i');
 
     const modalToggles = [
-      // modal - toggle open
+      // modal - open
       elm.classList.contains('card__caption'),
       elm.parentElement.classList.contains('card__image'),
-      // modal - toggle close
+      // modal - close
       elm.classList.contains('card__modal'),
       elm === modalClose,
     ];
