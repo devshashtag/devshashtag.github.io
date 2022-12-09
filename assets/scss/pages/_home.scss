@@ -39,6 +39,11 @@ main.home {
 
       font-size: 1.3rem;
       text-align: center;
+
+      b {
+        color: $color-orange-1;
+        text-transform: capitalize;
+      }
     }
 
     @include breakpoint(sm) {
@@ -126,7 +131,7 @@ main.home {
         padding: 0.5rem 2rem;
       }
 
-      // info text
+      // text
       .info__text {
         display: block;
 
@@ -138,7 +143,7 @@ main.home {
         position: absolute;
       }
 
-      // info item
+      // item
       .info__item {
         color: $color-white-1;
         text-align: center;
@@ -152,7 +157,7 @@ main.home {
         cursor: pointer;
         justify-content: stretch;
 
-        // info text
+        // text
         .info__text {
           position: static;
           min-width: 15rem;
@@ -170,7 +175,7 @@ main.home {
           background-color: $color-black-2;
         }
 
-        // info item
+        // item
         .info__item {
           text-align: left;
         }

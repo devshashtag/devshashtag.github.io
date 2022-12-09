@@ -99,7 +99,7 @@ aside.sidebar {
     }
   }
 
-  // // social
+  // social
   .sidebar__social nav ul {
     justify-content: center;
     flex-direction: row;
@@ -132,6 +132,15 @@ aside.sidebar {
       li a span {
         display: block;
       }
+    }
+  }
+
+  // contact
+  .sidebar__contact nav ul li a i {
+    display: none;
+
+    @include breakpoint(sm) {
+      display: block;
     }
   }
 }

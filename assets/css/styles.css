@@ -223,6 +223,14 @@ aside.sidebar .sidebar__social nav ul li a span {
     display: block;
   }
 }
+aside.sidebar .sidebar__contact nav ul li a i {
+  display: none;
+}
+@media (min-width: 576px) {
+  aside.sidebar .sidebar__contact nav ul li a i {
+    display: block;
+  }
+}
 
 .progress-bar {
   background-color: #454a53;
@@ -367,7 +375,7 @@ header.header .menu__links li.active-item a {
     gap: 2rem;
   }
   header.header .menu__links,
-header.header .menu__links li a {
+  header.header .menu__links li a {
     background-color: transparent;
   }
 }
@@ -447,6 +455,10 @@ main.home .home__profile p {
   font-size: 1.3rem;
   text-align: center;
 }
+main.home .home__profile p b {
+  color: #fcd8a1;
+  text-transform: capitalize;
+}
 @media (min-width: 576px) {
   main.home .home__profile {
     flex-direction: row;
@@ -490,7 +502,7 @@ main.home section:not(.home__profile) ul > h3:first-child {
 }
 @media (min-width: 576px) {
   main.home section:not(.home__profile) h2,
-main.home section:not(.home__profile) ul h3 {
+  main.home section:not(.home__profile) ul h3 {
     text-align: left;
   }
 }
@@ -730,7 +742,7 @@ main.projects .card__modal .modal__content ul {
 }
 @media (min-width: 768px) {
   main.projects .card__modal .modal__content p,
-main.projects .card__modal .modal__content ul {
+  main.projects .card__modal .modal__content ul {
     font-size: 1.3rem;
   }
 }
