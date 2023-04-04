@@ -136,11 +136,15 @@ aside.sidebar {
   }
 
   // contact
-  .sidebar__contact nav ul li a i {
-    display: none;
+  .sidebar__contact nav ul li a {
+    text-transform: lowercase;
 
-    @include breakpoint(sm) {
-      display: block;
+    i {
+      display: none;
+
+      @include breakpoint(sm) {
+        display: block;
+      }
     }
   }
 }

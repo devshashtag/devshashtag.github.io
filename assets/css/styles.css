@@ -223,6 +223,9 @@ aside.sidebar .sidebar__social nav ul li a span {
     display: block;
   }
 }
+aside.sidebar .sidebar__contact nav ul li a {
+  text-transform: lowercase;
+}
 aside.sidebar .sidebar__contact nav ul li a i {
   display: none;
 }
