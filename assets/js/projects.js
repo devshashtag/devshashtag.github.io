@@ -29,27 +29,18 @@ const projectCardsAPI = '/assets/js/data/projects.json';
 const projectCards = await getJSON(projectCardsAPI);
 
 for (const card of projectCards) {
-  const category = card['category'];
+  const categoryTeamWork = categoryTemplate(card['category'], true);
+  const categorySolo = categoryTemplate(card['category'], false);
   const projects = card['projects'];
-
-  let teamwork = [];
-  let solo = [];
+  let teamwork = '';
+  let solo = '';
 
   for (const project of projects) {
-    if (project.teamwork) {
-      teamwork.push(cardTemplate(project));
-    } else {
-      solo.push(cardTemplate(project));
-    }
+    if (project.teamwork) teamwork += cardTemplate(project);
+    else solo += cardTemplate(project);
   }
 
-  // category teamwork
-  const categoryTeamWorkHTML = categoryTemplate(category, true);
-  const teamworkCardsHTML = teamwork.reduce((html, current) => html + current, '');
-  categoryCard.insertAdjacentHTML('beforeend', categoryTeamWorkHTML + teamworkCardsHTML);
-
-  // category solo
-  const categorySoloHTML = categoryTemplate(category, false);
-  const soloCardsHTML = solo.reduce((html, current) => html + current, '');
-  categoryCard.insertAdjacentHTML('beforeend', categorySoloHTML + soloCardsHTML);
+  // categories
+  categoryCard.insertAdjacentHTML('beforeend', categoryTeamWork + teamwork);
+  categoryCard.insertAdjacentHTML('beforeend', categorySolo + solo);
 }
