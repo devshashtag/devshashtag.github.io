@@ -94,7 +94,7 @@ main.projects {
 
       // caption
       @include breakpoint(md) {
-        &:not(.modal--active):hover .card__caption {
+        &:not(.modal--active):hover .card__name {
           visibility: visible;
           opacity: 1;
         }
@@ -162,9 +162,9 @@ main.projects {
         }
 
         // close
-        i {
+        .modal__close i {
           cursor: pointer;
-          font-size: 1.7rem;
+          font-size: 2rem;
           color: $color-red-1;
           vertical-align: bottom;
 

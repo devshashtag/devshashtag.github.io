@@ -640,7 +640,7 @@ main.projects .projects__categories .category__card .card__name {
   transition: all 0.3s;
 }
 @media (min-width: 768px) {
-  main.projects .projects__categories .category__card:not(.modal--active):hover .card__caption {
+  main.projects .projects__categories .category__card:not(.modal--active):hover .card__name {
     visibility: visible;
     opacity: 1;
   }
@@ -689,13 +689,13 @@ main.projects .projects__categories .card__modal .modal__header .modal__name {
   text-transform: capitalize;
   color: #d1d5db;
 }
-main.projects .projects__categories .card__modal .modal__header i {
+main.projects .projects__categories .card__modal .modal__header .modal__close i {
   cursor: pointer;
-  font-size: 1.7rem;
+  font-size: 2rem;
   color: #df8282;
   vertical-align: bottom;
 }
-main.projects .projects__categories .card__modal .modal__header i:hover {
+main.projects .projects__categories .card__modal .modal__header .modal__close i:hover {
   color: #d96060;
 }
 @media (min-width: 768px) {
