@@ -1,20 +1,20 @@
 // global templates
 function headerMenuTemplate() {
-  const currentPage = window.location.pathname.split(".")[0];
+  const currentPage = window.location.pathname.split('.')[0];
 
   const pages = [
-    { name: "home", url: "/" },
-    { name: "projects", url: "/projects.html" },
+    { name: 'home', url: '/' },
+    { name: 'projects', url: '/projects.html' },
   ];
 
   const menuItems = pages.map((page) => {
-    const activeClass = currentPage == page.url.split(".")[0] ? ' class="active-item"' : "";
+    const activeClass = currentPage == page.url.split('.')[0] ? ' class="active-item"' : '';
     return `
       <li${activeClass}><a href="${page.url}">${page.name}</a></li>
     `;
   });
 
-  return menuItems.join("");
+  return menuItems.join('');
 }
 
 function headerTemplate() {
@@ -45,16 +45,33 @@ function headerTemplate() {
   `;
 }
 
+// home templates
+function homeSkillsTemplate(items) {
+  let itemsHTML = '';
+
+  for (const item of items) {
+    itemsHTML += `
+      <!-- ${item.name} -->
+      <li>
+        <div class="info__text">${item.name}</div>
+        <div class="progress-bar" style="--prog: ${item.progress}%" title="${item.progress}"></div>
+      </li>
+    `;
+  }
+
+  return itemsHTML;
+}
+
 // projects templates
 function categoryTemplate(name, teamwork) {
   return `
     <!-- category -->
-    <div class="category__name">${name}<span class="sep">-</span>${teamwork ? "team work" : "solo"}</div>
+    <div class="category__name">${name}<span class="sep">-</span>${teamwork ? 'team work' : 'solo'}</div>
   `;
 }
 
 function imagesTemplate(projectName, homeUrl, imageUrls) {
-  let imagesHTML = "";
+  let imagesHTML = '';
 
   for (const imageUrl of imageUrls) {
     imagesHTML += `
@@ -68,15 +85,15 @@ function imagesTemplate(projectName, homeUrl, imageUrls) {
 }
 
 function linksTemplate(projectName, pages, root) {
-  let urlsHTML = "<ul>";
+  let urlsHTML = '<ul>';
 
   for (const page of pages) {
     urlsHTML += `
-      <li><a href="${(root ? root : "") + page.url}" target="_blank">${projectName} - ${page.name}</a></li>
+      <li><a href="${(root ? root : '') + page.url}" target="_blank">${projectName} - ${page.name}</a></li>
     `;
   }
 
-  return urlsHTML + "</ul>";
+  return urlsHTML + '</ul>';
 }
 
 function cardTemplate(project) {
@@ -121,4 +138,4 @@ const getJSON = async (url) => {
   return jsonData;
 };
 
-export { headerTemplate, categoryTemplate, cardTemplate, getJSON };
+export { headerTemplate, homeSkillsTemplate, categoryTemplate, cardTemplate, getJSON };

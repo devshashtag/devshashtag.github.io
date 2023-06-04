@@ -260,11 +260,11 @@ aside.sidebar .sidebar__contact nav ul li a i {
   border-radius: inherit;
   background-color: #272c35;
   transition: background-color 0.3s;
-  -webkit-animation: progressBar 2s ease;
+  -webkit-animation: progressBar 2s linear;
   -webkit-animation-fill-mode: both;
-  -moz-animation: progressBar 2s ease;
+  -moz-animation: progressBar 2s linear;
   -moz-animation-fill-mode: both;
-  animation: progressBar 2s ease;
+  animation: progressBar 2s linear;
   animation-fill-mode: both;
 }
 

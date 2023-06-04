@@ -12,7 +12,7 @@
   }
 
   &::before {
-    content: "";
+    content: '';
     display: block;
     height: 100%;
 
@@ -20,11 +20,11 @@
     background-color: $color-gray-2;
     transition: background-color $transition-0;
 
-    -webkit-animation: progressBar 2s ease;
+    -webkit-animation: progressBar 2s linear;
     -webkit-animation-fill-mode: both;
-    -moz-animation: progressBar 2s ease;
+    -moz-animation: progressBar 2s linear;
     -moz-animation-fill-mode: both;
-    animation: progressBar 2s ease;
+    animation: progressBar 2s linear;
     animation-fill-mode: both;
   }
 }
