@@ -8,5 +8,8 @@
     "sass": "sass --watch assets/scss/styles.scss assets/css/styles.css"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.62.1"
+  }
 }
