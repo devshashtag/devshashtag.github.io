@@ -9,21 +9,21 @@
     ]
   },
   {
-    "category": "others",
-    "items": [
-      { "name": "linux", "progress": 100 },
-      { "name": "git", "progress": 100 },
-      { "name": "bash", "progress": 100 },
-      { "name": "python", "progress": 100 }
-    ]
-  },
-  {
     "category": "english",
     "items": [
       { "name": "reading", "progress": 90 },
       { "name": "writing", "progress": 50 },
       { "name": "listening", "progress": 100 },
       { "name": "speaking", "progress": 50 }
+    ]
+  },
+  {
+    "category": "others",
+    "items": [
+      { "name": "linux", "progress": 100 },
+      { "name": "git", "progress": 100 },
+      { "name": "bash", "progress": 100 },
+      { "name": "python", "progress": 100 }
     ]
   }
 ]
