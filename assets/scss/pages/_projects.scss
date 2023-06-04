@@ -1,42 +1,9 @@
 main.projects {
   @extend .main__container;
-  // categories
+
   .projects__categories {
-    margin: 0 auto;
+    width: 100%;
 
-    // header
-    h2 {
-      color: $color-orange-0;
-
-      font-size: 1.3rem;
-      font-weight: 500;
-
-      white-space: nowrap;
-      text-transform: uppercase;
-      text-align: center;
-
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-
-      margin: 2rem 0;
-
-      .sep {
-        color: $color-red-0;
-      }
-
-      &::before,
-      &::after {
-        content: '';
-        display: inline-block;
-        width: 100%;
-        height: 0.2rem;
-        border-radius: 1rem;
-        background-color: $color-gray-2;
-      }
-    }
-
-    // cards
     .category__cards {
       display: grid;
       grid-template-columns: 1fr;
@@ -45,7 +12,7 @@ main.projects {
       padding: 1rem;
     }
 
-    @include breakpoint(sm) {
+    @include breakpoint(md) {
       .category__cards {
         grid-template-columns: repeat(2, 1fr);
       }
@@ -57,223 +24,253 @@ main.projects {
         gap: 1.5rem;
       }
     }
-  }
 
-  // card
-  .category__card {
-    position: relative;
+    .category__name {
+      grid-column: 1 / -1;
+      color: $color-orange-0;
 
-    // image
-    .card__image {
-      cursor: pointer;
-      height: 100%;
-    }
+      font-size: 1.5rem;
+      font-weight: 500;
 
-    // caption
-    .card__caption {
-      cursor: pointer;
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-
-      visibility: hidden;
-      opacity: 0;
+      white-space: nowrap;
+      text-transform: uppercase;
 
       display: flex;
       align-items: center;
-      justify-content: center;
+      gap: 1rem;
 
-      background-color: $color-black-alpha-4;
-      color: $color-gold-0;
+      margin: 1rem 0;
 
-      font-size: 1.4rem;
-      font-weight: 400;
-      text-transform: capitalize;
+      .sep {
+        color: $color-red-0;
+      }
 
-      transition: all $transition-0;
+      &::before,
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 0.2rem;
+        border-radius: 1rem;
+        background-color: $color-gray-1;
+      }
     }
 
-    // caption
-    @include breakpoint(md) {
-      &:not(.modal--active):hover .card__caption {
+    // card
+    .category__card {
+      position: relative;
+
+      // image
+      .card__image {
+        cursor: pointer;
+        height: 100%;
+      }
+
+      // caption
+      .card__name {
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+
+        visibility: hidden;
+        opacity: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background-color: $color-black-alpha-4;
+        color: $color-gold-0;
+
+        font-size: 1.4rem;
+        font-weight: 400;
+        text-transform: capitalize;
+
+        transition: all $transition-0;
+      }
+
+      // caption
+      @include breakpoint(md) {
+        &:not(.modal--active):hover .card__caption {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+
+      // modal
+      &.modal--active .card__modal {
         visibility: visible;
-        opacity: 1;
+
+        // box
+        .modal__box {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     }
 
     // modal
-    &.modal--active .card__modal {
-      visibility: visible;
+    .card__modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $color-black-alpha-3;
+      z-index: 10;
+
+      visibility: hidden;
+
+      padding: 2rem 1rem;
 
       // box
       .modal__box {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  }
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
 
-  // modal
-  .card__modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: $color-black-alpha-3;
-    z-index: 10;
+        background-color: $color-gray-1;
+        padding: 1rem 1.2rem;
+        border-radius: 2px;
+        overflow-y: auto;
+        margin: 0 auto;
 
-    visibility: hidden;
+        max-width: calc($section-max-width * 0.8);
+        max-height: 100%;
 
-    padding: 2rem 1rem;
-
-    // box
-    .modal__box {
-      max-width: calc($section-max-width/1.2);
-      background-color: $color-gray-1;
-
-      padding: 1rem 1.2rem;
-      border-radius: 2px;
-      margin: 0 auto;
-
-      overflow: auto;
-      max-height: 100%;
-
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-
-      opacity: 0;
-      transform: translateY(-100px);
-      transition: all $transition-0;
-    }
-
-    // header
-    .modal__header {
-      display: flex;
-      justify-content: space-between;
-
-      padding: 0.5rem;
-
-      // name
-      .modal__name {
-        font-size: 1.4rem;
-        font-weight: 400;
-        text-transform: capitalize;
-        color: $color-white-1;
+        opacity: 0;
+        transform: translateY(-50px);
+        transition: all $transition-0;
       }
 
-      // close
-      i {
-        cursor: pointer;
-        font-size: 1.7rem;
-        color: $color-red-1;
-        vertical-align: bottom;
+      // header
+      .modal__header {
+        display: flex;
+        justify-content: space-between;
 
-        &:hover {
-          color: $color-red-0;
-        }
-      }
-
-      @include breakpoint(md) {
-        padding: 1rem;
+        padding: 0.5rem;
 
         // name
         .modal__name {
-          font-size: 1.6rem;
+          font-size: 1.4rem;
+          font-weight: 400;
+          text-transform: capitalize;
+          color: $color-white-1;
         }
 
         // close
         i {
-          font-size: 2rem;
-        }
-      }
-    }
-
-    // image
-    .modal__image {
-      line-height: 0;
-
-      img {
-        cursor: pointer;
-        border-radius: 2px;
-        opacity: 0.8;
-      }
-    }
-
-    // content
-    .modal__content {
-      background-color: $color-black-alpha-4;
-      padding: 2rem 1rem;
-      border-radius: 2px;
-
-      // header
-      h3 {
-        font-size: 1.4rem;
-        font-weight: 400;
-        text-transform: capitalize;
-        color: $color-white-1;
-        margin-bottom: 1rem;
-
-        @include breakpoint(md) {
-          font-size: 1.6rem;
-        }
-
-        &::before {
-          content: '#';
-          display: inline-block;
-          color: $color-orange-0;
-          padding-right: 0.5rem;
-        }
-      }
-
-      // text
-      p,
-      ul {
-        font-size: 1.2rem;
-        font-weight: 400;
-        text-transform: capitalize;
-        color: $color-white-1;
-        margin-bottom: 2rem;
-        margin-left: 1rem;
-
-        @include breakpoint(md) {
-          font-size: 1.3rem;
-        }
-
-        a {
-          color: $color-gold-0;
+          cursor: pointer;
+          font-size: 1.7rem;
+          color: $color-red-1;
+          vertical-align: bottom;
 
           &:hover {
-            color: $color-orange-0;
+            color: $color-red-0;
+          }
+        }
+
+        @include breakpoint(md) {
+          padding: 1rem;
+
+          // name
+          .modal__name {
+            font-size: 1.6rem;
+          }
+
+          // close
+          i {
+            font-size: 2rem;
           }
         }
       }
 
-      > :last-child {
-        margin-bottom: 0;
+      // image
+      .modal__image {
+        line-height: 0;
+
+        img {
+          cursor: pointer;
+          border-radius: 2px;
+          opacity: 0.8;
+        }
       }
 
-      // list
-      ul li {
-        display: flex;
-        align-items: center;
+      // content
+      .modal__content {
+        background-color: $color-black-alpha-4;
+        padding: 2rem 1rem;
+        border-radius: 2px;
 
-        gap: 0.8rem;
+        // header
+        h3 {
+          font-size: 1.4rem;
+          font-weight: 400;
+          text-transform: capitalize;
+          color: $color-white-1;
+          margin-bottom: 1rem;
 
-        margin-bottom: 1rem;
+          @include breakpoint(md) {
+            font-size: 1.6rem;
+          }
 
-        a {
-          color: $color-orange-1;
+          &::before {
+            content: "#";
+            display: inline-block;
+            color: $color-orange-0;
+            padding-right: 0.5rem;
+          }
         }
 
-        &::before {
-          content: '';
-          display: inline-block;
-          border: 2px solid $color-red-0;
-          border-radius: 50%;
+        // text
+        p,
+        ul {
+          font-size: 1.2rem;
+          font-weight: 400;
+          text-transform: capitalize;
+          color: $color-white-1;
+          margin-bottom: 2rem;
+          margin-left: 1rem;
+
+          @include breakpoint(md) {
+            font-size: 1.3rem;
+          }
+
+          a {
+            color: $color-gold-0;
+
+            &:hover {
+              color: $color-orange-0;
+            }
+          }
+        }
+
+        > :last-child {
+          margin-bottom: 0;
+        }
+
+        // list
+        ul li {
+          display: flex;
+          align-items: center;
+
+          gap: 0.8rem;
+
+          margin-bottom: 1rem;
+
+          a {
+            color: $color-orange-1;
+          }
+
+          &::before {
+            content: "";
+            display: inline-block;
+            border: 2px solid $color-red-0;
+            border-radius: 50%;
+          }
         }
       }
     }
