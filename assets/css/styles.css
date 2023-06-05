@@ -310,8 +310,8 @@ aside.sidebar .sidebar__contact nav ul li a i {
 }
 
 header.header {
-  background-color: #0e0e0e;
-  box-shadow: 0 0 10px #0e0e0e;
+  background-color: #1e2025;
+  box-shadow: 0 0 1rem rgba(18, 18, 18, 0.9333333333);
   position: sticky;
   top: 0;
   z-index: 10;
