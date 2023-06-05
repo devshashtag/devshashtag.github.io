@@ -126,6 +126,10 @@ main.projects {
 
       padding: 2rem 1rem;
 
+      @include breakpoint(md) {
+        padding: 1rem;
+      }
+
       // box
       .modal__box {
         display: flex;

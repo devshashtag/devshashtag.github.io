@@ -49,11 +49,7 @@ button {
 ::-webkit-scrollbar {
   background-color: $color-gray-1;
   color: #bcb4a8;
-  width: 1rem;
-
-  @include breakpoint(md) {
-    width: 0.5rem;
-  }
+  width: 0.75rem;
 }
 ::-webkit-scrollbar-thumb {
   background-color: $color-gray-3;

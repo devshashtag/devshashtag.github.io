@@ -41,12 +41,7 @@ button {
 ::-webkit-scrollbar {
   background-color: #22262e;
   color: #bcb4a8;
-  width: 1rem;
-}
-@media (min-width: 768px) {
-  ::-webkit-scrollbar {
-    width: 0.5rem;
-  }
+  width: 0.75rem;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -662,6 +657,11 @@ main.projects .projects__categories .card__modal {
   z-index: 10;
   visibility: hidden;
   padding: 2rem 1rem;
+}
+@media (min-width: 768px) {
+  main.projects .projects__categories .card__modal {
+    padding: 1rem;
+  }
 }
 main.projects .projects__categories .card__modal .modal__box {
   display: flex;

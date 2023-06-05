@@ -76,7 +76,7 @@ function imagesTemplate(projectName, homeUrl, imageUrls) {
   for (const imageUrl of imageUrls) {
     imagesHTML += `
       <a href="${homeUrl}" title="نمایش دمو" target="_blank">
-        <img src="${imageUrl}" alt="${projectName} alt" />
+        <img src="${imageUrl}" alt="${projectName}" loading="lazy" />
       </a>
     `;
   }
@@ -102,7 +102,7 @@ function cardTemplate(project) {
     <div class="category__card">
       <div class="card__name">${project.name}</div>
       <div class="card__image">
-        <img src="${project.images[0]}" alt="${project.name} alt" />
+        <img src="${project.images[0]}" alt="${project.name}" loading="lazy" />
       </div>
       <div class="card__modal">
         <div class="modal__box">
