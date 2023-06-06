@@ -7,7 +7,7 @@
   border-radius: 5rem;
   overflow-x: hidden;
 
-  @include breakpoint(sm) {
+  @include breakpoint(md) {
     height: $progress-bar-height;
   }
 

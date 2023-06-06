@@ -239,13 +239,13 @@ aside.sidebar .sidebar__contact nav ul li a i {
 .progress-bar {
   background-color: #454a53;
   width: 100%;
-  height: 2.1rem;
+  height: 2.5rem;
   border-radius: 5rem;
   overflow-x: hidden;
 }
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .progress-bar {
-    height: 1.6rem;
+    height: 2rem;
   }
 }
 .progress-bar::before {
@@ -514,13 +514,13 @@ main.home .home__skill li {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  cursor: pointer;
   position: relative;
   padding: 0.5rem 1rem;
 }
 @media (min-width: 768px) {
   main.home .home__skill li {
     padding: 0.5rem 2rem;
+    cursor: pointer;
   }
   main.home .home__skill li:hover .skill__name {
     background-color: #0e0e0e;

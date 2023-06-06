@@ -98,12 +98,12 @@ main.home {
     justify-content: center;
     gap: 1rem;
 
-    cursor: pointer;
     position: relative;
     padding: 0.5rem 1rem;
 
     @include breakpoint(md) {
       padding: 0.5rem 2rem;
+      cursor: pointer;
 
       &:hover .skill__name {
         background-color: $color-black-2;
