@@ -84,12 +84,14 @@ function projectsImagesTemplate(projectName, homeUrl, imageUrls) {
   return imagesHTML;
 }
 
-function projectsLinksTemplate(projectName, pages, root) {
+function projectsLinksTemplate(name, pages, root) {
+  if (!pages || !pages.length || !pages[0]?.name) return '';
+
   let urlsHTML = '<ul>';
 
   for (const page of pages) {
     urlsHTML += `
-      <li><a href="${(root ? root : '') + page.url}" target="_blank">${projectName} - ${page.name}</a></li>
+      <li><a href="${(root ? root : '') + page.url}" target="_blank">${name} - ${page.name}</a></li>
     `;
   }
 
@@ -97,6 +99,9 @@ function projectsLinksTemplate(projectName, pages, root) {
 }
 
 function projectsCardTemplate(project) {
+  const pages = projectsLinksTemplate(project.name, project.pages, project.url);
+  const sources = projectsLinksTemplate(project.name, project.sources);
+
   return `
     <!-- card -->
     <div class="category__card">
@@ -119,11 +124,9 @@ function projectsCardTemplate(project) {
             <h3>about</h3>
             <p>${project.description}</p>
 
-            <h3>live demo pages</h3>
-            ${projectsLinksTemplate(project.name, project.pages, project.url)}
+            ${pages.includes('li') ? `<h3>live demo pages</h3> ${pages}` : ''}
 
-            <h3>source code</h3>
-            ${projectsLinksTemplate(project.name, project.sources)}
+            ${sources.includes('li') ? `<h3>source code</h3> ${sources}` : ''}
           </div>
         </div>
       </div>
