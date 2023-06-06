@@ -41,6 +41,6 @@ for (const card of projectCards) {
   }
 
   // categories
-  categoryCard.insertAdjacentHTML('beforeend', categoryTeamWork + teamwork);
-  categoryCard.insertAdjacentHTML('beforeend', categorySolo + solo);
+  if (teamwork) categoryCard.insertAdjacentHTML('beforeend', categoryTeamWork + teamwork);
+  if (solo) categoryCard.insertAdjacentHTML('beforeend', categorySolo + solo);
 }
