@@ -270,7 +270,7 @@ aside.sidebar .sidebar__contact nav ul li a i {
   padding: 10px 5px;
   cursor: pointer;
 }
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   .navbar-toggle {
     display: none;
   }
@@ -346,30 +346,33 @@ header.header .menu__links {
   background-color: #d96060;
   visibility: hidden;
   opacity: 0;
-  transition: all 0.3s;
+  transition: visibility 0.3s, opacity 0.3s, gap 0.3s;
 }
 header.header .menu__links.active {
   visibility: visible;
   opacity: 1;
-  gap: 1px;
+  gap: 0.1rem;
 }
 header.header .menu__links li a {
-  background-color: #16191b;
+  background-color: #272c35;
   display: inline-block;
   font-size: 1.2rem;
   text-transform: uppercase;
   text-align: center;
+  box-shadow: 0 0 3rem rgba(18, 18, 18, 0.6666666667) inset;
   padding: 2rem 1rem;
   width: 100%;
-  transition: color 0.3s;
+  transition: color 0.3s, box-shadow 0.3s;
 }
 header.header .menu__links li a:hover {
   color: #df8282;
+  box-shadow: 0 0 5rem rgba(18, 18, 18, 0.9333333333) inset;
 }
 header.header .menu__links li.active-item a {
+  box-shadow: 0 0 5rem rgba(18, 18, 18, 0.9333333333) inset;
   color: #d96060;
 }
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   header.header .menu__links {
     position: static;
     flex-direction: row;
@@ -379,8 +382,13 @@ header.header .menu__links li.active-item a {
     gap: 2rem;
   }
   header.header .menu__links,
-  header.header .menu__links li a {
+  header.header .menu__links li a,
+  header.header .menu__links li a:hover {
     background-color: transparent;
+    box-shadow: none;
+  }
+  header.header .menu__links li.active-item a {
+    box-shadow: none;
   }
 }
 header.header .header__brand {
@@ -472,96 +480,67 @@ main.home .home__profile p b {
     text-align: left;
   }
 }
-main.home section:not(.home__profile) {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-main.home section:not(.home__profile) h2 {
+main.home section:not(.home__profile) h2,
+main.home section:not(.home__profile) h3 {
   color: #cf9965;
   text-transform: uppercase;
   text-align: center;
   font-size: 1.5rem;
 }
-main.home section:not(.home__profile) ul {
+@media (min-width: 768px) {
+  main.home section:not(.home__profile) h2,
+  main.home section:not(.home__profile) h3 {
+    text-align: left;
+  }
+}
+main.home section:not(.home__profile) h3 {
+  color: #fcd8a1;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-top: 2rem;
+}
+main.home section:not(.home__profile) .home__list {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-@media (min-width: 576px) {
-  main.home section:not(.home__profile) ul {
-    gap: 0;
+@media (min-width: 768px) {
+  main.home section:not(.home__profile) .home__list {
+    gap: 0.5rem;
   }
 }
-main.home section:not(.home__profile) ul h3 {
-  color: #fcd8a1;
-  font-size: 1.2rem;
-  font-weight: 300;
-  text-transform: uppercase;
-  text-align: center;
-  margin-top: 2rem;
-}
-main.home section:not(.home__profile) ul > h3:first-child {
-  margin-top: 0;
-}
-@media (min-width: 576px) {
-  main.home section:not(.home__profile) h2,
-  main.home section:not(.home__profile) ul h3 {
-    text-align: left;
-  }
-}
-main.home .home__info h2 {
-  margin-top: 2rem;
-}
-main.home .home__info > h2:first-child {
-  margin-top: 0;
-}
-main.home .home__info .info__list li {
+main.home .home__skill li {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  cursor: pointer;
   position: relative;
   padding: 0.5rem 1rem;
 }
 @media (min-width: 768px) {
-  main.home .home__info .info__list li {
+  main.home .home__skill li {
     padding: 0.5rem 2rem;
   }
+  main.home .home__skill li:hover .skill__name {
+    background-color: #0e0e0e;
+  }
 }
-main.home .home__info .info__list li .info__text {
+main.home .home__skill li .skill__name {
   display: block;
   color: #d96060;
   font-size: 1.3rem;
+  font-weight: 300;
   text-transform: uppercase;
+  border-radius: 1rem;
   position: absolute;
 }
-main.home .home__info .info__list li .info__item {
-  color: #d1d5db;
-  text-align: center;
-  font-size: 1.3rem;
-  font-weight: 300;
-  line-height: 2;
-}
-@media (min-width: 576px) {
-  main.home .home__info .info__list li {
-    cursor: pointer;
-    justify-content: stretch;
-  }
-  main.home .home__info .info__list li .info__text {
+@media (min-width: 768px) {
+  main.home .home__skill li .skill__name {
     position: static;
-    min-width: 15rem;
-    font-size: 1.5rem;
-    font-weight: 300;
-    border-radius: 1rem;
     padding: 0.1rem 1rem;
-    transition: background-color 0.3s;
-  }
-  main.home .home__info .info__list li:hover .info__text {
-    background-color: #0e0e0e;
-  }
-  main.home .home__info .info__list li .info__item {
-    text-align: left;
+    min-width: 12rem;
+    transition: all 0.3s linear;
   }
 }
 

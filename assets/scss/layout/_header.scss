@@ -46,41 +46,44 @@ header.header {
     visibility: hidden;
     opacity: 0;
 
-    transition: all $transition-0;
+    transition: visibility $transition-0, opacity $transition-0, gap $transition-0;
 
     // mobile styles
     &.active {
       visibility: visible;
       opacity: 1;
-
-      gap: 1px;
+      gap: 0.1rem;
     }
 
     // menu items
     li a {
-      background-color: $color-black-3;
+      background-color: $color-gray-2;
       display: inline-block;
 
       font-size: 1.2rem;
       text-transform: uppercase;
       text-align: center;
 
+      box-shadow: 0 0 3rem $color-black-alpha-4 inset;
+
       padding: 2rem 1rem;
       width: 100%;
 
-      transition: color $transition-0;
+      transition: color $transition-0, box-shadow $transition-0;
 
       &:hover {
         color: $color-red-1;
+        box-shadow: 0 0 5rem $color-black-alpha-3 inset;
       }
     }
 
     li.active-item a {
+      box-shadow: 0 0 5rem $color-black-alpha-3 inset;
       color: $color-red-0;
     }
 
     // desktop styles
-    @include breakpoint(sm) {
+    @include breakpoint(md) {
       position: static;
 
       flex-direction: row;
@@ -92,8 +95,14 @@ header.header {
       gap: 2rem;
 
       &,
-      li a {
+      li a,
+      li a:hover {
         background-color: transparent;
+        box-shadow: none;
+      }
+
+      li.active-item a {
+        box-shadow: none;
       }
     }
   }

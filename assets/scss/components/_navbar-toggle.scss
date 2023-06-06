@@ -6,7 +6,7 @@
   padding: 10px 5px;
   cursor: pointer;
 
-  @include breakpoint(sm) {
+  @include breakpoint(md) {
     display: none;
   }
 
@@ -22,7 +22,7 @@
 
     &::after,
     &::before {
-      content: "";
+      content: '';
       position: absolute;
 
       width: inherit;

@@ -56,129 +56,77 @@ main.home {
     }
   }
 
-  // other sections
+  // others
   section:not(.home__profile) {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-
-    // section header
-    h2 {
+    h2,
+    h3 {
       color: $color-orange-0;
       text-transform: uppercase;
       text-align: center;
 
       font-size: 1.5rem;
+
+      @include breakpoint(md) {
+        text-align: left;
+      }
+    }
+
+    h3 {
+      color: $color-orange-1;
+
+      font-size: 1.2rem;
+      font-weight: 300;
+      margin-top: 2rem;
     }
 
     // list
-    ul {
+    .home__list {
       display: flex;
       flex-direction: column;
       gap: 1rem;
 
-      @include breakpoint(sm) {
-        gap: 0;
-      }
-
-      // sub headers
-      h3 {
-        color: $color-orange-1;
-
-        font-size: 1.2rem;
-        font-weight: 300;
-        text-transform: uppercase;
-        text-align: center;
-
-        margin-top: 2rem;
-      }
-
-      & > h3:first-child {
-        margin-top: 0;
-      }
-    }
-
-    @include breakpoint(sm) {
-      h2,
-      ul h3 {
-        text-align: left;
+      @include breakpoint(md) {
+        gap: 0.5rem;
       }
     }
   }
 
-  // languages , skills
-  .home__info {
-    // headers
-    h2 {
-      margin-top: 2rem;
+  // skill
+  .home__skill li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    cursor: pointer;
+    position: relative;
+    padding: 0.5rem 1rem;
+
+    @include breakpoint(md) {
+      padding: 0.5rem 2rem;
+
+      &:hover .skill__name {
+        background-color: $color-black-2;
+      }
     }
 
-    & > h2:first-child {
-      margin-top: 0;
-    }
+    .skill__name {
+      display: block;
+      color: $color-red-0;
 
-    // lists
-    .info__list li {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
+      font-size: 1.3rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      border-radius: 1rem;
 
-      position: relative;
-      padding: 0.5rem 1rem;
+      position: absolute;
 
       @include breakpoint(md) {
-        padding: 0.5rem 2rem;
-      }
+        position: static;
+        padding: 0.1rem 1rem;
+        min-width: 12rem;
 
-      // text
-      .info__text {
-        display: block;
-
-        color: $color-red-0;
-
-        font-size: 1.3rem;
-        text-transform: uppercase;
-
-        position: absolute;
-      }
-
-      // item
-      .info__item {
-        color: $color-white-1;
-        text-align: center;
-
-        font-size: 1.3rem;
-        font-weight: 300;
-        line-height: 2;
-      }
-
-      @include breakpoint(sm) {
-        cursor: pointer;
-        justify-content: stretch;
-
-        // text
-        .info__text {
-          position: static;
-          min-width: 15rem;
-
-          font-size: 1.5rem;
-          font-weight: 300;
-          border-radius: 1rem;
-
-          padding: 0.1rem 1rem;
-
-          transition: background-color $transition-0;
-        }
-
-        &:hover .info__text {
-          background-color: $color-black-2;
-        }
-
-        // item
-        .info__item {
-          text-align: left;
-        }
+        transition: all $transition-0 linear;
       }
     }
   }
