@@ -142,12 +142,25 @@ main.projects {
         overflow-y: auto;
         margin: 0 auto;
 
+        width: 100%;
         max-width: calc($section-max-width * 0.8);
         max-height: 100%;
 
         opacity: 0;
         transform: translateY(-50px);
         transition: all $transition-0;
+
+        @include breakpoint(sm) {
+          width: 90%;
+        }
+
+        @include breakpoint(md) {
+          width: 80%;
+        }
+
+        @include breakpoint(lg) {
+          width: 70%;
+        }
       }
 
       // header
