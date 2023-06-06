@@ -1,4 +1,4 @@
-import { categoryTemplate, cardTemplate, getJSON } from '/assets/js/modules/template.js';
+import { projectsCategoryTemplate, projectsCardTemplate, getJSON } from '/assets/js/modules/template.js';
 
 const categoryCard = document.querySelector('.category__cards');
 
@@ -29,15 +29,15 @@ const projectCardsAPI = '/assets/js/data/projects.json';
 const projectCards = await getJSON(projectCardsAPI);
 
 for (const card of projectCards) {
-  const categoryTeamWork = categoryTemplate(card['category'], true);
-  const categorySolo = categoryTemplate(card['category'], false);
+  const categoryTeamWork = projectsCategoryTemplate(card['category'], true);
+  const categorySolo = projectsCategoryTemplate(card['category'], false);
   const projects = card['projects'];
   let teamwork = '';
   let solo = '';
 
   for (const project of projects) {
-    if (project.teamwork) teamwork += cardTemplate(project);
-    else solo += cardTemplate(project);
+    if (project.teamwork) teamwork += projectsCardTemplate(project);
+    else solo += projectsCardTemplate(project);
   }
 
   // categories

@@ -63,14 +63,14 @@ function homeSkillsTemplate(items) {
 }
 
 // projects templates
-function categoryTemplate(name, teamwork) {
+function projectsCategoryTemplate(name, teamwork) {
   return `
     <!-- category -->
     <div class="category__name">${name}<span class="sep">-</span>${teamwork ? 'team work' : 'solo'}</div>
   `;
 }
 
-function imagesTemplate(projectName, homeUrl, imageUrls) {
+function projectsImagesTemplate(projectName, homeUrl, imageUrls) {
   let imagesHTML = '';
 
   for (const imageUrl of imageUrls) {
@@ -84,7 +84,7 @@ function imagesTemplate(projectName, homeUrl, imageUrls) {
   return imagesHTML;
 }
 
-function linksTemplate(projectName, pages, root) {
+function projectsLinksTemplate(projectName, pages, root) {
   let urlsHTML = '<ul>';
 
   for (const page of pages) {
@@ -96,7 +96,7 @@ function linksTemplate(projectName, pages, root) {
   return urlsHTML + '</ul>';
 }
 
-function cardTemplate(project) {
+function projectsCardTemplate(project) {
   return `
     <!-- card -->
     <div class="category__card">
@@ -113,17 +113,17 @@ function cardTemplate(project) {
             </button>
           </div>
           <div class="modal__image">
-              ${imagesTemplate(project.name, project.url, project.images)}
+              ${projectsImagesTemplate(project.name, project.url, project.images)}
           </div>
           <div class="modal__content">
             <h3>about</h3>
             <p>${project.description}</p>
 
             <h3>live demo pages</h3>
-            ${linksTemplate(project.name, project.pages, project.url)}
+            ${projectsLinksTemplate(project.name, project.pages, project.url)}
 
             <h3>source code</h3>
-            ${linksTemplate(project.name, project.sources)}
+            ${projectsLinksTemplate(project.name, project.sources)}
           </div>
         </div>
       </div>
@@ -138,4 +138,4 @@ const getJSON = async (url) => {
   return jsonData;
 };
 
-export { headerTemplate, homeSkillsTemplate, categoryTemplate, cardTemplate, getJSON };
+export { headerTemplate, homeSkillsTemplate, projectsCategoryTemplate, projectsCardTemplate, getJSON };
