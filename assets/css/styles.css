@@ -332,10 +332,13 @@ header.header .menu__links {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  max-height: calc(100vh - 6rem);
+  max-height: calc(100svh - 6rem);
   background-color: #d96060;
   visibility: hidden;
   opacity: 0;
   transition: visibility 0.3s, opacity 0.3s, gap 0.3s;
+  overflow-y: auto;
 }
 header.header .menu__links.active {
   visibility: visible;

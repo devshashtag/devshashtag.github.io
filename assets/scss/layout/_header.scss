@@ -41,12 +41,15 @@ header.header {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    max-height: calc(100vh - $header-height);
+    max-height: calc(100svh - $header-height);
 
     background-color: $color-red-0;
     visibility: hidden;
     opacity: 0;
 
     transition: visibility $transition-0, opacity $transition-0, gap $transition-0;
+    overflow-y: auto;
 
     // mobile styles
     &.active {
