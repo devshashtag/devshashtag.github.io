@@ -53,7 +53,7 @@ function homeSkillsTemplate(items) {
     itemsHTML += `
       <!-- ${item.name} -->
       <li>
-        <div class="skill__name">${item.name}</div>
+        <div class="home__label">${item.name}</div>
         <div class="progress-bar" style="--prog: ${item.progress}%" title="${item.progress}"></div>
       </li>
     `;

@@ -509,11 +509,31 @@ main.home section:not(.home__profile) .home__list {
     gap: 0.5rem;
   }
 }
+main.home section:not(.home__profile) .home__label {
+  color: #d96060;
+  font-size: 1.3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+@media (min-width: 768px) {
+  main.home section:not(.home__profile) .home__label {
+    padding: 0.1rem 1rem;
+  }
+}
+main.home section:not(.home__profile) .home__value,
+main.home section:not(.home__profile) .home__text {
+  color: #d1d5db;
+  text-transform: capitalize;
+}
+main.home section:not(.home__profile) .home__value a,
+main.home section:not(.home__profile) .home__text a {
+  color: #edeef0;
+}
 main.home .home__skill li {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
   position: relative;
   padding: 0.5rem 1rem;
 }
@@ -522,25 +542,58 @@ main.home .home__skill li {
     padding: 0.5rem 2rem;
     cursor: pointer;
   }
-  main.home .home__skill li:hover .skill__name {
+  main.home .home__skill li:hover .home__label {
     background-color: #0e0e0e;
   }
 }
-main.home .home__skill li .skill__name {
-  display: block;
-  color: #d96060;
-  font-size: 1.3rem;
-  font-weight: 300;
-  text-transform: uppercase;
-  border-radius: 1rem;
+main.home .home__skill li .home__label {
   position: absolute;
+  border-radius: 0.5rem;
 }
 @media (min-width: 768px) {
-  main.home .home__skill li .skill__name {
+  main.home .home__skill li .home__label {
     position: static;
-    padding: 0.1rem 1rem;
     min-width: 12rem;
     transition: all 0.3s linear;
+  }
+}
+main.home .home__about ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem !important;
+  padding: 1.5rem 1rem;
+}
+@media (min-width: 768px) {
+  main.home .home__about ul {
+    padding: 1.5rem 2rem;
+  }
+}
+main.home .home__about ul li {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  main.home .home__about ul li {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+main.home .home__about ul .home__label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 15rem;
+}
+main.home .home__about ul .home__label span {
+  color: #d96060;
+  padding: 0 0.5rem;
+  font-size: 1.5rem;
+}
+@media (min-width: 768px) {
+  main.home .home__about ul .home__label {
+    justify-content: flex-start;
   }
 }
 

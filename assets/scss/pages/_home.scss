@@ -89,6 +89,28 @@ main.home {
         gap: 0.5rem;
       }
     }
+
+    .home__label {
+      color: $color-red-0;
+
+      font-size: 1.3rem;
+      font-weight: 300;
+      text-transform: uppercase;
+
+      @include breakpoint(md) {
+        padding: 0.1rem 1rem;
+      }
+    }
+
+    .home__value,
+    .home__text {
+      color: $color-white-1;
+      text-transform: capitalize;
+
+      a {
+        color: $color-white-0;
+      }
+    }
   }
 
   // skill
@@ -96,37 +118,71 @@ main.home {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
 
     position: relative;
     padding: 0.5rem 1rem;
 
     @include breakpoint(md) {
       padding: 0.5rem 2rem;
+
       cursor: pointer;
 
-      &:hover .skill__name {
+      &:hover .home__label {
         background-color: $color-black-2;
       }
     }
 
-    .skill__name {
-      display: block;
-      color: $color-red-0;
-
-      font-size: 1.3rem;
-      font-weight: 300;
-      text-transform: uppercase;
-      border-radius: 1rem;
-
+    .home__label {
       position: absolute;
+      border-radius: 0.5rem;
 
       @include breakpoint(md) {
         position: static;
-        padding: 0.1rem 1rem;
-        min-width: 12rem;
 
+        min-width: 12rem;
         transition: all $transition-0 linear;
+      }
+    }
+  }
+
+  // about me
+  .home__about ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem !important;
+    padding: 1.5rem 1rem;
+
+    @include breakpoint(md) {
+      padding: 1.5rem 2rem;
+    }
+
+    li {
+      display: flex;
+      text-align: center;
+      flex-direction: column;
+      gap: 1rem;
+
+      @include breakpoint(md) {
+        flex-direction: row;
+        text-align: left;
+      }
+    }
+
+    .home__label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 15rem;
+
+      span {
+        color: $color-red-0;
+        padding: 0 0.5rem;
+        font-size: 1.5rem;
+      }
+
+      @include breakpoint(md) {
+        justify-content: flex-start;
       }
     }
   }
