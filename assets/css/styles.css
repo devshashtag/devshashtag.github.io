@@ -270,7 +270,7 @@ aside.sidebar .sidebar__contact nav ul li a {
   display: inline-block;
   width: 20px;
   height: 2px;
-  transition: all 0.5s;
+  transition: all 0.3s;
 }
 .navbar-toggle .toggle-icon::after, .navbar-toggle .toggle-icon::before {
   content: "";
