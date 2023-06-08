@@ -66,7 +66,7 @@ function homeSkillsTemplate(items) {
 function sidebarCategoryTemplate(name, teamwork) {
   return `
     <!-- category -->
-    <h3>${name} <span>-</span> ${teamwork ? 'team work' : 'solo'}</h3>
+    <h3>${name} <span>-</span> ${teamwork ? 'team work' : 'individual'}</h3>
   `;
 }
 
@@ -78,7 +78,7 @@ function sidebarItemTemplate(project) {
 function projectsCategoryTemplate(name, teamwork) {
   return `
     <!-- category -->
-    <div class="category__name">${name}<span>-</span>${teamwork ? 'team work' : 'solo'}</div>
+    <div class="category__name">${name}<span>-</span>${teamwork ? 'team work' : 'individual'}</div>
   `;
 }
 

@@ -21,19 +21,19 @@ async function displayProjects() {
 
   for (const card of jsonData) {
     const categoryTeamWork = sidebarCategoryTemplate(card['category'], true);
-    const categorySolo = sidebarCategoryTemplate(card['category'], false);
+    const categoryIndividual = sidebarCategoryTemplate(card['category'], false);
 
     let teamwork = '';
-    let solo = '';
+    let individual = '';
 
     for (const project of card['projects']) {
       if (project.teamwork) teamwork += sidebarItemTemplate(project);
-      else solo += sidebarItemTemplate(project);
+      else individual += sidebarItemTemplate(project);
     }
 
     // categories
     if (teamwork) projectsList.insertAdjacentHTML('beforeend', categoryTeamWork + teamwork);
-    if (solo) projectsList.insertAdjacentHTML('beforeend', categorySolo + solo);
+    if (individual) projectsList.insertAdjacentHTML('beforeend', categoryIndividual + individual);
   }
 }
 

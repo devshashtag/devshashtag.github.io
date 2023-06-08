@@ -30,16 +30,16 @@ const projectCards = await getJSON(projectCardsAPI);
 
 for (const card of projectCards) {
   const categoryTeamWork = projectsCategoryTemplate(card['category'], true);
-  const categorySolo = projectsCategoryTemplate(card['category'], false);
+  const categoryIndividual = projectsCategoryTemplate(card['category'], false);
   let teamwork = '';
-  let solo = '';
+  let individual = '';
 
   for (const project of card['projects']) {
     if (project.teamwork) teamwork += projectsCardTemplate(project);
-    else solo += projectsCardTemplate(project);
+    else individual += projectsCardTemplate(project);
   }
 
   // categories
   if (teamwork) categoryCard.insertAdjacentHTML('beforeend', categoryTeamWork + teamwork);
-  if (solo) categoryCard.insertAdjacentHTML('beforeend', categorySolo + solo);
+  if (individual) categoryCard.insertAdjacentHTML('beforeend', categoryIndividual + individual);
 }
