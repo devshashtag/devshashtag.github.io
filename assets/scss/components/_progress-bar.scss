@@ -20,11 +20,11 @@
     background-color: $color-gray-2;
     transition: background-color $transition-0;
 
-    -webkit-animation: progressBar 2s linear;
+    -webkit-animation: progressBar 1s linear var(--delay);
     -webkit-animation-fill-mode: both;
-    -moz-animation: progressBar 2s linear;
+    -moz-animation: progressBar 1s linear var(--delay);
     -moz-animation-fill-mode: both;
-    animation: progressBar 2s linear;
+    animation: progressBar 1s linear var(--delay);
     animation-fill-mode: both;
   }
 }

@@ -46,20 +46,14 @@ function headerTemplate() {
 }
 
 // skills
-function homeSkillsTemplate(items) {
-  let itemsHTML = '';
-
-  for (const item of items) {
-    itemsHTML += `
-      <!-- ${item.name} -->
-      <li>
-        <div class="home__label">${item.name}</div>
-        <div class="progress-bar" style="--prog: ${item.progress}%" title="${item.progress}"></div>
-      </li>
-    `;
-  }
-
-  return itemsHTML;
+function homeSkillTemplate(item, delay) {
+  return `
+    <!-- ${item.name} -->
+    <li>
+      <div class="home__label">${item.name}</div>
+      <div class="progress-bar" style="--prog: ${item.progress}%; --delay: ${delay}s" title="${item.progress}"></div>
+    </li>
+  `;
 }
 
 // sidebar
@@ -153,4 +147,4 @@ const getJSON = async (url) => {
   return jsonData;
 };
 
-export { headerTemplate, homeSkillsTemplate, sidebarCategoryTemplate, sidebarItemTemplate, projectsCategoryTemplate, projectsCardTemplate, getJSON };
+export { headerTemplate, homeSkillTemplate, sidebarCategoryTemplate, sidebarItemTemplate, projectsCategoryTemplate, projectsCardTemplate, getJSON };

@@ -1,4 +1,4 @@
-import { homeSkillsTemplate, sidebarCategoryTemplate, sidebarItemTemplate, getJSON } from '/assets/js/modules/template.js';
+import { homeSkillTemplate, sidebarCategoryTemplate, sidebarItemTemplate, getJSON } from '/assets/js/modules/template.js';
 
 const infoList = document.getElementById('skill');
 const projectsList = document.getElementById('projects');
@@ -6,10 +6,16 @@ const projectsList = document.getElementById('projects');
 async function displaySkills() {
   const skillsAPI = '/assets/js/data/skills.json';
   const jsonData = await getJSON(skillsAPI);
+  let delay = 0;
 
   for (const data of jsonData) {
     const header = `<h3>${data['category']}</h3>`;
-    const skills = homeSkillsTemplate(data['items']);
+    let skills = '';
+
+    for (const item of data['items']) {
+      skills += homeSkillTemplate(item, delay);
+      delay += 0.1;
+    }
 
     infoList.insertAdjacentHTML('beforeend', header + skills);
   }
