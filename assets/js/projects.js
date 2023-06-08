@@ -31,11 +31,10 @@ const projectCards = await getJSON(projectCardsAPI);
 for (const card of projectCards) {
   const categoryTeamWork = projectsCategoryTemplate(card['category'], true);
   const categorySolo = projectsCategoryTemplate(card['category'], false);
-  const projects = card['projects'];
   let teamwork = '';
   let solo = '';
 
-  for (const project of projects) {
+  for (const project of card['projects']) {
     if (project.teamwork) teamwork += projectsCardTemplate(project);
     else solo += projectsCardTemplate(project);
   }

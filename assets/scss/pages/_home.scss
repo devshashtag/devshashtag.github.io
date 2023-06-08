@@ -174,11 +174,11 @@ main.home {
       align-items: center;
       justify-content: center;
       min-width: 15rem;
+      color: $color-orange-1;
 
       span {
         color: $color-red-0;
         padding: 0 0.5rem;
-        font-size: 1.5rem;
       }
 
       @include breakpoint(md) {

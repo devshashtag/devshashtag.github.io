@@ -151,11 +151,8 @@ aside.sidebar > section nav ul h3 {
   text-transform: uppercase;
   margin-top: 1rem;
 }
-aside.sidebar > section nav ul h3 .sep {
+aside.sidebar > section nav ul h3 span {
   color: #d96060;
-}
-aside.sidebar > section nav ul h3 .tag {
-  color: #cf9965;
 }
 aside.sidebar > section nav ul > h3:first-child {
   margin-top: 0;
@@ -179,7 +176,7 @@ aside.sidebar > section nav ul li a i {
 aside.sidebar > section nav ul li a:hover {
   color: #df8282;
 }
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   aside.sidebar > section {
     text-align: left;
   }
@@ -209,7 +206,7 @@ aside.sidebar .sidebar__social nav ul li a i:hover {
 aside.sidebar .sidebar__social nav ul li a span {
   display: none;
 }
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   aside.sidebar .sidebar__social nav ul {
     flex-direction: column;
     gap: 1.5rem;
@@ -226,14 +223,6 @@ aside.sidebar .sidebar__social nav ul li a span {
 }
 aside.sidebar .sidebar__contact nav ul li a {
   text-transform: lowercase;
-}
-aside.sidebar .sidebar__contact nav ul li a i {
-  display: none;
-}
-@media (min-width: 576px) {
-  aside.sidebar .sidebar__contact nav ul li a i {
-    display: block;
-  }
 }
 
 .progress-bar {
@@ -585,11 +574,11 @@ main.home .home__about ul .home__label {
   align-items: center;
   justify-content: center;
   min-width: 15rem;
+  color: #fcd8a1;
 }
 main.home .home__about ul .home__label span {
   color: #d96060;
   padding: 0 0.5rem;
-  font-size: 1.5rem;
 }
 @media (min-width: 768px) {
   main.home .home__about ul .home__label {
@@ -629,7 +618,7 @@ main.projects .projects__categories .category__name {
   gap: 1rem;
   margin: 1rem 0;
 }
-main.projects .projects__categories .category__name .sep {
+main.projects .projects__categories .category__name span {
   color: #d96060;
 }
 main.projects .projects__categories .category__name::before, main.projects .projects__categories .category__name::after {

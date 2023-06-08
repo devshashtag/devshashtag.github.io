@@ -45,7 +45,7 @@ function headerTemplate() {
   `;
 }
 
-// home templates
+// skills
 function homeSkillsTemplate(items) {
   let itemsHTML = '';
 
@@ -62,11 +62,23 @@ function homeSkillsTemplate(items) {
   return itemsHTML;
 }
 
-// projects templates
+// sidebar
+function sidebarCategoryTemplate(name, teamwork) {
+  return `
+    <!-- category -->
+    <h3>${name} <span>-</span> ${teamwork ? 'team work' : 'solo'}</h3>
+  `;
+}
+
+function sidebarItemTemplate(project) {
+  return `<li><a target="_blank" href="${project.url}">${project.name}</a></li>`;
+}
+
+// projects
 function projectsCategoryTemplate(name, teamwork) {
   return `
     <!-- category -->
-    <div class="category__name">${name}<span class="sep">-</span>${teamwork ? 'team work' : 'solo'}</div>
+    <div class="category__name">${name}<span>-</span>${teamwork ? 'team work' : 'solo'}</div>
   `;
 }
 
@@ -141,4 +153,4 @@ const getJSON = async (url) => {
   return jsonData;
 };
 
-export { headerTemplate, homeSkillsTemplate, projectsCategoryTemplate, projectsCardTemplate, getJSON };
+export { headerTemplate, homeSkillsTemplate, sidebarCategoryTemplate, sidebarItemTemplate, projectsCategoryTemplate, projectsCardTemplate, getJSON };
