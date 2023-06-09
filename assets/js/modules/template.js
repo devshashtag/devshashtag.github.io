@@ -97,7 +97,7 @@ function projectsLinksTemplate(name, pages, root) {
 
   for (const page of pages) {
     urlsHTML += `
-      <li><a href="${(root ? root : '') + page.url}" target="_blank">${name} - ${page.name}</a></li>
+      <li><a href="${(root ?? '') + page.url}" target="_blank">${name} - ${page.name}</a></li>
     `;
   }
 
