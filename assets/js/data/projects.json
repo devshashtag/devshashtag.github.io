@@ -74,14 +74,35 @@
         "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/snake-js" }]
       },
       {
-        "name": "frontend mini",
-        "url": "/frontend-mini",
+        "name": "mini frontend",
+        "url": "/mini-frontend",
         "teamwork": false,
         "description": "frontend mini projects",
-        "images": ["/assets/images/projects/frontend-mini.png"],
+        "images": ["/assets/images/projects/mini-frontend.png"],
         "tags": ["HTML", "CSS", "JAVASCRIPT"],
-        "pages": [{ "name": "home", "url": "" }],
-        "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/frontend-mini" }]
+        "pages": [
+          { "name": "home", "url": "" },
+          { "name": "web template", "url": "/web-template" },
+          { "name": "sidebar menu", "url": "/sidebar-menu" },
+          { "name": "bmi calculator", "url": "/bmi-calculator" },
+          { "name": "responsive navbar", "url": "/responsive-navbar" },
+          { "name": "main header", "url": "/main-header" },
+          { "name": "selling template", "url": "/selling-template" },
+          { "name": "flexbox kit", "url": "/flexbox-kit" },
+          { "name": "simple chart", "url": "/simple-chart" },
+          { "name": "windows calculator", "url": "/windows-calculator" },
+          { "name": "image filters", "url": "/image-filters" },
+          { "name": "video cover", "url": "/video-cover" },
+          { "name": "color generator", "url": "/color-generator" },
+          { "name": "space stars", "url": "/space-stars" },
+          { "name": "note app", "url": "/note-app" },
+          { "name": "cube head", "url": "/cube-head" },
+          { "name": "eve", "url": "/eve" },
+          { "name": "javascript mini", "url": "/javascript-mini" },
+          { "name": "sticky relative to parent", "url": "/sticky-relative-to-parent" },
+          { "name": "strength potion", "url": "/strength-potion" }
+        ],
+        "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/mini-frontend" }]
       }
     ]
   }
