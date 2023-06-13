@@ -98,6 +98,15 @@
         "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/tictactoe" }]
       },
       {
+        "name": "sheypoor post collector",
+        "url": "/sheypoor-post-collector",
+        "teamwork": false,
+        "description": "collect sheypoor posts as json",
+        "images": ["/assets/images/projects/sheypoor-post-collector.png"],
+        "tags": ["HTML", "SCSS", "JAVASCRIPT", "NODEJS", "RESPONSIVE"],
+        "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/sheypoor-post-collector" }]
+      },
+      {
         "name": "mini frontend",
         "url": "/mini-frontend",
         "teamwork": false,
