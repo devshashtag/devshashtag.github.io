@@ -88,6 +88,16 @@
         "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/job-template" }]
       },
       {
+        "name": "tic tac toe",
+        "url": "/tictactoe",
+        "teamwork": false,
+        "description": "customizable tic tac toe game",
+        "images": ["/assets/images/projects/tictactoe.png"],
+        "tags": ["HTML", "CSS", "JAVASCRIPT", "RESPONSIVE"],
+        "pages": [{ "name": "home", "url": "" }],
+        "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/tictactoe" }]
+      },
+      {
         "name": "mini frontend",
         "url": "/mini-frontend",
         "teamwork": false,
