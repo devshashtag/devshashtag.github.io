@@ -69,9 +69,23 @@
         "teamwork": false,
         "description": "snake DOM (hamiltonian cycle algorithm)",
         "images": ["/assets/images/projects/snake-js.png"],
-        "tags": ["HTML", "CSS", "JAVASCRIPT"],
+        "tags": ["HTML", "CSS", "JAVASCRIPT", "RESPONSIVE"],
         "pages": [{ "name": "home", "url": "" }],
         "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/snake-js" }]
+      },
+      {
+        "name": "job template",
+        "url": "/job-template",
+        "teamwork": false,
+        "description": "simple scss template",
+        "images": ["/assets/images/projects/job-template.png"],
+        "tags": ["HTML", "SCSS", "JAVASCRIPT", "RESPONSIVE"],
+        "pages": [
+          { "name": "home", "url": "" },
+          { "name": "register", "url": "/register" },
+          { "name": "contact-us", "url": "/contact-us" }
+        ],
+        "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/job-template" }]
       },
       {
         "name": "mini frontend",
