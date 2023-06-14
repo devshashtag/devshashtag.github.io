@@ -64,14 +64,13 @@
         "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/botostart" }]
       },
       {
-        "name": "snake js",
-        "url": "/snake-js",
+        "name": "sheypoor post collector",
+        "url": "/sheypoor-post-collector",
         "teamwork": false,
-        "description": "snake DOM (hamiltonian cycle algorithm)",
-        "images": ["/assets/images/projects/snake-js.png"],
-        "tags": ["HTML", "CSS", "JAVASCRIPT", "RESPONSIVE"],
-        "pages": [{ "name": "home", "url": "" }],
-        "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/snake-js" }]
+        "description": "collect sheypoor posts as json",
+        "images": ["/assets/images/projects/sheypoor-post-collector.png"],
+        "tags": ["HTML", "SCSS", "JAVASCRIPT", "NODEJS", "RESPONSIVE"],
+        "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/sheypoor-post-collector" }]
       },
       {
         "name": "job template",
@@ -98,13 +97,24 @@
         "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/tictactoe" }]
       },
       {
-        "name": "sheypoor post collector",
-        "url": "/sheypoor-post-collector",
+        "name": "snake js",
+        "url": "/snake-js",
         "teamwork": false,
-        "description": "collect sheypoor posts as json",
-        "images": ["/assets/images/projects/sheypoor-post-collector.png"],
-        "tags": ["HTML", "SCSS", "JAVASCRIPT", "NODEJS", "RESPONSIVE"],
-        "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/sheypoor-post-collector" }]
+        "description": "snake DOM (hamiltonian cycle algorithm)",
+        "images": ["/assets/images/projects/snake-js.png"],
+        "tags": ["HTML", "CSS", "JAVASCRIPT", "RESPONSIVE"],
+        "pages": [{ "name": "home", "url": "" }],
+        "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/snake-js" }]
+      },
+      {
+        "name": "analog world clock",
+        "url": "/analog-world-clock",
+        "teamwork": false,
+        "description": "analog world clock",
+        "images": ["/assets/images/projects/analog-world-clock.png"],
+        "tags": ["HTML", "CSS", "JAVASCRIPT", "RESPONSIVE"],
+        "pages": [{ "name": "home", "url": "" }],
+        "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/analog-world-clock" }]
       },
       {
         "name": "mini frontend",
