@@ -64,15 +64,6 @@
         "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/botostart" }]
       },
       {
-        "name": "sheypoor post collector",
-        "url": "/sheypoor-post-collector",
-        "teamwork": false,
-        "description": "collect sheypoor posts as json",
-        "images": ["/assets/images/projects/sheypoor-post-collector.png"],
-        "tags": ["HTML", "SCSS", "JAVASCRIPT", "NODEJS", "RESPONSIVE"],
-        "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/sheypoor-post-collector" }]
-      },
-      {
         "name": "job template",
         "url": "/job-template",
         "teamwork": false,
@@ -86,36 +77,7 @@
         ],
         "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/job-template" }]
       },
-      {
-        "name": "tic tac toe",
-        "url": "/tictactoe",
-        "teamwork": false,
-        "description": "customizable tic tac toe game",
-        "images": ["/assets/images/projects/tictactoe.png"],
-        "tags": ["HTML", "CSS", "JAVASCRIPT", "RESPONSIVE"],
-        "pages": [{ "name": "home", "url": "" }],
-        "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/tictactoe" }]
-      },
-      {
-        "name": "snake js",
-        "url": "/snake-js",
-        "teamwork": false,
-        "description": "snake DOM (hamiltonian cycle algorithm)",
-        "images": ["/assets/images/projects/snake-js.png"],
-        "tags": ["HTML", "CSS", "JAVASCRIPT", "RESPONSIVE"],
-        "pages": [{ "name": "home", "url": "" }],
-        "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/snake-js" }]
-      },
-      {
-        "name": "analog world clock",
-        "url": "/analog-world-clock",
-        "teamwork": false,
-        "description": "analog world clock",
-        "images": ["/assets/images/projects/analog-world-clock.png"],
-        "tags": ["HTML", "CSS", "JAVASCRIPT", "RESPONSIVE"],
-        "pages": [{ "name": "home", "url": "" }],
-        "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/analog-world-clock" }]
-      },
+
       {
         "name": "mini frontend",
         "url": "/mini-frontend",
@@ -146,6 +108,50 @@
           { "name": "strength potion", "url": "/projects/strength-potion" }
         ],
         "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/mini-frontend" }]
+      },
+      {
+        "name": "tic tac toe",
+        "url": "/tictactoe",
+        "teamwork": false,
+        "description": "customizable tic tac toe game",
+        "images": ["/assets/images/projects/tictactoe.png"],
+        "tags": ["HTML", "CSS", "JAVASCRIPT", "RESPONSIVE"],
+        "pages": [{ "name": "home", "url": "" }],
+        "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/tictactoe" }]
+      },
+      {
+        "name": "snake js",
+        "url": "/snake-js",
+        "teamwork": false,
+        "description": "snake DOM (hamiltonian cycle algorithm)",
+        "images": ["/assets/images/projects/snake-js.png"],
+        "tags": ["HTML", "CSS", "JAVASCRIPT", "RESPONSIVE"],
+        "pages": [{ "name": "home", "url": "" }],
+        "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/snake-js" }]
+      },
+      {
+        "name": "analog world clock",
+        "url": "/analog-world-clock",
+        "teamwork": false,
+        "description": "analog world clock",
+        "images": ["/assets/images/projects/analog-world-clock.png"],
+        "tags": ["HTML", "CSS", "JAVASCRIPT", "RESPONSIVE"],
+        "pages": [{ "name": "home", "url": "" }],
+        "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/analog-world-clock" }]
+      }
+    ]
+  },
+  {
+    "category": "nodejs",
+    "projects": [
+      {
+        "name": "sheypoor post collector",
+        "url": "/sheypoor-post-collector",
+        "teamwork": false,
+        "description": "collect sheypoor posts as json",
+        "images": ["/assets/images/projects/sheypoor-post-collector.png"],
+        "tags": ["HTML", "SCSS", "JAVASCRIPT", "NODEJS", "RESPONSIVE"],
+        "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/sheypoor-post-collector" }]
       }
     ]
   }
