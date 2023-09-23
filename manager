@@ -136,5 +136,5 @@
   - [ ] readme.md
   - [ ] github-pages
 
-
 - [x] remove teamwork and individual
+- [x] replace source code url with demo url if demo url is empty

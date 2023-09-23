@@ -67,7 +67,7 @@ function sidebarCategoryTemplate(name) {
 }
 
 function sidebarProjectTemplate(project) {
-  if (!project?.pages) return '';
+  if (!project?.pages) project.url = project.sources[0].url;
 
   return `
     <!-- project -->
