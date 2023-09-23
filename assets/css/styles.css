@@ -753,7 +753,6 @@ main.projects .projects__categories .card__modal .modal__image {
   line-height: 0;
 }
 main.projects .projects__categories .card__modal .modal__image img {
-  cursor: pointer;
   border-radius: 2px;
   opacity: 0.8;
 }

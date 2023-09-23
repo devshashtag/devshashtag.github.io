@@ -1,6 +1,22 @@
-import { projectsCategoryTemplate, projectsCardTemplate, getJSON } from '/assets/js/modules/template.js';
+import { projectCategoryTemplate, projectCardTemplate, getJSON } from '/assets/js/modules/template.js';
 
 const categoryCard = document.querySelector('.category__cards');
+
+// display projects
+const projectsAPI = '/assets/js/data/projects.json';
+const jsonProjects = await getJSON(projectsAPI);
+
+for (const data of jsonProjects) {
+  const categoryTemplate = projectCategoryTemplate(data['category']);
+  let projectsTemplate = '';
+
+  for (const project of data['projects']) {
+    projectsTemplate += projectCardTemplate(project);
+  }
+
+  if (!projectsTemplate) continue;
+  categoryCard.insertAdjacentHTML('beforeend', categoryTemplate + projectsTemplate);
+}
 
 // toggle card modal
 categoryCard.addEventListener('click', function (e) {
@@ -24,22 +40,3 @@ categoryCard.addEventListener('click', function (e) {
     document.body.classList.toggle('no-scroll');
   }
 });
-
-const projectCardsAPI = '/assets/js/data/projects.json';
-const projectCards = await getJSON(projectCardsAPI);
-
-for (const card of projectCards) {
-  const categoryTeamWork = projectsCategoryTemplate(card['category'], true);
-  const categoryIndividual = projectsCategoryTemplate(card['category'], false);
-  let teamwork = '';
-  let individual = '';
-
-  for (const project of card['projects']) {
-    if (project.teamwork) teamwork += projectsCardTemplate(project);
-    else individual += projectsCardTemplate(project);
-  }
-
-  // categories
-  if (teamwork) categoryCard.insertAdjacentHTML('beforeend', categoryTeamWork + teamwork);
-  if (individual) categoryCard.insertAdjacentHTML('beforeend', categoryIndividual + individual);
-}

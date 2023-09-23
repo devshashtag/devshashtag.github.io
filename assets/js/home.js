@@ -1,4 +1,9 @@
-import { homeSkillTemplate, sidebarCategoryTemplate, sidebarItemTemplate, getJSON } from '/assets/js/modules/template.js';
+import {
+  homeSkillTemplate,
+  sidebarCategoryTemplate,
+  sidebarProjectTemplate,
+  getJSON,
+} from '/assets/js/modules/template.js';
 
 const infoList = document.getElementById('skill');
 const projectsList = document.getElementById('projects');
@@ -23,23 +28,18 @@ async function displaySkills() {
 
 async function displayProjects() {
   const projectsAPI = '/assets/js/data/projects.json';
-  const jsonData = await getJSON(projectsAPI);
+  const jsonProjects = await getJSON(projectsAPI);
 
-  for (const card of jsonData) {
-    const categoryTeamWork = sidebarCategoryTemplate(card['category'], true);
-    const categoryIndividual = sidebarCategoryTemplate(card['category'], false);
+  for (const data of jsonProjects) {
+    const categoryTemplate = sidebarCategoryTemplate(data['category']);
+    let projectsTemplate = '';
 
-    let teamwork = '';
-    let individual = '';
-
-    for (const project of card['projects']) {
-      if (project.teamwork) teamwork += sidebarItemTemplate(project);
-      else individual += sidebarItemTemplate(project);
+    for (const project of data['projects']) {
+      projectsTemplate += sidebarProjectTemplate(project);
     }
 
-    // categories
-    if (teamwork) projectsList.insertAdjacentHTML('beforeend', categoryTeamWork + teamwork);
-    if (individual) projectsList.insertAdjacentHTML('beforeend', categoryIndividual + individual);
+    if (!projectsTemplate) continue;
+    projectsList.insertAdjacentHTML('beforeend', categoryTemplate + projectsTemplate);
   }
 }
 

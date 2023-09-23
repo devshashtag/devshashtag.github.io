@@ -1,20 +1,24 @@
 // global templates
 function headerMenuTemplate() {
   const currentPage = window.location.pathname.split('.')[0];
-
   const pages = [
     { name: 'home', url: '/' },
     { name: 'projects', url: '/projects.html' },
   ];
 
-  const menuItems = pages.map((page) => {
-    const activeClass = currentPage == page.url.split('.')[0] ? ' class="active-item"' : '';
-    return `
-      <li${activeClass}><a href="${page.url}">${page.name}</a></li>
-    `;
-  });
+  let menuItems = '';
 
-  return menuItems.join('');
+  for (const page of pages) {
+    const isActive = currentPage == page.url.split('.')[0];
+
+    menuItems += `
+      <li${isActive ? ' class="active-item"' : ''}>
+        <a href="${page.url}">${page.name}</a>
+      </li>
+    `;
+  }
+
+  return menuItems;
 }
 
 function headerTemplate() {
@@ -35,9 +39,7 @@ function headerTemplate() {
         <!-- brand -->
         <div class="header__brand">
           <a href="https://devshashtag.github.io" target="_blank">
-            <span>⊰</span>
-            Devs<span>.</span>Hashtag
-            <span>⊱</span>
+            <span>⊰</span>Devs<span>.</span>Hashtag<span>⊱</span>
           </a>
         </div>
       </div>
@@ -57,46 +59,51 @@ function homeSkillTemplate(item, delay) {
 }
 
 // sidebar
-function sidebarCategoryTemplate(name, teamwork) {
+function sidebarCategoryTemplate(name) {
   return `
     <!-- category -->
-    <h3>${name} <span>-</span> ${teamwork ? 'team work' : 'individual'}</h3>
+    <h3>${name}</h3>
   `;
 }
 
-function sidebarItemTemplate(project) {
-  return `<li><a target="_blank" href="${project.url}">${project.name}</a></li>`;
+function sidebarProjectTemplate(project) {
+  if (!project?.pages) return '';
+
+  return `
+    <!-- project -->
+    <li><a target="_blank" href="${project.url}">${project.name}</a></li>
+  `;
 }
 
 // projects
-function projectsCategoryTemplate(name, teamwork) {
+function projectCategoryTemplate(name) {
   return `
     <!-- category -->
-    <div class="category__name">${name}<span>-</span>${teamwork ? 'team work' : 'individual'}</div>
+    <h2 class="category__name">${name}</h2>
   `;
 }
 
-function projectsImagesTemplate(projectName, homeUrl, imageUrls) {
+function projectImagesTemplate(projectName, homeUrl, imageUrls) {
   let imagesHTML = '';
 
   for (const imageUrl of imageUrls) {
     imagesHTML += `
-      <a href="${homeUrl}" title="نمایش دمو" target="_blank">
-        <img src="${imageUrl}" alt="${projectName}" loading="lazy" />
-      </a>
+      <!-- image -->
+      <img src="${imageUrl}" alt="${projectName}" loading="lazy" />
     `;
   }
 
   return imagesHTML;
 }
 
-function projectsLinksTemplate(name, pages, root) {
+function projectLinksTemplate(name, pages, root) {
   if (!pages || !pages.length || !pages[0]?.name) return '';
 
   let urlsHTML = '<ul>';
 
   for (const page of pages) {
     urlsHTML += `
+      <!-- ${name} - ${page.name} -->
       <li><a href="${(root ?? '') + page.url}" target="_blank">${name} - ${page.name}</a></li>
     `;
   }
@@ -104,9 +111,9 @@ function projectsLinksTemplate(name, pages, root) {
   return urlsHTML + '</ul>';
 }
 
-function projectsCardTemplate(project) {
-  const pages = projectsLinksTemplate(project.name, project.pages, project.url);
-  const sources = projectsLinksTemplate(project.name, project.sources);
+function projectCardTemplate(project) {
+  const pages = projectLinksTemplate(project.name, project.pages, project.url);
+  const sources = projectLinksTemplate(project.name, project.sources);
 
   return `
     <!-- card -->
@@ -124,7 +131,7 @@ function projectsCardTemplate(project) {
             </button>
           </div>
           <div class="modal__image">
-              ${projectsImagesTemplate(project.name, project.url, project.images)}
+              ${projectImagesTemplate(project.name, project.url, project.images)}
           </div>
           <div class="modal__content">
             <h3>about</h3>
@@ -147,4 +154,12 @@ const getJSON = async (url) => {
   return jsonData;
 };
 
-export { headerTemplate, homeSkillTemplate, sidebarCategoryTemplate, sidebarItemTemplate, projectsCategoryTemplate, projectsCardTemplate, getJSON };
+export {
+  headerTemplate,
+  homeSkillTemplate,
+  sidebarCategoryTemplate,
+  sidebarProjectTemplate,
+  projectCategoryTemplate,
+  projectCardTemplate,
+  getJSON,
+};
