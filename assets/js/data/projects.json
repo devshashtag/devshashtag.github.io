@@ -103,7 +103,10 @@
           { "name": "note app", "url": "/projects/note-app" },
           { "name": "cube head", "url": "/projects/cube-head" },
           { "name": "eve", "url": "/projects/eve" },
-          { "name": "javascript mini", "url": "/projects/javascript-mini" },
+          {
+            "name": "javascript mini",
+            "source": "https://github.com/devshashtag/mini-frontend/tree/main/projects/javascript-mini"
+          },
           { "name": "sticky relative to parent", "url": "/projects/sticky-relative-to-parent" },
           { "name": "strength potion", "url": "/projects/strength-potion" }
         ],

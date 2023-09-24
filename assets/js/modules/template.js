@@ -96,19 +96,21 @@ function projectImagesTemplate(projectName, homeUrl, imageUrls) {
   return imagesHTML;
 }
 
-function projectLinksTemplate(name, pages, root) {
-  if (!pages || !pages.length || !pages[0]?.name) return '';
+function projectLinksTemplate(name, links, root) {
+  if (!links?.length) return '';
 
-  let urlsHTML = '<ul>';
+  let linksTemplate = '<ul>';
 
-  for (const page of pages) {
-    urlsHTML += `
-      <!-- ${name} - ${page.name} -->
-      <li><a href="${(root ?? '') + page.url}" target="_blank">${name} - ${page.name}</a></li>
+  for (const link of links) {
+    const url = link?.url !== undefined ? (root ?? '') + link.url : link.source;
+
+    linksTemplate += `
+      <!-- ${name} - ${link.name} -->
+      <li><a href="${url}" target="_blank">${name} - ${link.name}</a></li>
     `;
   }
 
-  return urlsHTML + '</ul>';
+  return linksTemplate + '</ul>';
 }
 
 function projectCardTemplate(project) {
