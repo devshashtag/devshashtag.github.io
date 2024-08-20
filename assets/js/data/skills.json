@@ -5,24 +5,24 @@
       { "name": "html", "progress": 100 },
       { "name": "css", "progress": 100 },
       { "name": "javascript", "progress": 70 },
-      { "name": "scss", "progress": 80 }
+      { "name": "scss", "progress": 50 }
     ]
   },
   {
     "category": "others",
     "items": [
-      { "name": "linux", "progress": 100 },
-      { "name": "git", "progress": 100 },
-      { "name": "bash", "progress": 100 },
-      { "name": "python", "progress": 100 }
+      { "name": "linux", "progress": 80 },
+      { "name": "git", "progress": 60 },
+      { "name": "bash", "progress": 60 },
+      { "name": "python", "progress": 50 }
     ]
   },
   {
     "category": "english",
     "items": [
-      { "name": "reading", "progress": 90 },
-      { "name": "writing", "progress": 50 },
-      { "name": "listening", "progress": 100 },
+      { "name": "reading", "progress": 80 },
+      { "name": "writing", "progress": 60 },
+      { "name": "listening", "progress": 90 },
       { "name": "speaking", "progress": 50 }
     ]
   }
