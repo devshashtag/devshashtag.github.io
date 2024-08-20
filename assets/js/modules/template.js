@@ -1,6 +1,6 @@
 // global templates
 function headerMenuTemplate() {
-  const currentPage = window.location.pathname.split('.')[0];
+  const currentPage = window.location.pathname.split('.')[0].replace('/index', '/');
   const pages = [
     { name: 'home', url: '/' },
     { name: 'projects', url: '/projects.html' },
@@ -156,12 +156,4 @@ const getJSON = async (url) => {
   return jsonData;
 };
 
-export {
-  headerTemplate,
-  homeSkillTemplate,
-  sidebarCategoryTemplate,
-  sidebarProjectTemplate,
-  projectCategoryTemplate,
-  projectCardTemplate,
-  getJSON,
-};
+export { headerTemplate, homeSkillTemplate, sidebarCategoryTemplate, sidebarProjectTemplate, projectCategoryTemplate, projectCardTemplate, getJSON };
