@@ -58,23 +58,6 @@ function homeSkillTemplate(item, delay) {
   `;
 }
 
-// sidebar
-function sidebarCategoryTemplate(name) {
-  return `
-    <!-- category -->
-    <h3>${name}</h3>
-  `;
-}
-
-function sidebarProjectTemplate(project) {
-  if (!project?.pages) project.url = project.sources[0].url;
-
-  return `
-    <!-- project -->
-    <li><a target="_blank" href="${project.url}">${project.name}</a></li>
-  `;
-}
-
 // projects
 function projectCategoryTemplate(name) {
   return `
@@ -156,4 +139,4 @@ const getJSON = async (url) => {
   return jsonData;
 };
 
-export { headerTemplate, homeSkillTemplate, sidebarCategoryTemplate, sidebarProjectTemplate, projectCategoryTemplate, projectCardTemplate, getJSON };
+export { headerTemplate, homeSkillTemplate, projectCategoryTemplate, projectCardTemplate, getJSON };
