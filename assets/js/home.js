@@ -13,7 +13,7 @@ async function displaySkills() {
 
     for (const item of data['items']) {
       skills += homeSkillTemplate(item, delay);
-      delay += 0.5;
+      delay += 0.1;
     }
 
     skillList.insertAdjacentHTML('beforeend', header + skills);

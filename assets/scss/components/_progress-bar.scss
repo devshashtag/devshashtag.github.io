@@ -18,13 +18,12 @@
 
     border-radius: inherit;
     background-color: $color-gray-2;
-    transition: background-color $transition-0;
 
-    -webkit-animation: progressBar 1s linear var(--delay);
+    -webkit-animation: progressBar $transition-0 linear var(--delay);
     -webkit-animation-fill-mode: both;
-    -moz-animation: progressBar 1s linear var(--delay);
+    -moz-animation: progressBar $transition-0 linear var(--delay);
     -moz-animation-fill-mode: both;
-    animation: progressBar 1s linear var(--delay);
+    animation: progressBar $transition-0 linear var(--delay);
     animation-fill-mode: both;
   }
 }

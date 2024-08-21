@@ -140,7 +140,7 @@ main.home {
       @include breakpoint(md) {
         position: static;
 
-        min-width: 12rem;
+        min-width: 10rem;
         transition: all $transition-0 linear;
       }
     }
