@@ -3,7 +3,7 @@
 *.css.map
 
 ### Less ###
-*.css
+# *.css
 
 ### grunt ###
 # Grunt usually compiles files inside this directory
