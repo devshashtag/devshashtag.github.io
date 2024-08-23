@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 *,
 ::after,
@@ -405,8 +406,13 @@ header.header .header__brand a {
 header.header .header__brand a:hover {
   color: #df8282;
 }
-header.header .header__brand span {
+header.header .header__brand a::before, header.header .header__brand a::after {
+  content: "⊰";
+  display: inline;
   color: #ec406a;
+}
+header.header .header__brand a::after {
+  content: "⊱";
 }
 
 .main__container, main.projects {
@@ -729,9 +735,16 @@ main.projects .projects__categories .card__modal .modal__header {
 }
 main.projects .projects__categories .card__modal .modal__header .modal__name {
   font-size: 1.4rem;
-  font-weight: 400;
   text-transform: capitalize;
-  color: #d1d5db;
+  color: #fcd8a1;
+}
+main.projects .projects__categories .card__modal .modal__header .modal__name::before, main.projects .projects__categories .card__modal .modal__header .modal__name::after {
+  content: "⊰";
+  display: inline;
+  color: #ec406a;
+}
+main.projects .projects__categories .card__modal .modal__header .modal__name::after {
+  content: "⊱";
 }
 main.projects .projects__categories .card__modal .modal__header .modal__close i {
   cursor: pointer;

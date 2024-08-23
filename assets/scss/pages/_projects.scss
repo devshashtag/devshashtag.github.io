@@ -173,9 +173,19 @@ main.projects {
         // name
         .modal__name {
           font-size: 1.4rem;
-          font-weight: 400;
           text-transform: capitalize;
-          color: $color-white-1;
+          color: $color-orange-1;
+
+          &::before,
+          &::after {
+            content: '⊰';
+            display: inline;
+            color: $color-pink-0;
+          }
+
+          &::after {
+            content: '⊱';
+          }
         }
 
         // close
