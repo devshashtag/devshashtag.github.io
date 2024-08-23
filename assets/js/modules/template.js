@@ -1,3 +1,8 @@
+const getJSON = async (url) => {
+  const response = await fetch(url);
+  return await response.json();
+};
+
 // global templates
 function headerMenuTemplate() {
   const currentPage = window.location.pathname.split('.')[0].replace('/index', '/');
@@ -38,9 +43,7 @@ function headerTemplate() {
         </nav>
         <!-- brand -->
         <div class="header__brand">
-          <a href="https://devshashtag.github.io" target="_blank">
-            <span>⊰</span>Devs<span>.</span>Hashtag<span>⊱</span>
-          </a>
+          <a href="https://devshashtag.github.io" target="_blank">DevsHashtag</a>
         </div>
       </div>
     </header>
@@ -131,12 +134,5 @@ function projectCardTemplate(project) {
     </div>
   `;
 }
-
-const getJSON = async (url) => {
-  const response = await fetch(url);
-  const jsonData = await response.json();
-
-  return jsonData;
-};
 
 export { headerTemplate, homeSkillTemplate, projectCategoryTemplate, projectCardTemplate, getJSON };

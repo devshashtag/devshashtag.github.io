@@ -129,11 +129,17 @@ header.header {
       &:hover {
         color: $color-red-1;
       }
-    }
 
-    // angles
-    span {
-      color: $color-pink-0;
+      &::before,
+      &::after {
+        content: '⊰';
+        display: inline;
+        color: $color-pink-0;
+      }
+
+      &::after {
+        content: '⊱';
+      }
     }
   }
 }
