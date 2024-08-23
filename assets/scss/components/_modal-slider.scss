@@ -1,6 +1,8 @@
 .modal-slider {
   background-color: $color-black-alpha-7;
 
+  border-radius: 0.5rem;
+
   &:has(.slider__selectors) {
     padding: 1rem;
   }
@@ -10,18 +12,23 @@
     position: relative;
 
     display: flex;
-    flex-direction: row-reverse;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem;
 
     overflow-x: hidden;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
+
+    &,
+    img {
+      border-radius: inherit;
+    }
   }
 
   // controls
   .slider__prev,
   .slider__next {
+    align-self: center;
     cursor: pointer;
     position: fixed;
     right: 3rem;

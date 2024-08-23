@@ -306,6 +306,7 @@ aside.sidebar .sidebar__contact nav ul li a {
 
 .modal-slider {
   background-color: rgba(18, 18, 18, 0.1333333333);
+  border-radius: 0.5rem;
 }
 .modal-slider:has(.slider__selectors) {
   padding: 1rem;
@@ -313,15 +314,19 @@ aside.sidebar .sidebar__contact nav ul li a {
 .modal-slider .slider__images {
   position: relative;
   display: flex;
-  flex-direction: row-reverse;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   overflow-x: hidden;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
 }
+.modal-slider .slider__images,
+.modal-slider .slider__images img {
+  border-radius: inherit;
+}
 .modal-slider .slider__prev,
 .modal-slider .slider__next {
+  align-self: center;
   cursor: pointer;
   position: fixed;
   right: 3rem;
@@ -702,6 +707,8 @@ main.projects .projects__categories .category__name::before, main.projects .proj
 }
 main.projects .projects__categories .category__card {
   position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
 }
 main.projects .projects__categories .category__card .card__image {
   cursor: pointer;

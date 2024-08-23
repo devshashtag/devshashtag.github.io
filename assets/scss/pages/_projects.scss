@@ -60,6 +60,9 @@ main.projects {
     .category__card {
       position: relative;
 
+      border-radius: 0.5rem;
+      overflow: hidden;
+
       // image
       .card__image {
         cursor: pointer;
