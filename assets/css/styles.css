@@ -273,8 +273,8 @@ aside.sidebar .sidebar__contact nav ul li a {
   background-color: #ec406a;
   position: relative;
   display: inline-block;
-  width: 20px;
-  height: 2px;
+  width: 24px;
+  height: 2.4px;
   transition: all 0.3s;
 }
 .navbar-toggle .toggle-icon::after, .navbar-toggle .toggle-icon::before {
@@ -286,21 +286,21 @@ aside.sidebar .sidebar__contact nav ul li a {
   background-color: #ec406a;
 }
 .navbar-toggle .toggle-icon::before {
-  top: -6px;
+  top: -7.2px;
 }
 .navbar-toggle .toggle-icon::after {
-  top: 6px;
+  top: 7.2px;
 }
 .navbar-toggle.active .toggle-icon {
   background-color: transparent;
 }
 .navbar-toggle.active .toggle-icon::before {
-  -webkit-transform: translateY(6px) rotateZ(-45deg);
-  transform: translateY(6px) rotateZ(-45deg);
+  -webkit-transform: translateY(7.2px) rotateZ(-45deg);
+  transform: translateY(7.2px) rotateZ(-45deg);
 }
 .navbar-toggle.active .toggle-icon::after {
-  -webkit-transform: translateY(-6px) rotateZ(45deg);
-  transform: translateY(-6px) rotateZ(45deg);
+  -webkit-transform: translateY(-7.2px) rotateZ(45deg);
+  transform: translateY(-7.2px) rotateZ(45deg);
 }
 
 header.header {
