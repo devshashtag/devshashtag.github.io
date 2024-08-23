@@ -151,7 +151,7 @@ main.projects {
         transition: all $transition-0;
 
         @include breakpoint(sm) {
-          width: 90%;
+          width: 95%;
         }
 
         @include breakpoint(md) {
@@ -159,7 +159,7 @@ main.projects {
         }
 
         @include breakpoint(lg) {
-          width: 70%;
+          width: 65%;
         }
       }
 
@@ -212,16 +212,6 @@ main.projects {
           i {
             font-size: 2rem;
           }
-        }
-      }
-
-      // image
-      .modal__image {
-        line-height: 0;
-
-        img {
-          border-radius: 2px;
-          opacity: 0.8;
         }
       }
 

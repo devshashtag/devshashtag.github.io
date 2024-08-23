@@ -102,6 +102,11 @@ function projectLinksTemplate(name, links, root) {
 function projectCardTemplate(project) {
   const pages = projectLinksTemplate(project.name, project.pages, project.url);
   const sources = projectLinksTemplate(project.name, project.sources);
+  const imagesLength = project.images.length;
+
+  // selectors template
+  const selectorTemplate = (active) => `<div class="selector${active ? ' active' : ''}"></div>`;
+  const selectorsTemplate = selectorTemplate(true) + selectorTemplate(false).repeat(imagesLength - 1);
 
   return `
     <!-- card -->
@@ -119,7 +124,29 @@ function projectCardTemplate(project) {
             </button>
           </div>
           <div class="modal__image">
-              ${projectImagesTemplate(project.name, project.url, project.images)}
+            <div class="modal-slider">
+              <!-- images -->
+              <div class="slider__images">
+                ${projectImagesTemplate(project.name, project.url, project.images)}
+                ${
+                  imagesLength > 1
+                    ? `
+                <!-- controls -->
+                <!-- next -->
+                <div class="slider__next">
+                  <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </div>
+                <!-- previous -->
+                <div class="slider__prev">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                </div>
+              </div>
+              <!-- selector -->
+              <div class="slider__selectors">${selectorsTemplate}</div>
+              `
+                    : '</div>'
+                }
+            </div>
           </div>
           <div class="modal__content">
             <h3>about</h3>

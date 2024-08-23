@@ -23,6 +23,7 @@ video {
 ::-webkit-scrollbar {
   background-color: #454a53;
   width: 0.75rem;
+  height: 0.75rem;
 }
 
 ::-webkit-scrollbar {
@@ -301,6 +302,73 @@ aside.sidebar .sidebar__contact nav ul li a {
 .navbar-toggle.active .toggle-icon::after {
   -webkit-transform: translateY(-7.2px) rotateZ(45deg);
   transform: translateY(-7.2px) rotateZ(45deg);
+}
+
+.modal-slider {
+  background-color: rgba(18, 18, 18, 0.1333333333);
+}
+.modal-slider:has(.slider__selectors) {
+  padding: 1rem;
+}
+.modal-slider .slider__images {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 1rem;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+.modal-slider .slider__prev,
+.modal-slider .slider__next {
+  cursor: pointer;
+  position: fixed;
+  right: 3rem;
+  transition: opacity 1s linear;
+  display: grid;
+  place-items: center;
+  width: 5rem;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  background-color: rgba(18, 18, 18, 0.3333333333);
+  color: #ec406a;
+  font-size: 2.5rem;
+}
+.modal-slider .slider__prev i,
+.modal-slider .slider__next i {
+  transition: transform 0.3s ease-in-out;
+}
+.modal-slider .slider__prev:hover i,
+.modal-slider .slider__next:hover i {
+  transform: perspective(400px) rotateY(40deg) scale(1.5);
+}
+.modal-slider .slider__prev {
+  left: 3rem;
+}
+.modal-slider .slider__selectors {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+.modal-slider .slider__selectors .selector {
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 1rem;
+  background-color: #4f5659;
+  transition: all 0.3s ease-in-out;
+}
+.modal-slider .slider__selectors .selector.active {
+  cursor: default;
+  background-color: #ec406a;
+  width: 2rem;
+}
+.modal-slider .slider__selectors .selector:hover:not(.active) {
+  background-color: #fcd8a1;
+  transform: scale(1.5);
 }
 
 header.header {
@@ -705,7 +773,7 @@ main.projects .projects__categories .card__modal .modal__box {
 }
 @media (min-width: 576px) {
   main.projects .projects__categories .card__modal .modal__box {
-    width: 90%;
+    width: 95%;
   }
 }
 @media (min-width: 768px) {
@@ -715,7 +783,7 @@ main.projects .projects__categories .card__modal .modal__box {
 }
 @media (min-width: 992px) {
   main.projects .projects__categories .card__modal .modal__box {
-    width: 70%;
+    width: 65%;
   }
 }
 main.projects .projects__categories .card__modal .modal__header {
@@ -755,13 +823,6 @@ main.projects .projects__categories .card__modal .modal__header .modal__close i:
   main.projects .projects__categories .card__modal .modal__header i {
     font-size: 2rem;
   }
-}
-main.projects .projects__categories .card__modal .modal__image {
-  line-height: 0;
-}
-main.projects .projects__categories .card__modal .modal__image img {
-  border-radius: 2px;
-  opacity: 0.8;
 }
 main.projects .projects__categories .card__modal .modal__content {
   background-color: rgba(18, 18, 18, 0.6666666667);
