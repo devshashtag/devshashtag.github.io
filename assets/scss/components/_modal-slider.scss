@@ -1,7 +1,10 @@
 .modal-slider {
   background-color: $color-black-alpha-4;
   border-radius: 0.5rem;
-  padding: 1rem;
+
+  &:has(.slider__selectors) {
+    padding: 1rem;
+  }
 
   // images
   .slider__images {

@@ -299,6 +299,8 @@ aside.sidebar .sidebar__contact nav ul li a {
 .modal-slider {
   background-color: rgba(18, 18, 18, 0.6666666667);
   border-radius: 0.5rem;
+}
+.modal-slider:has(.slider__selectors) {
   padding: 1rem;
 }
 .modal-slider .slider__images {
