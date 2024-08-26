@@ -3,7 +3,7 @@ const getJSON = async (url) => {
   return await response.json();
 };
 
-// global templates
+// header
 function headerMenuTemplate() {
   const currentPage = window.location.pathname.split('.')[0].replace('/index', '/');
   const pages = [
@@ -69,19 +69,19 @@ function projectCategoryTemplate(name) {
   `;
 }
 
-function projectImagesTemplate(imageUrls, projectName) {
-  let imagesHTML = '';
+function projectImagesTemplate(name, images) {
+  let imageTemplate = '';
 
-  for (const imageUrl of imageUrls) {
-    imagesHTML += `
+  for (const { title, url } of images) {
+    imageTemplate += `
       <!-- image -->
       <div class="slider__image">
-        <img src="${imageUrl}" alt="${projectName}" loading="lazy" />
+        <img src="${url}" alt="${name} - ${title}" loading="lazy" />
       </div>
     `;
   }
 
-  return imagesHTML;
+  return imageTemplate;
 }
 
 function projectLinksTemplate(name, links, root) {
@@ -89,12 +89,10 @@ function projectLinksTemplate(name, links, root) {
 
   let linksTemplate = '<ul>';
 
-  for (const link of links) {
-    const url = link?.url !== undefined ? (root ?? '') + link.url : link.source;
-
+  for (const { title, url } of links) {
     linksTemplate += `
-      <!-- ${name} - ${link.name} -->
-      <li><a href="${url}" target="_blank">${name} - ${link.name}</a></li>
+      <!-- ${name} - ${title} -->
+      <li><a href="${(root ?? '') + url}" target="_blank">${name} - ${title}</a></li>
     `;
   }
 
@@ -102,8 +100,9 @@ function projectLinksTemplate(name, links, root) {
 }
 
 function projectCardTemplate(project) {
-  const pages = projectLinksTemplate(project.name, project.pages, project.url);
+  const pages = projectLinksTemplate(project.name, project.pages, project.root);
   const sources = projectLinksTemplate(project.name, project.sources);
+  const images = projectImagesTemplate(project.name, project.images);
   const imagesLength = project.images.length;
 
   // selectors template
@@ -134,7 +133,7 @@ function projectCardTemplate(project) {
     <div class="category__card">
       <div class="card__name">${project.name}</div>
       <div class="card__image">
-        <img src="${project.images[0]}" alt="${project.name}" loading="lazy" />
+        <img src="${project.mainImage}" alt="${project.name}" loading="lazy" />
       </div>
       <div class="card__modal">
         <div class="modal__box">
@@ -148,7 +147,7 @@ function projectCardTemplate(project) {
             <div class="modal-slider">
               <!-- images -->
               <div class="slider__images">
-                ${projectImagesTemplate(project.images, project.name)}
+                ${images}
                 ${controls}
             </div>
           </div>

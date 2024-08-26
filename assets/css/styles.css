@@ -312,14 +312,12 @@ aside.sidebar .sidebar__contact nav ul li a {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
 }
-.modal-slider .slider__images:has(:nth-child(2)) .slider__image {
-  aspect-ratio: 9/5.5;
-}
 .modal-slider .slider__images .slider__image {
   display: grid;
   place-items: center;
   min-width: 100%;
   overflow-y: auto;
+  aspect-ratio: 16/7;
   scroll-snap-align: start;
 }
 .modal-slider .slider__images img {

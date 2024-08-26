@@ -3,158 +3,28 @@
     "category": "frontend",
     "projects": [
       {
-        "name": "reactapp",
-        "url": "/reactapp",
-        "teamwork": true,
-        "description": "scss template based on <a href=\"https://reactapp.ir\" target=\"_blank\">reactapp.ir</a>",
-        "images": ["/assets/images/projects/reactapp.png"],
-        "tags": ["HTML", "SCSS", "JAVASCRIPT", "RESPONSIVE"],
-        "pages": [
-          { "name": "home", "url": "" },
-          { "name": "courses", "url": "/pages/courses.html" },
-          { "name": "javascript", "url": "/pages/courses/javascript.html" },
-          { "name": "learning steps", "url": "/pages/learning-steps.html" },
-          { "name": "my account", "url": "/pages/my-account.html" },
-          { "name": "recover password", "url": "/pages/my-account/recover-password.html" },
-          { "name": "blog", "url": "/pages/blog.html" },
-          { "name": "about us", "url": "/pages/about-us.html" },
-          { "name": "contact", "url": "/pages/contact.html" },
-          { "name": "forums", "url": "/pages/forums.html" },
-          { "name": "terms", "url": "/pages/terms.html" }
-        ],
-        "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/reactapp" }]
-      },
-      {
-        "name": "luxury hotels",
-        "url": "/luxury-hotels",
-        "teamwork": true,
-        "description": "simple css template",
-        "images": ["/assets/images/projects/luxury-hotels.png"],
-        "tags": ["HTML", "CSS", "RESPONSIVE"],
-        "pages": [
-          { "name": "home", "url": "" },
-          { "name": "rooms", "url": "/pages/rooms.html" },
-          { "name": "facilities", "url": "/pages/facilities.html" },
-          { "name": "contact us", "url": "/pages/contact_us.html" }
-        ],
-        "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/luxury-hotels" }]
-      },
-      {
         "name": "botostart",
-        "url": "/botostart",
-        "teamwork": false,
-        "description": "scss template based on <a href=\"https://botostart.ir\" target=\"_blank\">botostart.ir</a> (old template)",
-        "images": ["/assets/images/projects/botostart.png"],
-        "tags": ["HTML", "SCSS", "JAVASCRIPT", "RESPONSIVE"],
+        "root": "/botostart",
+        "description": "an scss template inspired by <a href=\"https://botostart.ir\" target=\"_blank\">botostart.ir</a> (legacy version)",
+        "tags": ["teamwork", "responsive", "html", "scss", "javascript"],
+        "mainImage": "/assets/images/projects/botostart.png",
+        "images": [{ "title": "home", "url": "/assets/images/projects/botostart.png" }],
         "pages": [
-          { "name": "home", "url": "" },
-          { "name": "contact us", "url": "/luxury-hotels/pages/contact_us.html" },
-          { "name": "courses", "url": "/pages/courses.html" },
-          { "name": "course", "url": "/pages/courses/course.html" },
-          { "name": "articles", "url": "/pages/articles.html" },
-          { "name": "article", "url": "/pages/articles/article.html" },
-          { "name": "accounts", "url": "/pages/accounts.html" },
-          { "name": "lost password", "url": "/pages/accounts/lost-password.html" },
-          { "name": "contact", "url": "/pages/contact.html" },
-          { "name": "cart", "url": "/pages/cart.html" },
-          { "name": "teacher", "url": "/pages/teacher.html" },
-          { "name": "about", "url": "/pages/about.html" },
-          { "name": "404", "url": "/pages/404.html" }
+          { "title": "home", "url": "/" },
+          { "title": "contact us", "url": "/pages/contact_us.html" },
+          { "title": "courses", "url": "/pages/courses.html" },
+          { "title": "course", "url": "/pages/courses/course.html" },
+          { "title": "articles", "url": "/pages/articles.html" },
+          { "title": "article", "url": "/pages/articles/article.html" },
+          { "title": "accounts", "url": "/pages/accounts.html" },
+          { "title": "lost password", "url": "/pages/accounts/lost-password.html" },
+          { "title": "contact", "url": "/pages/contact.html" },
+          { "title": "cart", "url": "/pages/cart.html" },
+          { "title": "teacher", "url": "/pages/teacher.html" },
+          { "title": "about", "url": "/pages/about.html" },
+          { "title": "404", "url": "/pages/404.html" }
         ],
-        "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/botostart" }]
-      },
-      {
-        "name": "job template",
-        "url": "/job-template",
-        "teamwork": false,
-        "description": "simple scss template",
-        "images": ["/assets/images/projects/job-template.png"],
-        "tags": ["HTML", "SCSS", "JAVASCRIPT", "RESPONSIVE"],
-        "pages": [
-          { "name": "home", "url": "" },
-          { "name": "register", "url": "/register" },
-          { "name": "contact-us", "url": "/contact-us" }
-        ],
-        "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/job-template" }]
-      },
-
-      {
-        "name": "mini frontend",
-        "url": "/mini-frontend",
-        "teamwork": false,
-        "description": "frontend mini projects",
-        "images": ["/assets/images/projects/mini-frontend.png"],
-        "tags": ["HTML", "CSS", "JAVASCRIPT"],
-        "pages": [
-          { "name": "home", "url": "" },
-          { "name": "web template", "url": "/projects/web-template" },
-          { "name": "sidebar menu", "url": "/projects/sidebar-menu" },
-          { "name": "bmi calculator", "url": "/projects/bmi-calculator" },
-          { "name": "responsive navbar", "url": "/projects/responsive-navbar" },
-          { "name": "main header", "url": "/projects/main-header" },
-          { "name": "selling template", "url": "/projects/selling-template" },
-          { "name": "flexbox kit", "url": "/projects/flexbox-kit" },
-          { "name": "simple chart", "url": "/projects/simple-chart" },
-          { "name": "windows calculator", "url": "/projects/windows-calculator" },
-          { "name": "image filters", "url": "/projects/image-filters" },
-          { "name": "video cover", "url": "/projects/video-cover" },
-          { "name": "color generator", "url": "/projects/color-generator" },
-          { "name": "space stars", "url": "/projects/space-stars" },
-          { "name": "note app", "url": "/projects/note-app" },
-          { "name": "cube head", "url": "/projects/cube-head" },
-          { "name": "eve", "url": "/projects/eve" },
-          {
-            "name": "javascript mini",
-            "source": "https://github.com/devshashtag/mini-frontend/tree/main/projects/javascript-mini"
-          },
-          { "name": "sticky relative to parent", "url": "/projects/sticky-relative-to-parent" },
-          { "name": "strength potion", "url": "/projects/strength-potion" }
-        ],
-        "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/mini-frontend" }]
-      },
-      {
-        "name": "tic tac toe",
-        "url": "/tictactoe",
-        "teamwork": false,
-        "description": "customizable tic tac toe game",
-        "images": ["/assets/images/projects/tictactoe.png"],
-        "tags": ["HTML", "CSS", "JAVASCRIPT", "RESPONSIVE"],
-        "pages": [{ "name": "home", "url": "" }],
-        "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/tictactoe" }]
-      },
-      {
-        "name": "snake js",
-        "url": "/snake-js",
-        "teamwork": false,
-        "description": "snake DOM (hamiltonian cycle algorithm)",
-        "images": ["/assets/images/projects/snake-js.png"],
-        "tags": ["HTML", "CSS", "JAVASCRIPT", "RESPONSIVE"],
-        "pages": [{ "name": "home", "url": "" }],
-        "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/snake-js" }]
-      },
-      {
-        "name": "analog world clock",
-        "url": "/analog-world-clock",
-        "teamwork": false,
-        "description": "analog world clock",
-        "images": ["/assets/images/projects/analog-world-clock.png"],
-        "tags": ["HTML", "CSS", "JAVASCRIPT", "RESPONSIVE"],
-        "pages": [{ "name": "home", "url": "" }],
-        "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/analog-world-clock" }]
-      }
-    ]
-  },
-  {
-    "category": "nodejs",
-    "projects": [
-      {
-        "name": "sheypoor post collector",
-        "url": "/sheypoor-post-collector",
-        "teamwork": false,
-        "description": "collect sheypoor posts as json",
-        "images": ["/assets/images/projects/sheypoor-post-collector.png"],
-        "tags": ["HTML", "SCSS", "JAVASCRIPT", "NODEJS", "RESPONSIVE"],
-        "sources": [{ "name": "gitHub", "url": "https://github.com/devshashtag/sheypoor-post-collector" }]
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/botostart" }]
       }
     ]
   }
