@@ -21,27 +21,19 @@ video {
 }
 
 ::-webkit-scrollbar {
-  background-color: #454a53;
+  background-color: #272c35;
   width: 0.75rem;
   height: 0.75rem;
 }
 
-::-webkit-scrollbar {
-  background-color: #22262e;
-  color: #bcb4a8;
-}
-
 ::-webkit-scrollbar-thumb {
-  background-color: #454a53;
-  border-radius: 0.75rem;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #60676c;
-}
-
-::-webkit-scrollbar-thumb:active {
+  border-radius: 0.5rem;
   background-color: #4f5659;
+}
+
+::-webkit-scrollbar-thumb:hover,
+::-webkit-scrollbar-thumb:active {
+  background-color: #60676c;
 }
 
 ::-webkit-scrollbar-corner {
@@ -305,10 +297,8 @@ aside.sidebar .sidebar__contact nav ul li a {
 }
 
 .modal-slider {
-  background-color: rgba(18, 18, 18, 0.1333333333);
+  background-color: rgba(18, 18, 18, 0.6666666667);
   border-radius: 0.5rem;
-}
-.modal-slider:has(.slider__selectors) {
   padding: 1rem;
 }
 .modal-slider .slider__images {
@@ -320,25 +310,39 @@ aside.sidebar .sidebar__contact nav ul li a {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
 }
-.modal-slider .slider__images,
+.modal-slider .slider__images:has(:nth-child(2)) .slider__image {
+  aspect-ratio: 9/5.5;
+}
+.modal-slider .slider__images .slider__image {
+  display: grid;
+  place-items: center;
+  min-width: 100%;
+  overflow-y: auto;
+  scroll-snap-align: start;
+}
 .modal-slider .slider__images img {
-  border-radius: inherit;
+  object-fit: contain;
 }
 .modal-slider .slider__prev,
 .modal-slider .slider__next {
-  align-self: center;
   cursor: pointer;
   position: fixed;
-  right: 3rem;
+  right: 3.75rem;
   transition: opacity 1s linear;
   display: grid;
   place-items: center;
-  width: 5rem;
+  width: 3.5rem;
   aspect-ratio: 1;
-  border-radius: 100%;
+  border-radius: 1rem;
   background-color: rgba(18, 18, 18, 0.3333333333);
   color: #ec406a;
   font-size: 2.5rem;
+}
+@media (min-width: 768px) {
+  .modal-slider .slider__prev,
+  .modal-slider .slider__next {
+    width: 5rem;
+  }
 }
 .modal-slider .slider__prev i,
 .modal-slider .slider__next i {

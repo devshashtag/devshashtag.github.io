@@ -1,5 +1,5 @@
 import { projectCategoryTemplate, projectCardTemplate, getJSON } from '/assets/js/modules/template.js';
-import { moveToCurrent, sliderControls } from '/assets/js/modules/slider.js';
+import { sliderControls } from '/assets/js/modules/slider.js';
 
 const categoryCard = document.querySelector('.category__cards');
 
@@ -44,6 +44,3 @@ categoryCard.addEventListener('click', function (e) {
 
 // controls
 sliderControls();
-
-// responsive
-window.onresize = moveToCurrent;

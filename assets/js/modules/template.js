@@ -69,13 +69,15 @@ function projectCategoryTemplate(name) {
   `;
 }
 
-function projectImagesTemplate(projectName, homeUrl, imageUrls) {
+function projectImagesTemplate(imageUrls, projectName) {
   let imagesHTML = '';
 
   for (const imageUrl of imageUrls) {
     imagesHTML += `
       <!-- image -->
-      <img src="${imageUrl}" alt="${projectName}" loading="lazy" />
+      <div class="slider__image">
+        <img src="${imageUrl}" alt="${projectName}" loading="lazy" />
+      </div>
     `;
   }
 
@@ -108,6 +110,25 @@ function projectCardTemplate(project) {
   const selectorTemplate = (active) => `<div class="selector${active ? ' active' : ''}"></div>`;
   const selectorsTemplate = selectorTemplate(true) + selectorTemplate(false).repeat(imagesLength - 1);
 
+  // controls
+  let controls = '</div>';
+
+  if (imagesLength > 1) {
+    controls = `
+    <!-- controls -->
+      <!-- next -->
+      <div class="slider__next">
+        <i class="fa fa-angle-right" aria-hidden="true"></i>
+      </div>
+      <!-- previous -->
+      <div class="slider__prev">
+        <i class="fa fa-angle-left" aria-hidden="true"></i>
+      </div>
+    </div>
+    <!-- selector -->
+    <div class="slider__selectors">${selectorsTemplate}</div>`;
+  }
+
   return `
     <!-- card -->
     <div class="category__card">
@@ -127,25 +148,8 @@ function projectCardTemplate(project) {
             <div class="modal-slider">
               <!-- images -->
               <div class="slider__images">
-                ${projectImagesTemplate(project.name, project.url, project.images)}
-                ${
-                  imagesLength > 1
-                    ? `
-                <!-- controls -->
-                <!-- next -->
-                <div class="slider__next">
-                  <i class="fa fa-angle-right" aria-hidden="true"></i>
-                </div>
-                <!-- previous -->
-                <div class="slider__prev">
-                  <i class="fa fa-angle-left" aria-hidden="true"></i>
-                </div>
-              </div>
-              <!-- selector -->
-              <div class="slider__selectors">${selectorsTemplate}</div>
-              `
-                    : '</div>'
-                }
+                ${projectImagesTemplate(project.images, project.name)}
+                ${controls}
             </div>
           </div>
           <div class="modal__content">

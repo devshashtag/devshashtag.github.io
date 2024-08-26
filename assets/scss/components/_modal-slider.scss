@@ -1,11 +1,7 @@
 .modal-slider {
-  background-color: $color-black-alpha-7;
-
+  background-color: $color-black-alpha-4;
   border-radius: 0.5rem;
-
-  &:has(.slider__selectors) {
-    padding: 1rem;
-  }
+  padding: 1rem;
 
   // images
   .slider__images {
@@ -19,31 +15,48 @@
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
 
-    &,
+    &:has(:nth-child(2)) .slider__image {
+      aspect-ratio: 9/5.5;
+    }
+
+    // image
+    .slider__image {
+      display: grid;
+      place-items: center;
+
+      min-width: 100%;
+      overflow-y: auto;
+
+      scroll-snap-align: start;
+    }
+
     img {
-      border-radius: inherit;
+      object-fit: contain;
     }
   }
 
   // controls
   .slider__prev,
   .slider__next {
-    align-self: center;
     cursor: pointer;
     position: fixed;
-    right: 3rem;
+    right: 3.75rem;
     transition: opacity 1s linear;
 
     display: grid;
     place-items: center;
 
-    width: 5rem;
+    width: 3.5rem;
     aspect-ratio: 1;
-    border-radius: 100%;
+    border-radius: 1rem;
 
     background-color: $color-black-alpha-5;
     color: $color-pink-0;
     font-size: 2.5rem;
+
+    @include breakpoint(md) {
+      width: 5rem;
+    }
 
     i {
       transition: transform $transition-0 ease-in-out;
