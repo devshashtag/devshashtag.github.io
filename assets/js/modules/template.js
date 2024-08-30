@@ -74,10 +74,6 @@ function projectImagesTemplate(name, images) {
 
   for (const { title, url } of images) {
     imageTemplate += `
-      <!-- image -->
-      <div class="slider__image">
-        <img src="${url}" alt="${name} - ${title}" loading="lazy" />
-      </div>
     `;
   }
 
@@ -102,38 +98,13 @@ function projectLinksTemplate(name, links, root) {
 function projectCardTemplate(project) {
   const pages = projectLinksTemplate(project.name, project.pages, project.root);
   const sources = projectLinksTemplate(project.name, project.sources);
-  const images = projectImagesTemplate(project.name, project.images);
-  const imagesLength = project.images.length;
-
-  // selectors template
-  const selectorTemplate = (active) => `<div class="selector${active ? ' active' : ''}"></div>`;
-  const selectorsTemplate = selectorTemplate(true) + selectorTemplate(false).repeat(imagesLength - 1);
-
-  // controls
-  let controls = '</div>';
-
-  if (imagesLength > 1) {
-    controls = `
-    <!-- controls -->
-      <!-- next -->
-      <div class="slider__next">
-        <i class="fa fa-angle-right" aria-hidden="true"></i>
-      </div>
-      <!-- previous -->
-      <div class="slider__prev">
-        <i class="fa fa-angle-left" aria-hidden="true"></i>
-      </div>
-    </div>
-    <!-- selector -->
-    <div class="slider__selectors">${selectorsTemplate}</div>`;
-  }
 
   return `
     <!-- card -->
     <div class="category__card">
       <div class="card__name">${project.name}</div>
       <div class="card__image">
-        <img src="${project.mainImage}" alt="${project.name}" loading="lazy" />
+        <img src="${project.image}" alt="${project.name}" loading="lazy" />
       </div>
       <div class="card__modal">
         <div class="modal__box">
@@ -144,19 +115,12 @@ function projectCardTemplate(project) {
             </button>
           </div>
           <div class="modal__image">
-            <div class="modal-slider">
-              <!-- images -->
-              <div class="slider__images">
-                ${images}
-                ${controls}
-            </div>
+            <img src="${project.image}" alt="${project.name}" loading="lazy" />
           </div>
           <div class="modal__content">
             <h3>about</h3>
             <p>${project.description}</p>
-
             ${pages.includes('li') ? `<h3>live demo pages</h3> ${pages}` : ''}
-
             ${sources.includes('li') ? `<h3>source code</h3> ${sources}` : ''}
           </div>
         </div>

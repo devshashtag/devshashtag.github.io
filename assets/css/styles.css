@@ -317,8 +317,13 @@ aside.sidebar .sidebar__contact nav ul li a {
   place-items: center;
   min-width: 100%;
   overflow-y: auto;
-  aspect-ratio: 16/7;
   scroll-snap-align: start;
+  aspect-ratio: 16/9;
+}
+@media (min-width: 992px) {
+  .modal-slider .slider__images .slider__image {
+    aspect-ratio: 16/8;
+  }
 }
 .modal-slider .slider__images img {
   object-fit: contain;

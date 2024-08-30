@@ -7,11 +7,9 @@
         "root": "/botostart",
         "description": "an scss template inspired by <a href=\"https://botostart.ir\" target=\"_blank\">botostart.ir</a> (legacy version)",
         "tags": ["teamwork", "responsive", "html", "scss", "javascript"],
-        "mainImage": "/assets/images/projects/botostart.png",
-        "images": [{ "title": "home", "url": "/assets/images/projects/botostart.png" }],
+        "image": "/assets/images/projects/botostart.png",
         "pages": [
           { "title": "home", "url": "/" },
-          { "title": "contact us", "url": "/pages/contact_us.html" },
           { "title": "courses", "url": "/pages/courses.html" },
           { "title": "course", "url": "/pages/courses/course.html" },
           { "title": "articles", "url": "/pages/articles.html" },

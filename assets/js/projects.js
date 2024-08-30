@@ -1,5 +1,4 @@
 import { projectCategoryTemplate, projectCardTemplate, getJSON } from '/assets/js/modules/template.js';
-import { sliderControls } from '/assets/js/modules/slider.js';
 
 const categoryCard = document.querySelector('.category__cards');
 
@@ -41,6 +40,3 @@ categoryCard.addEventListener('click', function (e) {
     document.body.classList.toggle('no-scroll');
   }
 });
-
-// controls
-sliderControls();
