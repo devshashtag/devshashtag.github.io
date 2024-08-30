@@ -105,7 +105,7 @@ function projectCardTemplate(project) {
           <div class="modal__content">
             <h3>about</h3>
             <p>${project.description}</p>
-            ${pages.includes('li') ? `<h3>live demo pages</h3> ${pages}` : ''}
+            ${pages.includes('li') ? `<h3>live demo</h3> ${pages}` : ''}
             ${sources.includes('li') ? `<h3>source code</h3> ${sources}` : ''}
           </div>
         </div>

@@ -10,16 +10,12 @@ main.projects {
       gap: 2rem;
 
       padding: 1rem;
-    }
 
-    @include breakpoint(md) {
-      .category__cards {
+      @include breakpoint(md) {
         grid-template-columns: repeat(2, 1fr);
       }
-    }
 
-    @include breakpoint(lg) {
-      .category__cards {
+      @include breakpoint(xl) {
         grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
       }
