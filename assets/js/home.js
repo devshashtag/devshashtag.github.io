@@ -3,20 +3,18 @@ import { homeSkillTemplate, getJSON } from '/assets/js/modules/template.js';
 const skillList = document.getElementById('skill');
 
 async function displaySkills() {
-  const skillsAPI = '/assets/js/data/skills.json';
-  const jsonData = await getJSON(skillsAPI);
+  const skills = await getJSON('/assets/js/data/skills.json');
   let delay = 0;
 
-  for (const data of jsonData) {
-    const header = `<h3>${data['category']}</h3>`;
-    let skills = '';
+  for (const skill of skills) {
+    let items = '';
 
-    for (const item of data['items']) {
-      skills += homeSkillTemplate(item, delay);
+    for (const item of skill.items) {
+      items += homeSkillTemplate(item, delay);
       delay += 0.1;
     }
 
-    skillList.insertAdjacentHTML('beforeend', header + skills);
+    skillList.insertAdjacentHTML('beforeend', `<h3>${skill.category}</h3>` + items);
   }
 }
 

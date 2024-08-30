@@ -31,17 +31,13 @@ function headerTemplate() {
     <!-- header -->
     <header class="header">
       <div class="container">
-        <!-- menu -->
         <nav class="header__menu">
-          <!-- toggle -->
           <div class="navbar-toggle"><span class="toggle-icon"></span></div>
 
-          <!-- links -->
           <ul class="menu__links">
             ${headerMenuTemplate()}
           </ul>
         </nav>
-        <!-- brand -->
         <div class="header__brand">
           <a href="https://devshashtag.github.io" target="_blank">DevsHashtag</a>
         </div>
@@ -50,7 +46,7 @@ function headerTemplate() {
   `;
 }
 
-// skills
+// skill
 function homeSkillTemplate(item, delay) {
   return `
     <!-- ${item.name} -->
@@ -61,23 +57,12 @@ function homeSkillTemplate(item, delay) {
   `;
 }
 
-// projects
+// category
 function projectCategoryTemplate(name) {
   return `
     <!-- category -->
     <h2 class="category__name">${name}</h2>
   `;
-}
-
-function projectImagesTemplate(name, images) {
-  let imageTemplate = '';
-
-  for (const { title, url } of images) {
-    imageTemplate += `
-    `;
-  }
-
-  return imageTemplate;
 }
 
 function projectLinksTemplate(name, links, root) {
