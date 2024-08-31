@@ -791,28 +791,30 @@ main.projects .projects__categories .card__modal .modal__content ul {
 }
 main.projects .projects__categories .card__modal .modal__content p a,
 main.projects .projects__categories .card__modal .modal__content ul a {
-  color: #fde782;
+  color: #fcd8a1;
 }
 main.projects .projects__categories .card__modal .modal__content p a:hover,
 main.projects .projects__categories .card__modal .modal__content ul a:hover {
-  color: #cf9965;
+  color: #fde782;
 }
 main.projects .projects__categories .card__modal .modal__content > :last-child {
   margin-bottom: 0;
+}
+main.projects .projects__categories .card__modal .modal__content ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
 }
 main.projects .projects__categories .card__modal .modal__content ul li {
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  margin-bottom: 1rem;
-}
-main.projects .projects__categories .card__modal .modal__content ul li a {
-  color: #fcd8a1;
 }
 main.projects .projects__categories .card__modal .modal__content ul li::before {
   content: "";
   display: inline-block;
-  border: 2px solid #d96060;
+  border: 0.2rem solid #ec406a;
   border-radius: 50%;
 }
 
