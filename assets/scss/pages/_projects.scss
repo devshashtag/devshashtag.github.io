@@ -69,26 +69,24 @@ main.projects {
       .card__name {
         cursor: pointer;
         position: absolute;
-        top: 0;
-        left: 0;
         height: 100%;
         width: 100%;
-
-        visibility: hidden;
-        opacity: 0;
 
         display: flex;
         align-items: center;
         justify-content: center;
 
+        visibility: hidden;
+        opacity: 0;
+
         background-color: $color-black-alpha-4;
         color: $color-gold-0;
 
-        font-size: 1.4rem;
-        font-weight: 400;
+        font-size: 2rem;
+        font-weight: bold;
         text-transform: capitalize;
 
-        transition: all $transition-0;
+        transition: all $transition-0 linear;
       }
 
       // caption
