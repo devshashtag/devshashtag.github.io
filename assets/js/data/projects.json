@@ -58,6 +58,19 @@
           { "title": "contact us", "url": "/pages/contact_us.html" }
         ],
         "sources": [{ "title": "github", "url": "https://github.com/devshashtag/luxury-hotels" }]
+      },
+      {
+        "name": "job search",
+        "root": "/job-search",
+        "description": "a simple scss template",
+        "tags": ["html", "scss", "javascript", "responsive"],
+        "image": "/assets/images/projects/job-search.webp",
+        "pages": [
+          { "title": "home", "url": "" },
+          { "title": "register", "url": "/register" },
+          { "title": "contact-us", "url": "/contact-us" }
+        ],
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/job-search" }]
       }
     ]
   }
