@@ -44,6 +44,20 @@
           { "title": "terms", "url": "/pages/terms.html" }
         ],
         "sources": [{ "title": "github", "url": "https://github.com/devshashtag/reactapp" }]
+      },
+      {
+        "name": "luxury hotels",
+        "root": "/luxury-hotels",
+        "description": "a simple css template",
+        "tags": ["html", "css", "responsive"],
+        "image": "/assets/images/projects/luxury-hotels.webp",
+        "pages": [
+          { "title": "home", "url": "/" },
+          { "title": "facilities", "url": "/pages/facilities.html" },
+          { "title": "rooms", "url": "/pages/rooms.html" },
+          { "title": "contact us", "url": "/pages/contact_us.html" }
+        ],
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/luxury-hotels" }]
       }
     ]
   }
