@@ -6,7 +6,7 @@
         "name": "botostart",
         "root": "/botostart",
         "description": "an scss template inspired by <a href=\"https://botostart.ir\" target=\"_blank\">botostart.ir</a> (legacy version)",
-        "tags": ["teamwork", "responsive", "html", "scss", "javascript"],
+        "tags": ["html", "scss", "javascript", "responsive"],
         "image": "/assets/images/projects/botostart.webp",
         "pages": [
           { "title": "home", "url": "/" },
@@ -23,6 +23,27 @@
           { "title": "404", "url": "/pages/404.html" }
         ],
         "sources": [{ "title": "github", "url": "https://github.com/devshashtag/botostart" }]
+      },
+      {
+        "name": "reactapp",
+        "root": "/reactapp",
+        "description": "an scss template inspired by <a href=\"https://reactapp.ir\" target=\"_blank\">reactapp.ir</a>",
+        "tags": ["html", "scss", "javascript", "responsive", "teamwork"],
+        "image": "/assets/images/projects/reactapp.webp",
+        "pages": [
+          { "title": "home", "url": "/" },
+          { "title": "courses", "url": "/pages/courses.html" },
+          { "title": "javascript", "url": "/pages/courses/javascript.html" },
+          { "title": "learning steps", "url": "/pages/learning-steps.html" },
+          { "title": "my account", "url": "/pages/my-account.html" },
+          { "title": "recover password", "url": "/pages/my-account/recover-password.html" },
+          { "title": "blog", "url": "/pages/blog.html" },
+          { "title": "about us", "url": "/pages/about-us.html" },
+          { "title": "contact", "url": "/pages/contact.html" },
+          { "title": "forums", "url": "/pages/forums.html" },
+          { "title": "terms", "url": "/pages/terms.html" }
+        ],
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/reactapp" }]
       }
     ]
   }
