@@ -1,11 +1,11 @@
 [
   {
-    "category": "frontend",
+    "category": "frontend <span>&gt;</span> templates",
     "projects": [
       {
         "name": "botostart",
         "root": "/botostart",
-        "description": "an scss template inspired by <a href=\"https://botostart.ir\" target=\"_blank\">botostart.ir</a> (legacy version)",
+        "description": "a clean and responsive website template inspired by <a href=\"https://botostart.ir\" target=\"_blank\">botostart.ir (older version)</a> for online learning platforms",
         "tags": ["html", "scss", "javascript", "responsive"],
         "image": "/assets/images/projects/botostart.webp",
         "pages": [
@@ -27,7 +27,7 @@
       {
         "name": "reactapp",
         "root": "/reactapp",
-        "description": "an scss template inspired by <a href=\"https://reactapp.ir\" target=\"_blank\">reactapp.ir</a>",
+        "description": "a responsive website template inspired by <a href=\"https://reactapp.ir\" target=\"_blank\">reactapp.ir</a> for online learning platforms",
         "tags": ["html", "scss", "javascript", "responsive", "teamwork"],
         "image": "/assets/images/projects/reactapp.webp",
         "pages": [
@@ -48,7 +48,7 @@
       {
         "name": "luxury hotels",
         "root": "/luxury-hotels",
-        "description": "a simple css template",
+        "description": "A responsive template for hotel websites",
         "tags": ["html", "css", "responsive"],
         "image": "/assets/images/projects/luxury-hotels.webp",
         "pages": [
@@ -62,7 +62,7 @@
       {
         "name": "job search",
         "root": "/job-search",
-        "description": "a simple scss template",
+        "description": "a responsive template for job listings websites",
         "tags": ["html", "scss", "javascript", "responsive"],
         "image": "/assets/images/projects/job-search.webp",
         "pages": [
@@ -71,6 +71,92 @@
           { "title": "contact-us", "url": "/contact-us" }
         ],
         "sources": [{ "title": "github", "url": "https://github.com/devshashtag/job-search" }]
+      }
+    ]
+  },
+  {
+    "category": "frontend <span>&gt;</span> mini-projects",
+    "projects": [
+      {
+        "name": "blog header",
+        "root": "/frontend-mini/blog-header",
+        "description": "a header template for blogs",
+        "tags": ["html", "scss", "javascript", "responsive"],
+        "image": "/assets/images/projects/frontend-mini/blog-header.webp",
+        "pages": [{ "title": "home", "url": "/" }],
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini/tree/main/blog-header" }]
+      },
+      {
+        "name": "responsive navbar",
+        "root": "/frontend-mini/responsive-navbar",
+        "description": "a navbar that adapts to any device",
+        "tags": ["html", "css", "javascript", "responsive"],
+        "image": "/assets/images/projects/frontend-mini/responsive-navbar.webp",
+        "pages": [{ "title": "home", "url": "/" }],
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini/tree/main/responsive-navbar" }]
+      },
+      {
+        "name": "full page header",
+        "root": "/frontend-mini/full-page-header",
+        "description": "a clean full-page header",
+        "tags": ["html", "css"],
+        "image": "/assets/images/projects/frontend-mini/full-page-header.webp",
+        "pages": [{ "title": "home", "url": "/" }],
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini/tree/main/full-page-header" }]
+      },
+      {
+        "name": "analog world clock",
+        "root": "/frontend-mini/analog-world-clock",
+        "description": "a simple analog world-clock design",
+        "tags": ["html", "css", "javascript", "responsive"],
+        "image": "/assets/images/projects/frontend-mini/analog-world-clock.webp",
+        "pages": [{ "title": "home", "url": "/" }],
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini/tree/main/analog-world-clock" }]
+      },
+      {
+        "name": "matrix",
+        "root": "/frontend-mini/matrix",
+        "description": "a program that simulates falling letters like in the matrix",
+        "tags": ["html", "css", "javascript", "responsive"],
+        "image": "/assets/images/projects/frontend-mini/matrix.webp",
+        "pages": [{ "title": "home", "url": "/" }],
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini/tree/main/matrix" }]
+      },
+      {
+        "name": "galaxy stars",
+        "root": "/frontend-mini/galaxy-stars",
+        "description": "a program that simulates moving through space with stars",
+        "tags": ["html", "css", "javascript", "responsive"],
+        "image": "/assets/images/projects/frontend-mini/galaxy-stars.webp",
+        "pages": [{ "title": "home", "url": "/" }],
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini/tree/main/galaxy-stars" }]
+      },
+      {
+        "name": "eve",
+        "root": "/frontend-mini/eve",
+        "description": "a digital representation of eve from wall-e, showcasing her sleek design",
+        "tags": ["html", "css", "responsive"],
+        "image": "/assets/images/projects/frontend-mini/eve.webp",
+        "pages": [{ "title": "home", "url": "/" }],
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini/tree/main/eve" }]
+      },
+      {
+        "name": "strength potion",
+        "root": "/frontend-mini/strength-potion",
+        "description": "a fresh redesign of the strength potion",
+        "tags": ["html", "css", "responsive"],
+        "image": "/assets/images/projects/frontend-mini/strength-potion.webp",
+        "pages": [{ "title": "home", "url": "/" }],
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini/tree/main/strength-potion" }]
+      },
+      {
+        "name": "windows calculator",
+        "root": "/frontend-mini/windows-calculator",
+        "description": "a web version of the windows calculator design",
+        "tags": ["html", "css", "javascript", "responsive"],
+        "image": "/assets/images/projects/frontend-mini/windows-calculator.webp",
+        "pages": [{ "title": "home", "url": "/" }],
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini/tree/main/windows-calculator" }]
       }
     ]
   }
