@@ -159,5 +159,18 @@
         "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini" }]
       }
     ]
+  },
+  {
+    "category": "frontend <span>&gt;</span> tools",
+    "projects": [
+      {
+        "name": "sheypoor post collector",
+        "root": "/sheypoor-post-collector",
+        "description": "This Node.js application simplifies the process of gathering <b>publicly available</b> Sheypoor posts, converting them into a structured JSON format for easy analysis and use.",
+        "tags": ["html", "scss", "javascript", "nodejs", "responsive"],
+        "image": "/assets/images/projects/frontend/tools/sheypoor-post-collector.webp",
+        "sources": [{ "title": "gitHub", "url": "https://github.com/devshashtag/sheypoor-post-collector" }]
+      }
+    ]
   }
 ]
