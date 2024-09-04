@@ -84,7 +84,7 @@
         "tags": ["html", "scss", "javascript", "responsive"],
         "image": "/assets/images/projects/frontend/frontend-mini/blog-header.webp",
         "pages": [{ "title": "home", "url": "/" }],
-        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini/tree/main/blog-header" }]
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini" }]
       },
       {
         "name": "responsive navbar",
@@ -93,7 +93,7 @@
         "tags": ["html", "css", "javascript", "responsive"],
         "image": "/assets/images/projects/frontend/frontend-mini/responsive-navbar.webp",
         "pages": [{ "title": "home", "url": "/" }],
-        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini/tree/main/responsive-navbar" }]
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini" }]
       },
       {
         "name": "full page header",
@@ -102,7 +102,7 @@
         "tags": ["html", "css"],
         "image": "/assets/images/projects/frontend/frontend-mini/full-page-header.webp",
         "pages": [{ "title": "home", "url": "/" }],
-        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini/tree/main/full-page-header" }]
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini" }]
       },
       {
         "name": "analog world clock",
@@ -111,7 +111,7 @@
         "tags": ["html", "css", "javascript", "responsive"],
         "image": "/assets/images/projects/frontend/frontend-mini/analog-world-clock.webp",
         "pages": [{ "title": "home", "url": "/" }],
-        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini/tree/main/analog-world-clock" }]
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini" }]
       },
       {
         "name": "matrix",
@@ -120,7 +120,7 @@
         "tags": ["html", "css", "javascript", "responsive"],
         "image": "/assets/images/projects/frontend/frontend-mini/matrix.webp",
         "pages": [{ "title": "home", "url": "/" }],
-        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini/tree/main/matrix" }]
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini" }]
       },
       {
         "name": "galaxy stars",
@@ -129,7 +129,7 @@
         "tags": ["html", "css", "javascript", "responsive"],
         "image": "/assets/images/projects/frontend/frontend-mini/galaxy-stars.webp",
         "pages": [{ "title": "home", "url": "/" }],
-        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini/tree/main/galaxy-stars" }]
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini" }]
       },
       {
         "name": "eve",
@@ -138,7 +138,7 @@
         "tags": ["html", "css", "responsive"],
         "image": "/assets/images/projects/frontend/frontend-mini/eve.webp",
         "pages": [{ "title": "home", "url": "/" }],
-        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini/tree/main/eve" }]
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini" }]
       },
       {
         "name": "strength potion",
@@ -147,7 +147,7 @@
         "tags": ["html", "css", "responsive"],
         "image": "/assets/images/projects/frontend/frontend-mini/strength-potion.webp",
         "pages": [{ "title": "home", "url": "/" }],
-        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini/tree/main/strength-potion" }]
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini" }]
       },
       {
         "name": "windows calculator",
@@ -156,7 +156,7 @@
         "tags": ["html", "css", "javascript", "responsive"],
         "image": "/assets/images/projects/frontend/frontend-mini/windows-calculator.webp",
         "pages": [{ "title": "home", "url": "/" }],
-        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini/tree/main/windows-calculator" }]
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini" }]
       }
     ]
   }
