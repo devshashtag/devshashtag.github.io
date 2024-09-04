@@ -65,15 +65,22 @@ function projectCategoryTemplate(name) {
   `;
 }
 
-function projectLinksTemplate(name, links, root) {
+function projectLinksTemplate(name, links, root = '') {
   if (!links?.length) return '';
 
   let linksTemplate = '<ul>';
 
+  // localhost redirect to my github pages
+  const isLocalHost = ['localhost', '127.0.0.1', '', '::1'].includes(window.location.hostname);
+
+  if (root && root[0] === '/' && isLocalHost) {
+    root = `https://devshashtag.github.io${root}`;
+  }
+
   for (const { title, url } of links) {
     linksTemplate += `
       <!-- ${name} - ${title} -->
-      <li><a href="${(root ?? '') + url}" target="_blank">${name} - ${title}</a></li>
+      <li><a href="${root + url}" target="_blank">${name} - ${title}</a></li>
     `;
   }
 
