@@ -71,6 +71,18 @@
           { "title": "contact-us", "url": "/contact-us" }
         ],
         "sources": [{ "title": "github", "url": "https://github.com/devshashtag/job-search" }]
+      },
+      {
+        "name": "devsHashtag's portfolio",
+        "root": "",
+        "description": "this website serves as a platform to showcase my skills",
+        "tags": ["html", "scss", "javascript", "responsive"],
+        "image": "/assets/images/projects/frontend/templates/devshashtag.webp",
+        "pages": [
+          { "title": "home", "url": "/" },
+          { "title": "projects", "url": "/projects.html" }
+        ],
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/devshashtag.github.io" }]
       }
     ]
   },
