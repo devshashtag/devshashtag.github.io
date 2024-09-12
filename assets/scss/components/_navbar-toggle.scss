@@ -6,7 +6,7 @@
   padding: 10px 5px;
   cursor: pointer;
 
-  @include breakpoint(md) {
+  @include breakpoint(sm) {
     display: none;
   }
 

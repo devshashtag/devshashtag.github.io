@@ -74,7 +74,7 @@ header.header {
       transition: color $transition-0, box-shadow $transition-0;
 
       &:hover {
-        color: $color-red-1;
+        color: $color-pink-0;
         box-shadow: 0 0 5rem $color-black-alpha-3 inset;
       }
     }
@@ -85,7 +85,7 @@ header.header {
     }
 
     // desktop styles
-    @include breakpoint(md) {
+    @include breakpoint(sm) {
       position: static;
 
       flex-direction: row;
@@ -93,8 +93,6 @@ header.header {
       visibility: visible;
       opacity: 1;
       width: auto;
-
-      gap: 2rem;
 
       &,
       li a,

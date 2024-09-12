@@ -257,7 +257,7 @@ aside.sidebar .sidebar__contact nav ul li a {
   padding: 10px 5px;
   cursor: pointer;
 }
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   .navbar-toggle {
     display: none;
   }
@@ -354,21 +354,20 @@ header.header .menu__links li a {
   transition: color 0.3s, box-shadow 0.3s;
 }
 header.header .menu__links li a:hover {
-  color: #df8282;
+  color: #ec406a;
   box-shadow: 0 0 5rem rgba(18, 18, 18, 0.9333333333) inset;
 }
 header.header .menu__links li.active-item a {
   box-shadow: 0 0 5rem rgba(18, 18, 18, 0.9333333333) inset;
   color: #d96060;
 }
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   header.header .menu__links {
     position: static;
     flex-direction: row;
     visibility: visible;
     opacity: 1;
     width: auto;
-    gap: 2rem;
   }
   header.header .menu__links,
   header.header .menu__links li a,
@@ -591,7 +590,7 @@ main.projects .projects__categories .category__cards {
   gap: 2rem;
   padding: 1rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   main.projects .projects__categories .category__cards {
     grid-template-columns: repeat(2, 1fr);
   }
