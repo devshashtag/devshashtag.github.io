@@ -184,13 +184,13 @@
         "sources": [{ "title": "gitHub", "url": "https://github.com/devshashtag/sheypoor-post-collector" }]
       },
       {
-        "name": "flow planner",
-        "root": "/flow-planner",
+        "name": "planner",
+        "root": "/planner",
         "description": "effortlessly create, organize, and prioritize tasks to stay on track and achieve your goals",
         "tags": ["html", "scss", "javascript", "responsive"],
-        "image": "/assets/images/projects/frontend/tools/flow-planner.webp",
+        "image": "/assets/images/projects/frontend/tools/planner.webp",
         "pages": [{ "title": "home", "url": "/" }],
-        "sources": [{ "title": "gitHub", "url": "https://github.com/devshashtag/flow-planner" }]
+        "sources": [{ "title": "gitHub", "url": "https://github.com/devshashtag/planner" }]
       }
     ]
   }
