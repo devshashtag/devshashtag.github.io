@@ -119,7 +119,7 @@
       {
         "name": "analog world clock",
         "root": "/frontend-mini/analog-world-clock",
-        "description": "a simple analog world-clock design",
+        "description": "display the current time in different cities around the world",
         "tags": ["html", "css", "javascript", "responsive"],
         "image": "/assets/images/projects/frontend/frontend-mini/analog-world-clock.webp",
         "pages": [{ "title": "home", "url": "/" }],
@@ -128,7 +128,7 @@
       {
         "name": "matrix",
         "root": "/frontend-mini/matrix",
-        "description": "a program that simulates falling letters like in the matrix",
+        "description": "simulates falling letters like in the matrix",
         "tags": ["html", "css", "javascript", "responsive"],
         "image": "/assets/images/projects/frontend/frontend-mini/matrix.webp",
         "pages": [{ "title": "home", "url": "/" }],
@@ -137,7 +137,7 @@
       {
         "name": "galaxy stars",
         "root": "/frontend-mini/galaxy-stars",
-        "description": "a program that simulates moving through space with stars",
+        "description": "simulates moving through space with stars",
         "tags": ["html", "css", "javascript", "responsive"],
         "image": "/assets/images/projects/frontend/frontend-mini/galaxy-stars.webp",
         "pages": [{ "title": "home", "url": "/" }],
@@ -146,7 +146,7 @@
       {
         "name": "eve",
         "root": "/frontend-mini/eve",
-        "description": "a digital representation of eve from wall-e, showcasing her sleek design",
+        "description": "digital representation of eve from wall-e, showcasing her sleek design",
         "tags": ["html", "css", "responsive"],
         "image": "/assets/images/projects/frontend/frontend-mini/eve.webp",
         "pages": [{ "title": "home", "url": "/" }],
@@ -155,7 +155,7 @@
       {
         "name": "strength potion",
         "root": "/frontend-mini/strength-potion",
-        "description": "a fresh redesign of the strength potion",
+        "description": "fresh redesign of the strength potion",
         "tags": ["html", "css", "responsive"],
         "image": "/assets/images/projects/frontend/frontend-mini/strength-potion.webp",
         "pages": [{ "title": "home", "url": "/" }],
@@ -164,7 +164,7 @@
       {
         "name": "windows calculator",
         "root": "/frontend-mini/windows-calculator",
-        "description": "a web version of the windows calculator design",
+        "description": "web version of the windows calculator design",
         "tags": ["html", "css", "javascript", "responsive"],
         "image": "/assets/images/projects/frontend/frontend-mini/windows-calculator.webp",
         "pages": [{ "title": "home", "url": "/" }],
@@ -178,7 +178,7 @@
       {
         "name": "sheypoor post collector",
         "root": "/sheypoor-post-collector",
-        "description": "This Node.js application simplifies the process of gathering <b>publicly available</b> Sheypoor posts, converting them into a structured JSON format for easy analysis and use.",
+        "description": "simplifies the process of gathering <b>publicly available</b> Sheypoor posts, converting them into a structured JSON format for easy analysis and use.",
         "tags": ["html", "scss", "javascript", "nodejs", "responsive"],
         "image": "/assets/images/projects/frontend/tools/sheypoor-post-collector.webp",
         "sources": [{ "title": "gitHub", "url": "https://github.com/devshashtag/sheypoor-post-collector" }]
@@ -186,11 +186,74 @@
       {
         "name": "planner",
         "root": "/planner",
-        "description": "effortlessly create, organize, and prioritize tasks to stay on track and achieve your goals",
+        "description": "create, organize, and prioritize tasks to stay on track and achieve your goals",
         "tags": ["html", "scss", "javascript", "responsive"],
         "image": "/assets/images/projects/frontend/tools/planner.webp",
         "pages": [{ "title": "home", "url": "/" }],
         "sources": [{ "title": "gitHub", "url": "https://github.com/devshashtag/planner" }]
+      },
+      {
+        "name": "cronometer logger",
+        "root": "/cronometer-logger",
+        "description": "a stopwatch with built-in logging functionality, allowing you to record specific intervals",
+        "tags": ["html", "css", "javascript"],
+        "image": "/assets/images/projects/frontend/tools/cronometer-logger.webp",
+        "pages": [{ "title": "home", "url": "/" }],
+        "sources": [{ "title": "gitHub", "url": "https://github.com/devshashtag/cronometer-logger" }]
+      },
+      {
+        "name": "color generator",
+        "root": "/color-generator",
+        "description": "generate and copy colors with ease",
+        "tags": ["html", "css", "javascript"],
+        "image": "/assets/images/projects/frontend/tools/color-generator.webp",
+        "pages": [{ "title": "home", "url": "/" }],
+        "sources": [{ "title": "gitHub", "url": "https://github.com/devshashtag/color-generator" }]
+      },
+      {
+        "name": "image spliter",
+        "root": "/image-spliter",
+        "description": "transform your images with a variety of cool css filters and split them into different sections",
+        "tags": ["html", "css", "javascript"],
+        "image": "/assets/images/projects/frontend/tools/image-spliter.webp",
+        "pages": [{ "title": "home", "url": "/" }],
+        "sources": [{ "title": "gitHub", "url": "https://github.com/devshashtag/image-spliter" }]
+      },
+      {
+        "name": "image filters",
+        "root": "/image-filters",
+        "description": "transform your images with a variety of cool css filters",
+        "tags": ["html", "css", "javascript"],
+        "image": "/assets/images/projects/frontend/tools/image-filters.webp",
+        "pages": [{ "title": "home", "url": "/" }],
+        "sources": [{ "title": "gitHub", "url": "https://github.com/devshashtag/image-filters" }]
+      },
+      {
+        "name": "video cover",
+        "root": "/video-cover",
+        "description": "capture screenshots at different intervals from your videos",
+        "tags": ["html", "css", "javascript"],
+        "image": "/assets/images/projects/frontend/tools/video-cover.webp",
+        "pages": [{ "title": "home", "url": "/" }],
+        "sources": [{ "title": "gitHub", "url": "https://github.com/devshashtag/video-cover" }]
+      },
+      {
+        "name": "bmi calculator",
+        "root": "/bmi-calculator",
+        "description": "calculate your body-mass-index (bmi) to get an understanding of your weight status",
+        "tags": ["html", "css", "javascript"],
+        "image": "/assets/images/projects/frontend/tools/bmi-calculator.webp",
+        "pages": [{ "title": "home", "url": "/" }],
+        "sources": [{ "title": "gitHub", "url": "https://github.com/devshashtag/bmi-calculator" }]
+      },
+      {
+        "name": "flexbox kit",
+        "root": "/flexbox-kit",
+        "description": "visualize and experiment with flexbox properties to see how they change your layout",
+        "tags": ["html", "css", "javascript"],
+        "image": "/assets/images/projects/frontend/tools/flexbox-kit.webp",
+        "pages": [{ "title": "home", "url": "/" }],
+        "sources": [{ "title": "gitHub", "url": "https://github.com/devshashtag/flexbox-kit" }]
       }
     ]
   }
