@@ -96,7 +96,7 @@ function projectCardTemplate(project) {
     <div class="category__card">
       <div class="card__name">${project.name}</div>
       <div class="card__image">
-        <img src="${project.image}" alt="${project.name}" loading="lazy" />
+        <img src="${project.image ?? ''}" alt="${project.name}" loading="lazy" />
       </div>
       <div class="card__modal">
         <div class="modal__box">

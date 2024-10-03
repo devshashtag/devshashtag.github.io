@@ -256,5 +256,28 @@
         "sources": [{ "title": "gitHub", "url": "https://github.com/devshashtag/flexbox-kit" }]
       }
     ]
+  },
+  {
+    "category": "frontend <span>&gt;</span> games",
+    "projects": [
+      {
+        "name": "snake",
+        "root": "/snake",
+        "description": "a classic snake game that using hamiltonian cycle algorithm for snake movement",
+        "image": ["/assets/images/projects/frontend/games/snake.webp"],
+        "tags": ["HTML", "CSS", "JAVASCRIPT", "RESPONSIVE"],
+        "pages": [{ "title": "home", "url": "" }],
+        "sources": [{ "title": "gitHub", "url": "https://github.com/devshashtag/snake" }]
+      },
+      {
+        "name": "tic tac toe",
+        "root": "/tictactoe",
+        "description": "a simple tic-tac-toe game",
+        "image": ["/assets/images/projects/frontend/games/tictactoe.webp"],
+        "tags": ["HTML", "CSS", "JAVASCRIPT", "RESPONSIVE"],
+        "pages": [{ "title": "home", "url": "" }],
+        "sources": [{ "title": "gitHub", "url": "https://github.com/devshashtag/tictactoe" }]
+      }
+    ]
   }
 ]
