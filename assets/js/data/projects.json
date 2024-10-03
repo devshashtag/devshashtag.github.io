@@ -73,7 +73,7 @@
         "sources": [{ "title": "github", "url": "https://github.com/devshashtag/job-search" }]
       },
       {
-        "name": "devsHashtag's portfolio",
+        "name": "devsHashtag portfolio",
         "root": "",
         "description": "this website serves as a platform to showcase my skills",
         "tags": ["html", "scss", "javascript", "responsive"],
@@ -115,7 +115,7 @@
       {
         "name": "sheypoor post collector",
         "root": "/sheypoor-post-collector",
-        "description": "simplifies the process of gathering <b>publicly available</b> Sheypoor posts, converting them into a structured JSON format for easy analysis and use.",
+        "description": "simplifies the process of gathering <b>publicly available</b> Sheypoor posts, converting them into a structured JSON format for easy analysis and use",
         "tags": ["html", "scss", "javascript", "nodejs", "responsive"],
         "image": "/assets/images/projects/frontend/tools/sheypoor-post-collector.webp",
         "sources": [{ "title": "gitHub", "url": "https://github.com/devshashtag/sheypoor-post-collector" }]
@@ -198,11 +198,29 @@
     "category": "frontend <span>&gt;</span> mini-projects",
     "projects": [
       {
+        "name": "sidebar-menu",
+        "root": "/frontend-mini/sidebar-menu",
+        "description": "sidebar menu with smooth transitions",
+        "tags": ["html", "css", "javascript", "responsive"],
+        "image": "/assets/images/projects/frontend/frontend-mini/sidebar-menu.webp",
+        "pages": [{ "title": "home", "url": "/" }],
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini" }]
+      },
+      {
         "name": "blog header",
         "root": "/frontend-mini/blog-header",
         "description": "a header template for blogs",
         "tags": ["html", "scss", "javascript", "responsive"],
         "image": "/assets/images/projects/frontend/frontend-mini/blog-header.webp",
+        "pages": [{ "title": "home", "url": "/" }],
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini" }]
+      },
+      {
+        "name": "contact-us",
+        "root": "/frontend-mini/contact-us",
+        "description": "a simple contact form",
+        "tags": ["html", "css", "responsive"],
+        "image": "/assets/images/projects/frontend/frontend-mini/contact-us.webp",
         "pages": [{ "title": "home", "url": "/" }],
         "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini" }]
       },
@@ -275,6 +293,15 @@
         "description": "web version of the windows calculator design",
         "tags": ["html", "css", "javascript", "responsive"],
         "image": "/assets/images/projects/frontend/frontend-mini/windows-calculator.webp",
+        "pages": [{ "title": "home", "url": "/" }],
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini" }]
+      },
+      {
+        "name": "simple-chart",
+        "root": "/frontend-mini/simple-chart",
+        "description": "a simple chart for data visualization",
+        "tags": ["html", "css", "responsive"],
+        "image": "/assets/images/projects/frontend/frontend-mini/simple-chart.webp",
         "pages": [{ "title": "home", "url": "/" }],
         "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini" }]
       }
