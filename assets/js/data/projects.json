@@ -96,7 +96,7 @@
         "image": ["/assets/images/projects/frontend/games/snake.webp"],
         "tags": ["HTML", "CSS", "JAVASCRIPT", "RESPONSIVE"],
         "pages": [{ "title": "home", "url": "" }],
-        "sources": [{ "title": "gitHub", "url": "https://github.com/devshashtag/snake" }]
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/snake" }]
       },
       {
         "name": "tic tac toe",
@@ -105,7 +105,7 @@
         "image": ["/assets/images/projects/frontend/games/tictactoe.webp"],
         "tags": ["HTML", "CSS", "JAVASCRIPT", "RESPONSIVE"],
         "pages": [{ "title": "home", "url": "" }],
-        "sources": [{ "title": "gitHub", "url": "https://github.com/devshashtag/tictactoe" }]
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/tictactoe" }]
       }
     ]
   },
@@ -118,7 +118,7 @@
         "description": "simplifies the process of gathering <b>publicly available</b> Sheypoor posts, converting them into a structured JSON format for easy analysis and use",
         "tags": ["html", "scss", "javascript", "nodejs", "responsive"],
         "image": "/assets/images/projects/frontend/tools/sheypoor-post-collector.webp",
-        "sources": [{ "title": "gitHub", "url": "https://github.com/devshashtag/sheypoor-post-collector" }]
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/sheypoor-post-collector" }]
       },
       {
         "name": "planner",
@@ -127,7 +127,7 @@
         "tags": ["html", "scss", "javascript", "responsive"],
         "image": "/assets/images/projects/frontend/tools/planner.webp",
         "pages": [{ "title": "home", "url": "/" }],
-        "sources": [{ "title": "gitHub", "url": "https://github.com/devshashtag/planner" }]
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/planner" }]
       },
       {
         "name": "cronometer logger",
@@ -136,16 +136,25 @@
         "tags": ["html", "css", "javascript"],
         "image": "/assets/images/projects/frontend/tools/cronometer-logger.webp",
         "pages": [{ "title": "home", "url": "/" }],
-        "sources": [{ "title": "gitHub", "url": "https://github.com/devshashtag/cronometer-logger" }]
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/cronometer-logger" }]
       },
       {
-        "name": "color generator",
-        "root": "/color-generator",
-        "description": "generate and copy colors with ease",
-        "tags": ["html", "css", "javascript"],
-        "image": "/assets/images/projects/frontend/tools/color-generator.webp",
+        "name": "markify",
+        "root": "/markify",
+        "description": "a simple image watermarking tool with live preview",
+        "tags": ["html", "scss", "javascript", "responsive"],
+        "image": "/assets/images/projects/frontend/tools/markify.webp",
         "pages": [{ "title": "home", "url": "/" }],
-        "sources": [{ "title": "gitHub", "url": "https://github.com/devshashtag/color-generator" }]
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/markify" }]
+      },
+      {
+        "name": "font awesome icons",
+        "root": "/fontawesome-icons",
+        "description": "find and download, copy or use as fonts—access all font awesome icons effortlessly",
+        "tags": ["html", "scss", "javascript", "responsive"],
+        "image": "/assets/images/projects/frontend/tools/fontawesome-icons.webp",
+        "pages": [{ "title": "home", "url": "/" }],
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/fontawesome-icons" }]
       },
       {
         "name": "image spliter",
@@ -154,7 +163,7 @@
         "tags": ["html", "css", "javascript"],
         "image": "/assets/images/projects/frontend/tools/image-spliter.webp",
         "pages": [{ "title": "home", "url": "/" }],
-        "sources": [{ "title": "gitHub", "url": "https://github.com/devshashtag/image-spliter" }]
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/image-spliter" }]
       },
       {
         "name": "image filters",
@@ -163,7 +172,7 @@
         "tags": ["html", "css", "javascript"],
         "image": "/assets/images/projects/frontend/tools/image-filters.webp",
         "pages": [{ "title": "home", "url": "/" }],
-        "sources": [{ "title": "gitHub", "url": "https://github.com/devshashtag/image-filters" }]
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/image-filters" }]
       },
       {
         "name": "video cover",
@@ -172,7 +181,16 @@
         "tags": ["html", "css", "javascript"],
         "image": "/assets/images/projects/frontend/tools/video-cover.webp",
         "pages": [{ "title": "home", "url": "/" }],
-        "sources": [{ "title": "gitHub", "url": "https://github.com/devshashtag/video-cover" }]
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/video-cover" }]
+      },
+      {
+        "name": "color generator",
+        "root": "/color-generator",
+        "description": "generate and copy colors with ease",
+        "tags": ["html", "css", "javascript"],
+        "image": "/assets/images/projects/frontend/tools/color-generator.webp",
+        "pages": [{ "title": "home", "url": "/" }],
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/color-generator" }]
       },
       {
         "name": "bmi calculator",
@@ -181,7 +199,7 @@
         "tags": ["html", "css", "javascript"],
         "image": "/assets/images/projects/frontend/tools/bmi-calculator.webp",
         "pages": [{ "title": "home", "url": "/" }],
-        "sources": [{ "title": "gitHub", "url": "https://github.com/devshashtag/bmi-calculator" }]
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/bmi-calculator" }]
       },
       {
         "name": "flexbox kit",
@@ -190,7 +208,7 @@
         "tags": ["html", "css", "javascript"],
         "image": "/assets/images/projects/frontend/tools/flexbox-kit.webp",
         "pages": [{ "title": "home", "url": "/" }],
-        "sources": [{ "title": "gitHub", "url": "https://github.com/devshashtag/flexbox-kit" }]
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/flexbox-kit" }]
       }
     ]
   },
@@ -198,29 +216,11 @@
     "category": "frontend <span>&gt;</span> mini-projects",
     "projects": [
       {
-        "name": "sidebar-menu",
-        "root": "/frontend-mini/sidebar-menu",
-        "description": "sidebar menu with smooth transitions",
-        "tags": ["html", "css", "javascript", "responsive"],
-        "image": "/assets/images/projects/frontend/frontend-mini/sidebar-menu.webp",
-        "pages": [{ "title": "home", "url": "/" }],
-        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini" }]
-      },
-      {
         "name": "blog header",
         "root": "/frontend-mini/blog-header",
         "description": "a header template for blogs",
         "tags": ["html", "scss", "javascript", "responsive"],
         "image": "/assets/images/projects/frontend/frontend-mini/blog-header.webp",
-        "pages": [{ "title": "home", "url": "/" }],
-        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini" }]
-      },
-      {
-        "name": "contact-us",
-        "root": "/frontend-mini/contact-us",
-        "description": "a simple contact form",
-        "tags": ["html", "css", "responsive"],
-        "image": "/assets/images/projects/frontend/frontend-mini/contact-us.webp",
         "pages": [{ "title": "home", "url": "/" }],
         "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini" }]
       },
@@ -243,11 +243,29 @@
         "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini" }]
       },
       {
-        "name": "analog world clock",
-        "root": "/frontend-mini/analog-world-clock",
-        "description": "display the current time in different cities around the world",
+        "name": "sidebar-menu",
+        "root": "/frontend-mini/sidebar-menu",
+        "description": "sidebar menu with smooth transitions",
         "tags": ["html", "css", "javascript", "responsive"],
-        "image": "/assets/images/projects/frontend/frontend-mini/analog-world-clock.webp",
+        "image": "/assets/images/projects/frontend/frontend-mini/sidebar-menu.webp",
+        "pages": [{ "title": "home", "url": "/" }],
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini" }]
+      },
+      {
+        "name": "contact-us",
+        "root": "/frontend-mini/contact-us",
+        "description": "a simple contact form",
+        "tags": ["html", "css", "responsive"],
+        "image": "/assets/images/projects/frontend/frontend-mini/contact-us.webp",
+        "pages": [{ "title": "home", "url": "/" }],
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini" }]
+      },
+      {
+        "name": "form validation",
+        "root": "/frontend-mini/form-validation",
+        "description": "simple form with validations",
+        "tags": ["html", "css", "javascript", "responsive"],
+        "image": "/assets/images/projects/frontend/frontend-mini/form-validation.webp",
         "pages": [{ "title": "home", "url": "/" }],
         "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini" }]
       },
@@ -270,20 +288,20 @@
         "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini" }]
       },
       {
-        "name": "eve",
-        "root": "/frontend-mini/eve",
-        "description": "digital representation of eve from wall-e, showcasing her sleek design",
-        "tags": ["html", "css", "responsive"],
-        "image": "/assets/images/projects/frontend/frontend-mini/eve.webp",
+        "name": "analog world clock",
+        "root": "/frontend-mini/analog-world-clock",
+        "description": "display the current time in different cities around the world",
+        "tags": ["html", "css", "javascript", "responsive"],
+        "image": "/assets/images/projects/frontend/frontend-mini/analog-world-clock.webp",
         "pages": [{ "title": "home", "url": "/" }],
         "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini" }]
       },
       {
-        "name": "strength potion",
-        "root": "/frontend-mini/strength-potion",
-        "description": "fresh redesign of the strength potion",
+        "name": "simple-chart",
+        "root": "/frontend-mini/simple-chart",
+        "description": "a simple chart for data visualization",
         "tags": ["html", "css", "responsive"],
-        "image": "/assets/images/projects/frontend/frontend-mini/strength-potion.webp",
+        "image": "/assets/images/projects/frontend/frontend-mini/simple-chart.webp",
         "pages": [{ "title": "home", "url": "/" }],
         "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini" }]
       },
@@ -297,11 +315,20 @@
         "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini" }]
       },
       {
-        "name": "simple-chart",
-        "root": "/frontend-mini/simple-chart",
-        "description": "a simple chart for data visualization",
+        "name": "strength potion",
+        "root": "/frontend-mini/strength-potion",
+        "description": "fresh redesign of the strength potion",
         "tags": ["html", "css", "responsive"],
-        "image": "/assets/images/projects/frontend/frontend-mini/simple-chart.webp",
+        "image": "/assets/images/projects/frontend/frontend-mini/strength-potion.webp",
+        "pages": [{ "title": "home", "url": "/" }],
+        "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini" }]
+      },
+      {
+        "name": "eve",
+        "root": "/frontend-mini/eve",
+        "description": "digital representation of eve from wall-e, showcasing her sleek design",
+        "tags": ["html", "css", "responsive"],
+        "image": "/assets/images/projects/frontend/frontend-mini/eve.webp",
         "pages": [{ "title": "home", "url": "/" }],
         "sources": [{ "title": "github", "url": "https://github.com/devshashtag/frontend-mini" }]
       }
