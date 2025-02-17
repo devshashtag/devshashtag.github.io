@@ -74,14 +74,14 @@ aside.sidebar {
       }
     }
 
-    @include breakpoint(md) {
+    @include breakpoint(lg) {
       text-align: left;
 
       nav ul li {
         padding: 0 2rem;
 
         a {
-          justify-content: stretch;
+          justify-content: flex-start;
         }
       }
     }
